@@ -1199,13 +1199,11 @@
             <div class="dm-left">
 
                 <figure>
-                    <figcaption class="benefits">Access to all Arsenal Player Videos<br />Receive the digital member e-newsletter</figcaption>
+                    <figcaption class="benefits"></figcaption>
                 </figure>
-
-                <a href="#" class="benefits-link bind-benefits"><span>What benefits do you get with Arsenal</span><span>Digital Membership?</span></a>
-
+                
                 <a href="#" class="btn red-btn bind-register">Sign up for FREE</a>
-
+				<a href="#" class="btn red-btn bind-register">Login With Facebook</a>
             </div>
 
             <div class="dm-right">
