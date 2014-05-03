@@ -208,19 +208,23 @@ if (defined('ENVIRONMENT'))
      define('DB_PASS','');
      define('ROT_DIR','/saigonfutsal/');
      define('BASE_URL','http://localhost/saigonfutsal/');
-     define('MAIL_ADMIN','giangbeoit@gmail.com');
+     define('MAIL_ADMIN','info@saigonfutsal.com');
+   	 define('PW_MAIL','a123456');
+	 define('SMTP_SERVER','smtp.tenten.vn');
      define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
  }
  else
  {
-    define('HOST','localhost'); 
-    define('DB_NAME','vietmong_vmc');
-    define('DB_USER','vietmong_vmc');
-    define('DB_PASS','a123456');
+    define('HOST','mysql-server01'); 
+    define('DB_NAME','0936222844sgfs');
+    define('DB_USER','0936222844sgfs');
+    define('DB_PASS','aA123456');
     define('ROT_DIR','/');
-    define('BASE_URL','http://vietmongco.vn/');
-    define('MAIL_ADMIN','giangbeoit@gmail.com');
-    define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
+    define('BASE_URL','http://saigonfutsal.com/');
+    define('MAIL_ADMIN','info@saigonfutsal.com');
+    define('PW_MAIL','a123456');
+	define('SMTP_SERVER','smtp.tenten.vn');
+	define('PATH_FOLDER','/export/linux/www/com/l/a/saigonfutsal/3/9/0936222844.H1039/saigonfutsal.com');
  }
 require_once BASEPATH.'core/CodeIgniter.php';
 
