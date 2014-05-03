@@ -1,0 +1,183 @@
+#menu {
+    background-color: #BFDBFF;
+    overflow: hidden;
+}
+#menu ul {
+    border-bottom: 1px solid #a8aab4;
+    background-color: #c8c9d0;
+    float: left;
+    padding-left: 20px;
+    position: relative;
+    width: 100%;
+}
+#menu ul li {
+    float: left;
+    list-style: none outside none;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+#menu ul li a {
+    bottom: -2px;
+    float: left;
+    font: 12px arial,sans-serif;
+    padding-left: 5px;
+    position: relative;
+}
+#menu ul li span {
+    float: left;
+    line-height: 15px;
+    padding: 4px 10px 4px 5px;
+}
+#menu ul li a:hover, 
+#menu ul li a.select {
+    background: url("../images/menu_select.png") no-repeat scroll 0 0 transparent;
+    color: #444444;
+    float: left;
+    text-decoration: none;
+}
+#menu ul li a:hover span,
+#menu ul li a.select span {
+    background: url("../images/menu_select.png") no-repeat scroll 100% -23px transparent;
+}
+#submenu {
+    background: url(../images/bg_submenu.png) repeat-x bottom;
+    height: 89px;
+    padding: 1px 0px;
+    box-shadow: 0 3px 3px #CCCCCC;
+}
+#submenu ul li.item,
+#submenu ul li.main {
+    position: relative;
+    float: left;
+    padding-left: 3px; 
+    margin-right: 2px;
+}
+.dot{
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #c5d7eb;
+    height: 68px;
+}
+#submenu ul li.main a {
+    float: left;
+    font-family: Tahoma;
+    font-size: 11px;
+    height: 70px;
+    list-style: none outside none;
+    
+    text-align: center;
+    max-width: 70px;
+    position: relative;
+    padding-right: 3px;
+    /*border: 1px solid #c5d7eb;*/     
+}
+#submenu ul li.main p{
+     bottom: 0;
+    color: #FF0000;
+    font-weight: bold;
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    width: 50px;
+    z-index: 10;
+}
+
+#submenu ul li.main.select,
+#submenu ul li.main:hover{
+    background: url(../images/lia.png) no-repeat left top;
+}
+#submenu ul li.main.select a,
+#submenu ul li.main:hover a {
+    background: url(../images/lia.png) no-repeat right top;
+}
+#submenu ul li.item ul.main-sub li{
+    margin-bottom: 1px;
+}
+#submenu ul li.item ul.main-sub li a{
+    padding: 2px 5px;  
+}
+#submenu ul li.item ul.main-sub li a:hover{
+    background: url("../images/submenu_hover.png") repeat-x scroll center bottom transparent;
+    padding: 2px 5px;  
+    border-radius: 5px 5px 5px 5px;
+    /*border: 1px solid #e8be56;*/
+    overflow: hidden;
+}
+#submenu ul li.item ul.main-sub li a.select{
+    background: url("../images/submenu_hover.png") repeat-x scroll center bottom transparent;
+    padding: 2px 5px;  
+    border-radius: 5px 5px 5px 5px;
+    /*border: 1px solid #e8be56;*/
+    overflow: hidden;
+}
+#submenu ul li.item ul.main-sub li a{
+    line-height: 18px;
+    min-width: none;
+    max-width: none;
+    
+    border: 0px;
+    text-align: left;
+    float: none;
+    
+}
+.menucontent {
+    display: none;
+}
+
+.box_menu{
+    float: left;
+    background: url(../images/bg_menu.png) no-repeat;
+    height: 89px;
+    padding-left: 4px;
+}
+.box_menu div.box_menu_right{
+    float: left;
+    background: url(../images/bg_menu.png) no-repeat right;
+    height: 89px;
+    padding-right: 4px; 
+    position: relative;
+}
+/*
+.box_menu:hover{
+    background: url(../images/bg_menu_hover.png) no-repeat;
+}
+.box_menu:hover .box_menu_right{
+    background: url(../images/bg_menu_hover.png) no-repeat right;
+} */
+.box_menu_right .title_menu{
+    position: relative;
+    bottom: 0px;
+    text-align: center;
+    font-size: 11px;
+    font-family: Arial;
+    height: 15px;
+}
+.box_menu div.box_menu_right ul.main-sub,
+.box_menu div.box_menu_right ul{
+    margin-top: 3px;
+    height: 70px;
+    overflow: hidden;
+}
+ul.main-sub li{
+    padding-left: 3px;
+    height: 22px;
+    margin-bottom: 1px;
+}
+ul.main-sub li a{
+    padding-right: 3px;
+    height: 22px;
+    line-height: 20px;
+    float: left;
+}
+/*ul.main-sub li.select
+ul.main-sub li:hover{
+   background: url(../images/li_mini_a.png) no-repeat top left;
+   
+   
+}
+ul.main-sub li.select a
+ul.main-sub li:hover a{
+   background: url(../images/li_mini.png) no-repeat top right; 
+  
+}
+*/

@@ -1,0 +1,119 @@
+ul.b-list{
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-top: 5px;
+}
+ul.b-list li{
+    list-style: none;
+    margin-left: 5px;
+    height: 30px;
+    float: left;
+
+}
+ul.b-list li .bt_link{
+    background: url("../images/bnt.png") repeat-x scroll 0 0 transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    float: left;
+    text-align: center;
+    text-shadow: 0 1px 0 #464646;
+    border-radius: 3px 3px 3px 3px;
+    border-left: 1px solid #2a71c1;
+    border-right: 1px solid #2a71c1;
+    border-top: 1px solid #2878d2;
+    border-bottom: 1px solid #2a71c1;
+}
+ul.b-list li .bt_link:hover{
+    background: url("../images/bnt.png") repeat-x scroll 0 -90px transparent;
+    border-left: 1px solid #617a13;
+    border-right: 1px solid #617a13;
+    border-top: 1px solid #617a13;
+    border-bottom: 1px solid #617a13;    
+}
+ul.b-list li .bt_print{
+    background: url("../images/icon.png") no-repeat scroll 0 -64px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+    height: 30px;
+    width: 67px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+}
+ul.b-list li .bt_print:hover{
+    background: url("../images/icon.png") no-repeat scroll 0 -96px transparent;
+}
+.bt100{
+    background: url("../images/bnt.png") repeat-x scroll 0 0 transparent;
+    text-shadow: 0 1px 0 #464646;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 12px;
+    height: 25px;
+    font-weight: bold;
+    border-radius: 3px 3px 3px 3px;
+    border-left: 1px solid #2a71c1;
+    border-right: 1px solid #2a71c1;
+    border-top: 1px solid #2878d2;
+    border-bottom: 1px solid #2a71c1; 
+}
+.bt100:hover{
+    background: url("../images/bnt.png") repeat-x scroll 0 -90px transparent; 
+    border-left: 1px solid #617a13;
+    border-right: 1px solid #617a13;
+    border-top: 1px solid #617a13;
+    border-bottom: 1px solid #617a13;
+}
+.bt65{
+    background: url("../images/bnt.png") repeat-x scroll 0 0 transparent;
+    text-shadow: 0 1px 0 #464646;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 12px;
+    height: 25px;
+    font-weight: bold;
+    border-radius: 3px 3px 3px 3px;
+    border-left: 1px solid #2a71c1;
+    border-right: 1px solid #2a71c1;
+    border-top: 1px solid #2878d2;
+    border-bottom: 1px solid #2a71c1;      
+}
+.bt65:hover{
+   background: url("../images/bnt.png") repeat-x scroll 0 -90px transparent; 
+    border-left: 1px solid #617a13;
+    border-right: 1px solid #617a13;
+    border-top: 1px solid #617a13;
+    border-bottom: 1px solid #617a13;
+}
+
+a.button{
+    -moz-box-sizing: content-box;
+    background: url("../images/bnt.png") repeat-x scroll 0 -120px transparent;
+    border-color: #ac3311;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 0px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Tahoma;
+    font-size: 12px !important;
+    font-weight: bold;
+    line-height: 15px;
+    padding: 4px 10px;
+    text-shadow: 0 1px 0 #464646;
+    white-space: nowrap;
+}
+a.button:hover{
+    color: #FFF;
+}

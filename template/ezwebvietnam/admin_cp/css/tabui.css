@@ -1,0 +1,63 @@
+#tabs { 
+    padding-left: 10px;
+    margin-top  :10px; 
+    border-bottom: 1px solid #9da0aa;
+    height: 22px;
+    list-style:none; 
+    position: relative;
+}
+#tabs li { 
+    float:left; display:block;;
+    background: url(../images/tabui.png) no-repeat scroll left top;
+    height: 22px;
+    margin: 0 2px 0 0;
+    padding-left: 5px;
+    position: relative;    
+}
+#tabs li a.tab { 
+    background: url(../images/tabui.png) no-repeat scroll right top;
+    background-position: 100% -25px;
+    color: #C90202;
+    cursor: pointer;
+    float: left;
+    line-height: 18px;
+    text-decoration: none;
+    padding: 3px 10px 1px 3px; 
+    
+}
+#tabs li.current { 
+    background-color:#e1e1e1;
+    background: url(../images/tabui.png) no-repea left;
+    background-position: 0px -50px;
+    position: relative;
+    bottom: -1px;
+   
+}
+#tabs li.current a.tab { 
+    color:#000; text-decoration:none; 
+    background: url(../images/tabui.png) no-repea left;
+    background-position: 100% -75px;  
+    padding: 3px 35px 1px 3px;  
+}
+#tabs li.current a.remove{
+    background: url(../images/bt_closeTab.png) no-repeat;
+    background-position: 0px -52px;
+}
+#tabs li a.remove { 
+    color:#f00; margin-left:10px;
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    background: url(../images/bt_closeTab.png) no-repeat;
+    height: 17px;
+    width: 23px;
+}
+#contenttab { background-color:#e1e1e1;}
+#contenttab p { }
+        
+#main { width:900px; margin:0px auto; overflow:hidden;background-color:#F6F6F6; margin-top:20px;
+             -moz-border-radius:10px;  -webkit-border-radius:10px; padding:30px;}
+#doclist { border-right:solid 1px #dcdcdc;}
+#doclist ul { margin:0; list-style:none;}
+#doclist li { margin:10px 0; padding:0; float: left;}
+#documents { margin:0; padding:0;}

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html>
+<head>
+    <title>Quản lý bán hàng Online - VSale</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="phan mem quan ly ban hang, quan ly ban hang truc tuyen, ban hang, quan ly ban hang online, quản lý bán hàng">
+    <meta name="keywords" content="phan mem quan ly ban hang, quan ly ban hang truc tuyen, ban hang, quan ly ban hang online, quản lý bán hàng">
+    <script type="text/javascript" src="js/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/core/360vnit.alert.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/core/login.js" charset="UTF-8"></script>
+<link type="text/css" rel="stylesheet" href="css/dangnhap.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="css/360vnit.alert.css" media="screen" />
+ 
+    <script type="text/javascript">
+    var base_url = 'http://quanlybanhang.360vnit.com/';
+    </script>
+</head>
+<body>
+    <div id="wapper_login">
+        <!--<div class="name_product"></div>-->
+        <div class="content" id="content">
+            <form action="http://quanlybanhang.360vnit.com/index.php" method="post" accept-charset="utf-8"> 
+<div class="swap_input" style="margin-top: 52px; ">
+    <div class="label">Tên đăng nhập</div>
+    <input type="text" name="username" id="username" value="">
+</div>
+<div class="swap_input">
+    <div class="label">Mật khẩu</div>
+    <input type="password" name="password" id="password" value="">            
+</div>
+<div class="account_login">
+    <a href="javascript:;" onclick="forgot_pass();">Quên mật khẩu</a>
+</div>
+<input type="submit" class="button_login" title="Đăng nhập" id="btnDangnhap" value="Đăng nhập" name="btnDangnhap">
+</form></div>
+<div id="div_forgot_pass" style="display: none;">
+<div class="swap_input" style="margin-top: 82px;margin-bottom: 22px;">
+    <div class="label">Địa chỉ Email</div>
+    <input type="text" name="email" id="email" value="">
+</div>
+
+<div class="account_login">
+    <a href="javascript:;" onclick="form_login();">Màn hình đăng nhập</a>
+</div>
+<input type="submit" class="button_login" title="Quên mật khẩu" id="btnDangnhap" onclick="send_pass();" value="Gửi mật khẩu" name="btnDangnhap">
+</div>        </div>
+        <!--<div class="version">Version: 2.0</div>
+        <div class="copy">Copyright 2010 - All rights reserved.</div>-->
+    </div>
+    <div id="wapper_error">
+        
+    </div>
+</body>
+</html>
