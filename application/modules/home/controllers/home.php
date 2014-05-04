@@ -11,13 +11,16 @@ class Home extends MY_Controller
 	public function index()
 	{
 		$this->load->helper('cookie'); 
-	    $cookie = array(
-	                    'name'   => 'visit_web',
-	                    'value'  => 'visit_web',
-	                    'expire' =>  5184000,
-	                    'secure' => false
-	                );
-	    $this->input->set_cookie($cookie);
+		if(!$this->input->cookie('visit_web', false))
+        {
+		    $cookie = array(
+		                    'name'   => 'visit_web',
+		                    'value'  => 'visit_web',
+		                    'expire' =>  5184000,
+		                    'secure' => false
+		                );
+		    $this->input->set_cookie($cookie);
+	    }
 		$this->data['news_slide_1']=$this->newshomemodel->news_home_famous();
 		if(isset($this->data['news_slide_1'][0]['id_new']))
 		{
