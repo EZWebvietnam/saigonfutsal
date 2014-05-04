@@ -203,7 +203,7 @@ if (defined('ENVIRONMENT'))
  if($_SERVER['SERVER_NAME'] == 'localhost')
  {
       define('HOST','localhost'); 
-     define('DB_NAME','webmarketing');
+     define('DB_NAME','saigonfutsal');
      define('DB_USER','root');
      define('DB_PASS','');
      define('ROT_DIR','/saigonfutsal/');

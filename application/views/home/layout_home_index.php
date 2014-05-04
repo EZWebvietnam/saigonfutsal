@@ -141,7 +141,16 @@
 
                 <div class="inner large match">	
 
-                    <div class="promo-image"><img  alt="12/13: Arsenal 0-0 Everton - Aaron Ramsey" src="/assets/_files/scaled/711x400/apr_13/gun__1366188655_ramsey_everton2.jpg"></div>
+                    <div class="promo-image">
+                    <?php 
+                    if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image']) && $news_slide_1[0]['image']!='')
+                    {
+                    ?>
+                    <img width="711" height="400" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_slide_1[0]['image']?>">
+                    <?php } else {?>
+                    <img width="711" height="400" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                    <?php } ?>	
+                    </div>
 
                     <div class="promo-mask"></div>
 
@@ -150,7 +159,7 @@
                     <div class="promo-article">
 
 
-                        <a href="/match-menu/3710764/first-team/everton-v-arsenal" class="match-result">
+                        <!--<a href="/match-menu/3710764/first-team/everton-v-arsenal" class="match-result">
 
                             <div class="center-result">
 
@@ -167,27 +176,24 @@
                             </div>
 
                         </a>
-
+						-->
 
                         <div class="primary">
-                            <h2><a href="/match/report/1314/pre/first-team/everton-v-arsenal-match-preview" >Everton v Arsenal - Match Preview</a></h2>
-                            <p>'Going to Everton is always a game where you need to perform and be up for it. That is what we will try to do.'</p>
+                            <h2><a href="/match/report/1314/pre/first-team/everton-v-arsenal-match-preview" ><?php echo $news_slide_1[0]['title']?></a></h2>
+                            <p>'<?php echo sub_string(loaibohtmltrongvanban($news_slide_1[0]['content']),109);?>'</p>
                         </div>
 
                         <div class="secondary">
                             <ul>
+                            <?php 
+                            foreach($new_slide_sub as $slide_sub)
+                            {
+                            ?>
                                 <li>
                                     <a href="/news/news-archive/20140404/wenger-ramsey-is-a-bit-like-lampard"  >
-                                        Wenger - Ramsey is a bit like Lampard        </a>
+                                       <?php echo $slide_sub['title']?>       </a>
                                 </li>
-                                <li>
-                                    <a href="/news/news-archive/20140404/-barkley-is-one-of-the-best-i-have-seen-"  >
-                                        ‘Barkley is one of the best I have seen’        </a>
-                                </li>
-                                <li>
-                                    <a href="/news/news-archive/20140404/team-news-who-is-fit-to-face-everton-"  >
-                                        Team news: Who is fit to face Everton?        </a>
-                                </li>
+                             <?php } ?>   
                             </ul>
                         </div>
 
