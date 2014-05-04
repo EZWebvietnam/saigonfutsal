@@ -460,47 +460,27 @@
                         </div>        </section>
 
                     <section class="social-holder medium-only small-only">
-                        <h2>Follow Arsenal</h2>
+                        <h2>Follow SaigonFutsal</h2>
                         <div class="social">
                             <ul class="social-icons">
 
                                 <li>
-                                    <a href="http://facebook.com/arsenal" target="_blank">
-                                        <img  alt="Facebook" src="/assets/_files/scaled/50x50/dec_13/gun__1386864888_gun__1385743686_facebook.png">                </a>
+                                    <a href="https://www.facebook.com/SaigonFutsal" target="_blank">
+                                        <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/fb_icon.png">                </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/Arsenal" target="_blank">
-                                        <img  alt="Twitter" src="/assets/_files/scaled/50x50/dec_13/gun__1386864919_twitter.png">                </a>
+                                    <a href="https://twitter.com/SaigonFootball" target="_blank">
+                                        <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/tw_icon.png">                </a>
                                 </li>
                                 <li>
-                                    <a href="https://plus.google.com/+arsenal/" target="_blank">
-                                        <img  alt="Google Plus" src="/assets/_files/scaled/50x50/dec_13/gun__1386864939_Gplus.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="http://instagram.com/arsenal/" target="_blank">
-                                        <img  alt="Instagram" src="/assets/_files/scaled/50x50/dec_13/gun__1386864962_Instagram.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="https://soundcloud.com/officialarsenal" target="_blank">
-                                        <img  alt="SoundCloud" src="/assets/_files/scaled/50x50/dec_13/gun__1386864984_Soundcloud.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="http://www.pinterest.com/TheArsenal/" target="_blank">
-                                        <img  alt="Pinterest" src="/assets/_files/scaled/50x50/dec_13/gun__1386865033_Pinterest.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="http://www.flickr.com/photos/officialarsenal" target="_blank">
-                                        <img  alt="Flickr" src="/assets/_files/scaled/50x50/dec_13/gun__1386865050_Flickr.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="http://e.t.qq.com/officialarsenal" target="_blank">
-                                        <img  alt="QQ" src="/assets/_files/scaled/50x50/feb_14/gun__1391616927_blue_button.png">                </a>
+                                    <a href="https://plus.google.com/102817370847800628226" target="_blank">
+                                        <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/gp_icon.png">                </a>
                                 </li>
                             </ul><!--/social-icons -->
 
                             <div class="social-links">
-                                <div id="fb-like-sidebar" class="fb-like" data-href="http://www.facebook.com/arsenal" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-                                <a href="https://twitter.com/Arsenal" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false" data-dnt="true">Follow @Arsenal</a>
+                                <div id="fb-like-sidebar" class="fb-like" data-href="https://www.facebook.com/SaigonFutsal" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+                                <a href="https://twitter.com/SaigonFootball" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false" data-dnt="true">Follow @SaigonFootbal</a>
                             </div><!--social-links -->
 
                         </div><!--/social -->
@@ -608,47 +588,28 @@
                         <div id="div-gpt-ad-1353671982241-1" class="large-only ad-small" style="width:170px; height:237px;" data-attr-pushdown="0"></div>            </div>
 
                     <div class="widget ">
-                        <h2>Follow Arsenal</h2>
+                        <h2>Follow SaigonFutsal</h2>
                         <div class="social">
                             <ul class="social-icons">
 
                                 <li>
-                                    <a href="http://facebook.com/arsenal" target="_blank">
-                                        <img  alt="Facebook" src="/assets/_files/scaled/50x50/dec_13/gun__1386864888_gun__1385743686_facebook.png">                </a>
+                                    <a href="https://www.facebook.com/SaigonFutsal" target="_blank">
+                                        <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/fb_icon.png">                </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/Arsenal" target="_blank">
-                                        <img  alt="Twitter" src="/assets/_files/scaled/50x50/dec_13/gun__1386864919_twitter.png">                </a>
+                                    <a href="https://twitter.com/SaigonFootball" target="_blank">
+                                        <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/tw_icon.png">                </a>
                                 </li>
                                 <li>
-                                    <a href="https://plus.google.com/+arsenal/" target="_blank">
-                                        <img  alt="Google Plus" src="/assets/_files/scaled/50x50/dec_13/gun__1386864939_Gplus.png">                </a>
+                                    <a href="https://plus.google.com/102817370847800628226" target="_blank">
+                                        <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/gp_icon.png">                </a>
                                 </li>
-                                <li>
-                                    <a href="http://instagram.com/arsenal/" target="_blank">
-                                        <img  alt="Instagram" src="/assets/_files/scaled/50x50/dec_13/gun__1386864962_Instagram.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="https://soundcloud.com/officialarsenal" target="_blank">
-                                        <img  alt="SoundCloud" src="/assets/_files/scaled/50x50/dec_13/gun__1386864984_Soundcloud.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="http://www.pinterest.com/TheArsenal/" target="_blank">
-                                        <img  alt="Pinterest" src="/assets/_files/scaled/50x50/dec_13/gun__1386865033_Pinterest.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="http://www.flickr.com/photos/officialarsenal" target="_blank">
-                                        <img  alt="Flickr" src="/assets/_files/scaled/50x50/dec_13/gun__1386865050_Flickr.png">                </a>
-                                </li>
-                                <li>
-                                    <a href="http://e.weibo.com/OfficialArsenal" target="_blank">
-                                        <img  alt="Sina Weibo" src="/assets/_files/scaled/50x50/dec_13/gun__1386865070_Sina-Weibo.png">                </a>
-                                </li>
+                                
                             </ul><!--/social-icons -->
 
                             <div class="social-links">
-                                <div id="fb-like-sidebar" class="fb-like" data-href="http://www.facebook.com/arsenal" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-                                <a href="https://twitter.com/Arsenal" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false" data-dnt="true">Follow @Arsenal</a>
+                                <div id="fb-like-sidebar" class="fb-like" data-href="https://www.facebook.com/SaigonFutsal" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+                                <a href="https://twitter.com/SaigonFootball" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false" data-dnt="true">Follow @SaigonFutsal</a>
                             </div><!--social-links -->
 
                         </div><!--/social -->
