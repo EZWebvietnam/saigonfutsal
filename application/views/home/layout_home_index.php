@@ -11,6 +11,7 @@
         <meta name="author" content="<?php echo $header['author']?>" >
         <meta name="viewport" content="<?php echo $header['viewport']?>" >
         <meta name="msvalidate.01" content="<?php echo $header['msvalidate']?>" >
+        <meta name="robots" content="<?php echo $header['robots']?>">
         <meta name="description" content="<?php echo $header['description']?>" >
         <meta name="google-site-verification" content="<?php echo $header['google']?>" />
         <meta name="keywords" content="<?php echo $header['keywords']?>" />
