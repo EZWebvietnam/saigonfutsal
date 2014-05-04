@@ -5,46 +5,46 @@
 <!--[if IE 9 ]><html class="ie ie9 no-js"><![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
     <head>
-        <title>The Official Website of Arsenal Football Club | Arsenal.com</title>
+        <title><?php echo $header['title']?></title>
         <meta charset="utf-8">
-        <meta name="author" content="Rippleffect Ltd." >
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1" >
-        <meta name="msvalidate.01" content="4A33AA4076C3CD85A873140AEC2AE1B5" >
-        <meta name="description" content="The Official Website of Arsenal Football Club" >
+         <link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/<?php echo $header['icon']?>" type="image/x-icon"/>
+        <meta name="author" content="<?php echo $header['author']?>" >
+        <meta name="viewport" content="<?php echo $header['viewport']?>" >
+        <meta name="msvalidate.01" content="<?php echo $header['msvalidate']?>" >
+        <meta name="description" content="<?php echo $header['description']?>" >
+        <meta name="google-site-verification" content="<?php echo $header['google']?>" />
+        <meta name="keywords" content="<?php echo $header['keywords']?>" />
+        <meta property="fb:app_id" content="<?php echo $header['fbapp']?>">
         <link href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/css/styles.css?v=1.7.3" media="all" rel="stylesheet" type="text/css" >
-        <script type="text/javascript">
-            //<!--
+        <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-5250167-1']);
-            _gaq.push(['_trackPageview']);
+		  ga('create', 'UA-50645102-1', 'saigonfutsal.com');
+		  ga('send', 'pageview');
 
-            (function() {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-            })();
-            //-->
-        </script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.2.js"></script>
+		</script>
+		
         <script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/js/popup.js"></script>
-        <script type="text/javascript">
-            //<!--
-            var googletag = googletag || {};
-            googletag.cmd = googletag.cmd || [];
-            (function() {
-                var a = document.createElement("script");
-                a.async = true;
-                a.type = "text/javascript";
-                var b = "https:" == document.location.protocol;
-                a.src = (b ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
-                var c = document.getElementsByTagName("script")[0];
-                c.parentNode.insertBefore(a, c)
-            })()    //-->
-        </script>
+        <script type='text/javascript'>
+		(function() {
+		var useSSL = 'https:' == document.location.protocol;
+		var src = (useSSL ? 'https:' : 'http:') +
+		'//www.googletagservices.com/tag/js/gpt.js';
+		document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+		})();
+		</script>
+        <!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MC7D9J"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MC7D9J');</script>
+		<!-- End Google Tag Manager -->
         <script type="text/javascript">
             //<!--
             googletag.cmd.push(function() {
@@ -121,13 +121,7 @@
                             <li><a href="http://jp-arsenal.com" class="japan">Japan</a></li>
                             <li><a href="http://kr.arsenal.com" class="south-korea">South Korea</a></li>
                         </ul>
-                    </div><!--//county-select -->	        <ul id="quick-links">
-                        <li><a href="http://arsenaldirect.arsenal.com/?utm_source=NewArsenal.com&utm_medium=OnlineShoppingButton&utm_campaign=ArsenalOnlineShopping">Online Shopping</a><a href="#" class="hidden">more options</a></li>
-                        <li><a href="http://www.arsenal.com/hospitality">Hospitality</a></li>
-                        <li><a href="https://www.arsenallotto.co.uk">Lotto</a></li>
-                        <li><a href="http://player.arsenal.com">Arsenal Player</a></li>
-                        <li><a href="/juniorgunners">Junior Gunners</a></li>
-                    </ul>	        <div id="site-search">
+                    </div><!--//county-select -->	        	        <div id="site-search">
                         <a class='search' href="/search">Search</a>
                         <form action="/search" method="get">
                             <label for="search-field">Search the entire site</label>

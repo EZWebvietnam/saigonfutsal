@@ -1277,7 +1277,7 @@ app.auth = {
         $('select', $registerForm).trigger('change');
     },
     showLogin: function (e) {
-        _gaq.push(['_trackEvent', 'Digital Membership', 'View Login']);
+        
         if (typeof e != 'undefined') {
             e.preventDefault();
         }
@@ -1285,7 +1285,6 @@ app.auth = {
         $('#dm-login').addClass('active');
     },
     showRegister: function (e) {
-        _gaq.push(['_trackEvent', 'Digital Membership', 'View Register']);
         if (typeof e != 'undefined') {
             e.preventDefault();
         }
@@ -1293,7 +1292,7 @@ app.auth = {
         $('#dm-register').addClass('active');
     },
     showBenefits: function (e) {
-        _gaq.push(['_trackEvent', 'Digital Membership', 'View Benefits']);
+       
         if (typeof e != 'undefined') {
             e.preventDefault();
         }
@@ -1414,7 +1413,7 @@ app.auth = {
     },
     showForgotPassword: function (hideOthers) {
         hideOthers = typeof hideOthers === 'boolean' ? hideOthers : true;
-        _gaq.push(['_trackEvent', 'Digital Membership', 'View Forgot Password']);
+        
         if (typeof e != 'undefined') {
             e.preventDefault();
         }
@@ -1579,7 +1578,7 @@ app.auth.register = {
                         dataType: 'json',
                         success: function (data) {
                             if (data.success) {
-                                _gaq.push(['_trackPageview', '/register-success.html']);
+                                
                                 app.auth.register.showThankYou();
                             } else if (data.messages) {
                                 app.auth.register.displayErrors(data.messages);

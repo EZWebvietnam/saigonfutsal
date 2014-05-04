@@ -26,7 +26,7 @@ class MY_Controller extends CI_Controller
     }
     public function load_header()
     {
-        $link = $_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'setting.xml';
+        $link = PATH_FOLDER . ROT_DIR . 'setting.xml';
         $doc = new DOMDocument();
         $doc->load($link);
 
@@ -52,11 +52,19 @@ class MY_Controller extends CI_Controller
             $icon = $employee->getElementsByTagName("icon");
             $icons = $icon->item(0)->nodeValue;
             $desc = $employee->getElementsByTagName("description");
-                $description = $desc->item(0)->nodeValue;
+            $description = $desc->item(0)->nodeValue;
             $tit = $employee->getElementsByTagName("title");
-                $title = $tit->item(0)->nodeValue;
-                $data_setting = array('author'=>$name,'publisher'=>$pubs,'copyright'=>$cop,'robots'=>$robots,
-                    'distribution'=>$distribution,'rating'=>$rating,'keywords'=>$keywords,'logo'=>$logos,'icon'=>$icons,'description'=>$description,'title'=>$title);
+            $title = $tit->item(0)->nodeValue;
+            $view = $employee->getElementsByTagName("viewport");
+            $viewport = $view->item(0)->nodeValue;
+            $msval = $employee->getElementsByTagName("msvalidate");
+            $msvalidate = $msval->item(0)->nodeValue;
+            $goo =  $employee->getElementsByTagName("google");
+            $google = $goo->item(0)->nodeValue;
+            $fb =  $employee->getElementsByTagName("fbapp");
+            $fbapp = $fb->item(0)->nodeValue;
+            $data_setting = array('author'=>$name,'publisher'=>$pubs,'copyright'=>$cop,'robots'=>$robots,
+                    'distribution'=>$distribution,'rating'=>$rating,'keywords'=>$keywords,'logo'=>$logos,'icon'=>$icons,'description'=>$description,'title'=>$title,'viewport'=>$viewport,'msvalidate'=>$msvalidate,'google'=>$google,'fbapp'=>$fbapp,'icon'=>$icons);
         }
         $this->data['header']=$data_setting;
     }
