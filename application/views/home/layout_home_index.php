@@ -76,10 +76,20 @@
         Typekit.load();
     } catch (e) {
     }</script>
+    <script type="text/javascript">
+	  var timeout = setTimeout("location.reload(true);",300000);
+	  function resetTimeout() {
+	    clearTimeout(timeout);
+	    timeout = setTimeout("location.reload(true);",300000);
+	  }
+	</script>
     </head>
 
     <body >
-
+		<?php 
+		if(!$this->input->cookie('visit_web', false))
+        {
+		?>
         <div id="cookie-wrapper" style='display: none;'>
             <div id="cookie-header">
                 <p class="straptext"><span>Cookies on the Arsenal Website</span><br />We use cookies to improve your browsing experience and help us improve our websites. For more information, please <a target='_blank' href="/cookie-policy">click here</a>. By continuing to use our website, you agree to our use of such cookies.</p>
@@ -88,7 +98,9 @@
                     <a target='_blank' href="/cookie-policy" class="cookie-more">Find out more</a>
                 </div>	    
             </div>
-        </div><div id="div-gpt-ad-1353671982241-10" class="small-only ad-mobile-top" style="width:320px; height:50px;" data-attr-pushdown="0"></div><div id="div-gpt-ad-1353671982241-13" class="medium-only ad-leaderboard" style="width:728px; height:90px;" data-attr-pushdown="0"></div>
+        </div>
+        <?php } ?>
+        <div id="div-gpt-ad-1353671982241-10" class="small-only ad-mobile-top" style="width:320px; height:50px;" data-attr-pushdown="0"></div><div id="div-gpt-ad-1353671982241-13" class="medium-only ad-leaderboard" style="width:728px; height:90px;" data-attr-pushdown="0"></div>
         <header>
 
             <div class="header-wrap">
@@ -212,7 +224,7 @@
 
                 <article>
 
-                    <h1><a href="/news/news-archive?category=first">First Team</a></h1>          
+                    <h1><a href="/news/news-archive?category=first">FUST News</a></h1>          
 
                     <section class="primary">
                         <div class="article-image image">
@@ -384,60 +396,23 @@
                     <section class="small-only">
 
                         <h2>Don't Miss</h2>
-
-                        <a href="http://player.arsenal.com/player/4942-arsenal-360" class="feature">
-                            <img  alt="Arsenal 360" src="/assets/_files/scaled/192x280/jun_13/gun__1370426462_feature_arsenal360_colour.jpg">	
+						<?php 
+						foreach($list_clip_home as $clip_home)
+						{
+						?>
+                        <a href="https://www.youtube.com/watch?v=<?php echo $clip_home['code']?>&feature=youtu.be" class="feature">
+                            <img  alt="<?php echo $clip_home['title']?>" src="http://img.youtube.com/vi/<?php echo $clip_home['code']?>/sddefault.jpg">	
                             <div class="video"></div>
 
                             <div class="overlay"></div>
 
                             <div class="reveal">
-                                <p>Highlights, reaction, analysis and much more</p>
+                                <p><?php echo $clip_home['title']?></p>
                             </div>
 
-                            <h4>New episode:<span>Arsenal 360 </span></h4>
-                        </a><!--/feature --><a href="/news/features/20140404/everton-v-arsenal" class="feature">
-                            <img  alt="Scouting Report - Everton" src="/assets/_files/scaled/192x280/dec_13/gun__1386159850_feature_scoutingreport_everton.jpg">	
-
-                            <div class="overlay"></div>
-
-                            <div class="reveal">
-                                <p>Michael Cox and Dave Prentice look at the threat of Everton ahead of Sunday's clash at Goodison Park</p>
-                            </div>
-
-                            <h4>Scouting Report:<span>Everton (a) </span></h4>
-                        </a><!--/feature --><a href="/news/features/20140402/gunners-against-the-toffees" class="feature">
-                            <img  alt="Behind The Numbers" src="/assets/_files/scaled/192x280/apr_14/gun__1396520424_1_thumbnail.jpg">	
-
-                            <div class="overlay"></div>
-
-                            <div class="reveal">
-                                <p>This week our statistician looks at one of Arsenal's longest standing rivalries</p>
-                            </div>
-
-                            <h4>Behind The Numbers:<span>Making history </span></h4>
-                        </a><!--/feature --><a href="/news/features/20140401/everton-v-arsenal" class="feature">
-                            <img  alt="Stats Zone" src="/assets/_files/scaled/192x280/may_13/gun__1368436814_feature_statszone_colour.jpg">	
-
-                            <div class="overlay"></div>
-
-                            <div class="reveal">
-                                <p>This week we focus on Santi Cazorla's effectiveness out wide and his battle with Gareth Barry at Goodison Park</p>
-                            </div>
-
-                            <h4>Stats Zone:<span>Everton (a) </span></h4>
-                        </a><!--/feature --><a href="http://player.arsenal.com/player/4936-close-up-the-ox" class="feature">
-                            <img  alt="Close Up - Alex Oxlade-Chamberlain" src="/assets/_files/scaled/192x280/feb_13/gun__1361887311_feature_closeup_oxladechamberl.jpg">	
-                            <div class="video"></div>
-
-                            <div class="overlay"></div>
-
-                            <div class="reveal">
-                                <p>Alex speaks about fulfilling his potential, self-analysis and his ambitions for the future at Arsenal</p>
-                            </div>
-
-                            <h4>Close Up:<span>The Ox </span></h4>
+                            <h4><?php echo $clip_home['title']?></h4>
                         </a><!--/feature -->
+                       <?php } ?>
                     </section>
 
                     <h2 class="small-only"><a href="/news/news-archive?category=club">Club News</a></h2>                            <section class="primary small-only">
@@ -464,63 +439,27 @@
                     <div class="widgets">
 
                         <h2>Don't Miss</h2>
-                        <div class="widget"><a href="http://player.arsenal.com/player/4942-arsenal-360" class="feature">
-                                <img  alt="Arsenal 360" src="/assets/_files/scaled/192x280/jun_13/gun__1370426462_feature_arsenal360_colour.jpg">	
+                        <?php 
+						foreach($list_clip_home as $clip_home)
+						{
+						?>
+                        <div class="widget">
+                        <a href="https://www.youtube.com/watch?v=<?php echo $clip_home['code']?>&feature=youtu.be" class="feature">
+                                <img  alt="Arsenal 360" src="http://img.youtube.com/vi/<?php echo $clip_home['code']?>/sddefault.jpg">	
                                 <div class="video"></div>
 
                                 <div class="overlay"></div>
 
                                 <div class="reveal">
-                                    <p>Highlights, reaction, analysis and much more</p>
+                                    <p><?php echo strtoupper(get_yt_title($clip_home['code']))?></p>
                                 </div>
 
-                                <h4>New episode:<span>Arsenal 360 </span></h4>
+                                <h4><?php echo $clip_home['title']?></h4>
                             </a><!--/feature --></div>
-                        <div class="widget"><a href="/news/features/20140404/everton-v-arsenal" class="feature">
-                                <img  alt="Scouting Report - Everton" src="/assets/_files/scaled/192x280/dec_13/gun__1386159850_feature_scoutingreport_everton.jpg">	
-
-                                <div class="overlay"></div>
-
-                                <div class="reveal">
-                                    <p>Michael Cox and Dave Prentice look at the threat of Everton ahead of Sunday's clash at Goodison Park</p>
-                                </div>
-
-                                <h4>Scouting Report:<span>Everton (a) </span></h4>
-                            </a><!--/feature --></div>
-                        <div class="widget"><a href="/news/features/20140402/gunners-against-the-toffees" class="feature">
-                                <img  alt="Behind The Numbers" src="/assets/_files/scaled/192x280/apr_14/gun__1396520424_1_thumbnail.jpg">	
-
-                                <div class="overlay"></div>
-
-                                <div class="reveal">
-                                    <p>This week our statistician looks at one of Arsenal's longest standing rivalries</p>
-                                </div>
-
-                                <h4>Behind The Numbers:<span>Making history </span></h4>
-                            </a><!--/feature --></div>
-                        <div class="widget"><a href="/news/features/20140401/everton-v-arsenal" class="feature">
-                                <img  alt="Stats Zone" src="/assets/_files/scaled/192x280/may_13/gun__1368436814_feature_statszone_colour.jpg">	
-
-                                <div class="overlay"></div>
-
-                                <div class="reveal">
-                                    <p>This week we focus on Santi Cazorla's effectiveness out wide and his battle with Gareth Barry at Goodison Park</p>
-                                </div>
-
-                                <h4>Stats Zone:<span>Everton (a) </span></h4>
-                            </a><!--/feature --></div>
-                        <div class="widget"><a href="http://player.arsenal.com/player/4936-close-up-the-ox" class="feature">
-                                <img  alt="Close Up - Alex Oxlade-Chamberlain" src="/assets/_files/scaled/192x280/feb_13/gun__1361887311_feature_closeup_oxladechamberl.jpg">	
-                                <div class="video"></div>
-
-                                <div class="overlay"></div>
-
-                                <div class="reveal">
-                                    <p>Alex speaks about fulfilling his potential, self-analysis and his ambitions for the future at Arsenal</p>
-                                </div>
-
-                                <h4>Close Up:<span>The Ox </span></h4>
-                            </a><!--/feature --></div>
+                        <?php } ?>
+                        
+                        
+                        
 
                     </div><!--/widgets -->
 
@@ -1203,7 +1142,7 @@
                 </figure>
                 
                 <a href="#" class="btn red-btn bind-register">Sign up for FREE</a>
-				<a href="#" class="btn red-btn bind-register">Login With Facebook</a>
+				<a href="<?php echo base_url();?>login-fb" class="btn red-btn bind-register">Login With Facebook</a>
             </div>
 
             <div class="dm-right">

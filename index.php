@@ -212,6 +212,8 @@ if (defined('ENVIRONMENT'))
    	 define('PW_MAIL','a123456');
 	 define('SMTP_SERVER','smtp.tenten.vn');
      define('PATH_FOLDER',$_SERVER['DOCUMENT_ROOT']);
+     define('FBAPPID','771797639499496');
+     define('FBAPPSR','8a1727618cc16a3e6762ee0fd7b2fa4d');
  }
  else
  {
@@ -225,6 +227,8 @@ if (defined('ENVIRONMENT'))
     define('PW_MAIL','a123456');
 	define('SMTP_SERVER','smtp.tenten.vn');
 	define('PATH_FOLDER','/export/linux/www/com/l/a/saigonfutsal/3/9/0936222844.H1039/saigonfutsal.com');
+	 define('FBAPPID','771797639499496');
+     define('FBAPPSR','8a1727618cc16a3e6762ee0fd7b2fa4d');
  }
 require_once BASEPATH.'core/CodeIgniter.php';
 

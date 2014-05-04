@@ -682,6 +682,8 @@ var app = {
         }
     },
     initCookieHeader: function () {
+    	var cookie_check = $('#cookie-wrapper');
+    	if (cookie_check.length){
         if (null === $.cookie('arsenal-cookie-warning')) {
             var $cookieWrap = $('#cookie-wrapper');
             $cookieWrap.slideDown('fast');
@@ -696,6 +698,7 @@ var app = {
                 domain: domainName,
                 expires: 1095
             });
+        }
         }
     }
 };

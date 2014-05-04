@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "home/index";
+$route['login-social/login-fb']='home/member/facebook';
 $route['trang-chu'] = "home/home/index";
 $route['san-pham'] = "home/product/list_product";
 $route['san-pham/page/(:any)'] = "home/product/list_product";
