@@ -900,5 +900,27 @@ if(!function_exists('columnSort_desc')){
 			return $info_page;
 		}
 	}
+	if(!function_exists('getVideosYouTube')){
+		function getVideos($channel){
+			if($channel == ""){
+				return false;   
+			}
+			/* Get number of videos */
+			$books = simplexml_load_file('http://gdata.youtube.com/feeds/base/users/'.$channel.'/uploads?max-results=1&start-index=1');
+			$numb_videos = $books->children( 'openSearch', true )->totalResults; 
+			settype($numb_videos, "integer");
+
+			$ids = array();
+			$i = 1;
+			for($i = 1; $i <= $numb_videos; $i++){
+				$books = simplexml_load_file('http://gdata.youtube.com/feeds/base/users/'.$channel.'/uploads?max-results=1&start-index='.$i);
+				$ApiLink  = $books->entry->id;
+				settype($ApiLink, "string");
+				$ApiLink = str_replace("http://gdata.youtube.com/feeds/base/videos/", "", $ApiLink);
+				array_push($ids, $ApiLink);
+			}
+			return $ids;    
+		}
+	}
 }
 ?>
