@@ -1,935 +1,904 @@
 <?php
 
-if (!function_exists("removesign")) {
+if(!function_exists("removesign")){
 
 
 
-    function removesign($str)
+	function removesign($str){
 
-    {
+		$coDau = array(
 
-        $coDau = array(
+			"à",
 
-            "à",
+			"á",
 
-            "á",
+			"ạ",
 
-            "ạ",
+			"ả",
 
-            "ả",
+			"ã",
 
-            "ã",
+			"â",
 
-            "â",
+			"ầ",
 
-            "ầ",
+			"ấ",
 
-            "ấ",
+			"ậ",
 
-            "ậ",
+			"ẩ",
 
-            "ẩ",
+			"ẫ",
 
-            "ẫ",
+			"ă",
 
-            "ă",
+			"ằ",
 
-            "ằ",
+			"ắ",
 
-            "ắ",
+			"ặ",
 
-            "ặ",
+			"ẳ",
 
-            "ẳ",
+			"ẵ",
 
-            "ẵ",
+			"è",
 
-            "è",
+			"é",
 
-            "é",
+			"ẹ",
 
-            "ẹ",
+			"ẻ",
 
-            "ẻ",
+			"ẽ",
 
-            "ẽ",
+			"ê",
 
-            "ê",
+			"ề",
 
-            "ề",
+			"ế",
 
-            "ế",
+			"ệ",
 
-            "ệ",
+			"ể",
 
-            "ể",
+			"ễ",
 
-            "ễ",
+			"ì",
 
-            "ì",
+			"í",
 
-            "í",
+			"ị",
 
-            "ị",
+			"ỉ",
 
-            "ỉ",
+			"ĩ",
 
-            "ĩ",
+			"ò",
 
-            "ò",
+			"ó",
 
-            "ó",
+			"ọ",
 
-            "ọ",
+			"ỏ",
 
-            "ỏ",
+			"õ",
 
-            "õ",
+			"ô",
 
-            "ô",
+			"ồ",
 
-            "ồ",
+			"ố",
 
-            "ố",
+			"ộ",
 
-            "ộ",
+			"ổ",
 
-            "ổ",
+			"ỗ",
 
-            "ỗ",
+			"ơ",
 
-            "ơ",
+			"ờ",
 
-            "ờ",
+			"ớ",
 
-            "ớ",
+			"ợ",
 
-            "ợ",
+			"ở",
 
-            "ở",
+			"ỡ",
 
-            "ỡ",
+			"ù",
 
-            "ù",
+			"ú",
 
-            "ú",
+			"ụ",
 
-            "ụ",
+			"ủ",
 
-            "ủ",
+			"ũ",
 
-            "ũ",
+			"ư",
 
-            "ư",
+			"ừ",
 
-            "ừ",
+			"ứ",
 
-            "ứ",
+			"ự",
 
-            "ự",
+			"ử",
 
-            "ử",
+			"ữ",
 
-            "ữ",
+			"ỳ",
 
-            "ỳ",
+			"ý",
 
-            "ý",
+			"ỵ",
 
-            "ỵ",
+			"ỷ",
 
-            "ỷ",
+			"ỹ",
 
-            "ỹ",
+			"đ",
 
-            "đ",
+			"À",
 
-            "À",
+			"Á",
 
-            "Á",
+			"Ạ",
 
-            "Ạ",
+			"Ả",
 
-            "Ả",
+			"Ã",
 
-            "Ã",
+			"Â",
 
-            "Â",
+			"Ầ",
 
-            "Ầ",
+			"Ấ",
 
-            "Ấ",
+			"Ậ",
 
-            "Ậ",
+			"Ẩ",
 
-            "Ẩ",
+			"Ẫ",
 
-            "Ẫ",
+			"Ă",
 
-            "Ă",
+			"Ằ",
 
-            "Ằ",
+			"Ắ",
 
-            "Ắ",
+			"Ặ",
 
-            "Ặ",
+			"Ẳ",
 
-            "Ẳ",
+			"Ẵ",
 
-            "Ẵ",
+			"È",
 
-            "È",
+			"É",
 
-            "É",
+			"Ẹ",
 
-            "Ẹ",
+			"Ẻ",
 
-            "Ẻ",
+			"Ẽ",
 
-            "Ẽ",
+			"Ê",
 
-            "Ê",
+			"Ề",
 
-            "Ề",
+			"Ế",
 
-            "Ế",
+			"Ệ",
 
-            "Ệ",
+			"Ể",
 
-            "Ể",
+			"Ễ",
 
-            "Ễ",
+			"Ì",
 
-            "Ì",
+			"Í",
 
-            "Í",
+			"Ị",
 
-            "Ị",
+			"Ỉ",
 
-            "Ỉ",
+			"Ĩ",
 
-            "Ĩ",
+			"Ò",
 
-            "Ò",
+			"Ó",
 
-            "Ó",
+			"Ọ",
 
-            "Ọ",
+			"Ỏ",
 
-            "Ỏ",
+			"Õ",
 
-            "Õ",
+			"Ô",
 
-            "Ô",
+			"Ồ",
 
-            "Ồ",
+			"Ố",
 
-            "Ố",
+			"Ộ",
 
-            "Ộ",
+			"Ổ",
 
-            "Ổ",
+			"Ỗ",
 
-            "Ỗ",
+			"Ơ",
 
-            "Ơ",
+			"Ờ",
 
-            "Ờ",
+			"Ớ",
 
-            "Ớ",
+			"Ợ",
 
-            "Ợ",
+			"Ở",
 
-            "Ở",
+			"Ỡ",
 
-            "Ỡ",
+			"Ù",
 
-            "Ù",
+			"Ú",
 
-            "Ú",
+			"Ụ",
 
-            "Ụ",
+			"Ủ",
 
-            "Ủ",
+			"Ũ",
 
-            "Ũ",
+			"Ư",
 
-            "Ư",
+			"Ừ",
 
-            "Ừ",
+			"Ứ",
 
-            "Ứ",
+			"Ự",
 
-            "Ự",
+			"Ử",
 
-            "Ử",
+			"Ữ",
 
-            "Ữ",
+			"Ỳ",
 
-            "Ỳ",
+			"Ý",
 
-            "Ý",
+			"Ỵ",
 
-            "Ỵ",
+			"Ỷ",
 
-            "Ỷ",
+			"Ỹ",
 
-            "Ỹ",
+			"Đ",
 
-            "Đ",
+			"ê",
 
-            "ê",
+			"ù",
 
-            "ù",
+			"à");
 
-            "à");
+		$khongDau = array(
 
-        $khongDau = array(
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"a",
 
-            "a",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"e",
 
-            "e",
+			"i",
 
-            "i",
+			"i",
 
-            "i",
+			"i",
 
-            "i",
+			"i",
 
-            "i",
+			"i",
 
-            "i",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"o",
 
-            "o",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"u",
 
-            "u",
+			"y",
 
-            "y",
+			"y",
 
-            "y",
+			"y",
 
-            "y",
+			"y",
 
-            "y",
+			"y",
 
-            "y",
+			"d",
 
-            "d",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"A",
 
-            "A",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"E",
 
-            "E",
+			"I",
 
-            "I",
+			"I",
 
-            "I",
+			"I",
 
-            "I",
+			"I",
 
-            "I",
+			"I",
 
-            "I",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"O",
 
-            "O",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"U",
 
-            "U",
+			"Y",
 
-            "Y",
+			"Y",
 
-            "Y",
+			"Y",
 
-            "Y",
+			"Y",
 
-            "Y",
+			"Y",
 
-            "Y",
+			"D",
 
-            "D",
+			"e",
 
-            "e",
+			"u",
 
-            "u",
+			"a");
 
-            "a");
+		return str_replace($coDau, $khongDau, $str);
 
-        return str_replace($coDau, $khongDau, $str);
-
-    }
+	}
 
 }
 
-if (!function_exists('sub_string')) {
+if(!function_exists('sub_string')){
 
-    function sub_string($chuoi, $gioihan)
-
-    {
+	function sub_string($chuoi, $gioihan){
 
 
 
-        // nếu độ dài chuỗi nhỏ hơn hay bằng vị trí cắt
+		// nếu độ dài chuỗi nhỏ hơn hay bằng vị trí cắt
 
-        // thì không thay đổi chuỗi ban đầu
+		// thì không thay đổi chuỗi ban đầu
 
-        if (strlen($chuoi) <= $gioihan) {
+		if(strlen($chuoi) <= $gioihan){
 
-            return $chuoi;
+			return $chuoi;
 
-        } else {
+		}else{
 
 
 
-            if (strpos($chuoi, " ", $gioihan) > $gioihan) {
+			if(strpos($chuoi, " ", $gioihan) > $gioihan){
 
-                $new_gioihan = strpos($chuoi, " ", $gioihan);
+				$new_gioihan = strpos($chuoi, " ", $gioihan);
 
-                $new_chuoi = substr($chuoi, 0, $new_gioihan) . "...";
+				$new_chuoi = substr($chuoi, 0, $new_gioihan) . "...";
 
-                return $new_chuoi;
+				return $new_chuoi;
 
-            }
+			}
 
-            $new_chuoi = substr($chuoi, 0, $gioihan) . "...";
+			$new_chuoi = substr($chuoi, 0, $gioihan) . "...";
 
-            return $new_chuoi;
+			return $new_chuoi;
 
-        }
+		}
 
-    }
+	}
 
 
 
 }
 
-if (!function_exists("loaibohtmltrongvanban")) {
+if(!function_exists("loaibohtmltrongvanban")){
 
-    function loaibohtmltrongvanban($html, $exceptions = null)
+	function loaibohtmltrongvanban($html, $exceptions = null){
 
-    {
+		if(is_array($exceptions) && !empty($exceptions)){
 
-        if (is_array($exceptions) && !empty($exceptions)) {
+			foreach($exceptions as $exception){
 
-            foreach ($exceptions as $exception) {
+				$openTagPattern = '/<(' . $exception . ')(\s.*?)?>/msi';
 
-                $openTagPattern = '/<(' . $exception . ')(\s.*?)?>/msi';
+				$closeTagPattern = '/<\/(' . $exception . ')>/msi';
 
-                $closeTagPattern = '/<\/(' . $exception . ')>/msi';
+				$html = preg_replace(array($openTagPattern, $closeTagPattern), array('||l|\1\2|r||',
 
-                $html = preg_replace(array($openTagPattern, $closeTagPattern), array('||l|\1\2|r||',
+						'||l|/\1|r||'), $html);
 
-                        '||l|/\1|r||'), $html);
+			}
 
-            }
+		}
 
-        }
+		$html = preg_replace('/<.*?>/msi', '', $html);
 
-        $html = preg_replace('/<.*?>/msi', '', $html);
+		if(is_array($exceptions)){
 
-        if (is_array($exceptions)) {
+			$html = str_replace('||l|', '<', $html);
 
-            $html = str_replace('||l|', '<', $html);
+			$html = str_replace('|r||', '>', $html);
 
-            $html = str_replace('|r||', '>', $html);
+		}
 
-        }
+		return $html; // Code in Vn4rum.net - Thế giới học tập
 
-        return $html; // Code in Vn4rum.net - Thế giới học tập
-
-    }
+	}
 
 }
 
-if (!function_exists('columnSort_desc')) {
+if(!function_exists('columnSort_desc')){
 
-    function columnSort_desc($unsorted, $column)
+	function columnSort_desc($unsorted, $column){
 
-    {
+		$sorted = $unsorted;
 
-        $sorted = $unsorted;
+		for($i = 0; $i < sizeof($sorted) - 1; $i++){
 
-        for ($i = 0; $i < sizeof($sorted) - 1; $i++) {
+			for($j = 0; $j < sizeof($sorted) - 1 - $i; $j++)
 
-            for ($j = 0; $j < sizeof($sorted) - 1 - $i; $j++)
+			if($sorted[$j][$column] < $sorted[$j + 1][$column]){
 
-                if ($sorted[$j][$column] < $sorted[$j + 1][$column]) {
+				$tmp = $sorted[$j];
 
-                    $tmp = $sorted[$j];
+				$sorted[$j] = $sorted[$j + 1];
 
-                    $sorted[$j] = $sorted[$j + 1];
+				$sorted[$j + 1] = $tmp;
 
-                    $sorted[$j + 1] = $tmp;
+			}
 
-                }
+		}
 
-        }
+		return $sorted;
 
-        return $sorted;
+	}
 
-    }
+	if(!function_exists('compare_date')){
 
-    if (!function_exists('compare_date')) {
+		function compare_date($dateBefore){
 
-        function compare_date($dateBefore)
+			if($dateBefore != ''){
 
-        {
+				$date = date('d/m/Y');
 
-            if ($dateBefore != '') {
+				$pardate = explode('/',$date);
 
-                $date = date('d/m/Y');
+				$date1 = date("d/m/y", mktime(0, 0, 0, $pardate[1], $pardate[0], $pardate[2]));
 
-                $pardate = explode('/',$date);
+				$date3 = $dateBefore;
 
-                $date1 = date("d/m/y", mktime(0, 0, 0, $pardate[1], $pardate[0], $pardate[2]));
+				$parts = explode('/', $date3);
 
-                $date3 = $dateBefore;
+				$date4 = date("d/m/y", mktime(0, 0, 0, $parts[1], $parts[0], $parts[2]));
 
-                $parts = explode('/', $date3);
+				if(($date4 < $date1) || ($date4 == $date1)){
 
-                $date4 = date("d/m/y", mktime(0, 0, 0, $parts[1], $parts[0], $parts[2]));
+					return 0;
 
-                if (($date4 < $date1) || ($date4 == $date1)) {
+				}else{
 
-                    return 0;
+					return 1;
 
-                } else {
-
-                    return 1;
-
-                }
+				}
 
                 
 
-            } else {
+			}else{
 
-                return 0;
+				return 0;
 
-            }
+			}
 
-        }
+		}
 
-    }
+	}
 
-    if(!function_exists('format_money'))
+	if(!function_exists('format_money')){
 
-    {
+		function format_money($n){
 
-        function format_money($n)
+			// first strip any formatting;
 
-        {
-
-             // first strip any formatting;
-
-        $n = (0+str_replace(",","",$n));
+			$n = (0+str_replace(",","",$n));
 
         
 
-        // is this a number?
+			// is this a number?
 
-        if(!is_numeric($n)) return false;
+			if(!is_numeric($n)) return false;
 
         
 
-        // now filter it;
+			// now filter it;
 
       
 
         
 
-        return number_format($n);
+			return number_format($n);
 
-        }
+		}
 
-    }
+	}
 
-    if(!function_exists('rand_string'))
+	if(!function_exists('rand_string')){
 
-    {
+		function rand_string( $length ){
 
-        function rand_string( $length ) {
+			$str='';
 
-            $str='';
+			$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+			$size = strlen( $chars );
 
-        $size = strlen( $chars );
+			for( $i = 0; $i < $length; $i++ ){
 
-        for( $i = 0; $i < $length; $i++ ) {
+				$str .= $chars[ rand( 0, $size - 1 ) ];
 
-        $str .= $chars[ rand( 0, $size - 1 ) ];
+			}
 
-         }
+			return $str;
 
-        return $str;
+		}
 
-}
+	}
 
-    }
+	if(!function_exists('bd_nice_number')){
 
-    if(!function_exists('bd_nice_number'))
+		function bd_nice_number($n){
 
-    {
+			// first strip any formatting;
 
-        function bd_nice_number($n) {
-
-        // first strip any formatting;
-
-        $n = (0+str_replace(",","",$n));
+			$n = (0+str_replace(",","",$n));
 
         
 
-        // is this a number?
+			// is this a number?
 
-        if(!is_numeric($n)) return false;
-
-        
-
-        // now filter it;
-
-        if($n>1000000000000) return round(($n/1000000000000),1).' tỉ';
-
-        else if($n>1000000000) return round(($n/1000000000),1).' trăm triệu';
-
-        else if($n>1000000) return round(($n/1000000),1).' triệu';
-
-        else if($n>1000) return round(($n/1000),1).' ngàn';
+			if(!is_numeric($n)) return false;
 
         
 
-        return number_format($n);
+			// now filter it;
 
-        }
+			if($n>1000000000000) return round(($n/1000000000000),1).' tỉ';
 
-    }
+			else if($n>1000000000) return round(($n/1000000000),1).' trăm triệu';
 
-    if(!function_exists('full_url_'))
+			else if($n>1000000) return round(($n/1000000),1).' triệu';
 
-    {
+			else if($n>1000) return round(($n/1000),1).' ngàn';
 
-        function full_url_($s)
+        
 
-        {
+			return number_format($n);
 
-            $ssl = (!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? true:false;
+		}
 
-            $sp = strtolower($s['SERVER_PROTOCOL']);
+	}
 
-            $protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
+	if(!function_exists('full_url_')){
 
-            $port = $s['SERVER_PORT'];
+		function full_url_($s){
 
-            $port = ((!$ssl && $port=='80') || ($ssl && $port=='443')) ? '' : ':'.$port;
+			$ssl = (!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? true:false;
 
-            $host = isset($s['HTTP_X_FORWARDED_HOST']) ? $s['HTTP_X_FORWARDED_HOST'] : isset($s['HTTP_HOST']) ? $s['HTTP_HOST'] : $s['SERVER_NAME'];
+			$sp = strtolower($s['SERVER_PROTOCOL']);
 
-            return $protocol . '://' . $host . $port . $s['REQUEST_URI'];
+			$protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
 
-        }
+			$port = $s['SERVER_PORT'];
 
-    }
+			$port = ((!$ssl && $port=='80') || ($ssl && $port=='443')) ? '' : ':'.$port;
 
-    if(!function_exists('time_diff_string'))
+			$host = isset($s['HTTP_X_FORWARDED_HOST']) ? $s['HTTP_X_FORWARDED_HOST'] : isset($s['HTTP_HOST']) ? $s['HTTP_HOST'] : $s['SERVER_NAME'];
 
-    {
+			return $protocol . '://' . $host . $port . $s['REQUEST_URI'];
 
-        function time_diff_string($from, $to, $full = false) {
+		}
 
-        $from = new DateTime($from);
+	}
 
-        $to = new DateTime($to);
+	if(!function_exists('time_diff_string')){
 
-        $diff = $to->diff($from);
+		function time_diff_string($from, $to, $full = false){
+
+			$from = new DateTime($from);
+
+			$to = new DateTime($to);
+
+			$diff = $to->diff($from);
 
     
 
-        $diff->w = floor($diff->d / 7);
+			$diff->w = floor($diff->d / 7);
 
-        $diff->d -= $diff->w * 7;
+			$diff->d -= $diff->w * 7;
 
     
 
-        $string = array(
+			$string = array(
 
-            'y' => 'year',
+				'y' => 'year',
 
-            'm' => 'month',
+				'm' => 'month',
 
-            'w' => 'week',
+				'w' => 'week',
 
-            'd' => 'day',
+				'd' => 'day',
 
-            'h' => 'hour',
+				'h' => 'hour',
 
-            'i' => 'minute',
+				'i' => 'minute',
 
-            's' => 'second',
+				's' => 'second',
 
-        );
+			);
 
-        foreach ($string as $k => &$v) {
+			foreach($string as $k => &$v){
 
-            if ($diff->$k) {
+				if($diff->$k){
 
-                $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+					$v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
 
-            } else {
+				}else{
 
-                unset($string[$k]);
+					unset($string[$k]);
 
-            }
+				}
 
-        }
+			}
 
-        if (!$full) $string = array_slice($string, 0, 1);
+			if(!$full) $string = array_slice($string, 0, 1);
 
-        return $string ? implode(', ', $string) . '' : '';
+			return $string ? implode(', ', $string) . '' : '';
 
-}
+		}
 
-    }
-    if(!function_exists('get_yt_title'))
-    {
-		function get_yt_title($clip_id)
-		{
-		    $entry = simplexml_load_file('http://gdata.youtube.com/feeds/api/videos/' . $clip_id);
+	}
+	if(!function_exists('get_yt_title')){
+		function get_yt_title($clip_id){
+			$entry = simplexml_load_file('http://gdata.youtube.com/feeds/api/videos/' . $clip_id);
 		    
-		    return ($entry) ? ucwords(strtolower($entry->children('http://search.yahoo.com/mrss/')->group->title)) : false;
+			return ($entry) ? ucwords(strtolower($entry->children('http://search.yahoo.com/mrss/')->group->title)) : false;
 		}	
 	}
-	if(!function_exists('loadPostFace'))
-	{
+	if(!function_exists('loadPostFace')){
 		function loadPostFace(){
-	    $page_id = '1429871157244055'; // Page ID or username
-		$token = '553435274702353|OaJc7d2WCoDv83AaR4JchNA_Jgw'; // Valid access token, I used app token here but you might want to use a user token .. up to you
+			$page_id = '1429871157244055'; // Page ID or username
+			$token = '553435274702353|OaJc7d2WCoDv83AaR4JchNA_Jgw'; // Valid access token, I used app token here but you might want to use a user token .. up to you
 
-		$page_posts = file_get_contents('https://graph.facebook.com/'.$page_id.'/posts?fields=message&access_token='.$token); // > fields=message < since you want to get only 'message' property (make your call faster in milliseconds) you can remove it
+			$page_posts = file_get_contents('https://graph.facebook.com/'.$page_id.'/posts?fields=message&access_token='.$token); // > fields=message < since you want to get only 'message' property (make your call faster in milliseconds) you can remove it
 
-		$pageposts = json_decode($page_posts); 
-	     return $pageposts;
-}
+			$pageposts = json_decode($page_posts); 
+			return $pageposts;
+		}
 	}
-	if(!function_exists('fetchUrl'))
-	{
-	function fetchUrl($url){
-	return file_get_contents($url);
+	if(!function_exists('fetchUrl')){
+		function fetchUrl($url){
+			return file_get_contents($url);
+		}
 	}
-	}
-	if(!function_exists('loadProfilePageFace'))
-	{
+	if(!function_exists('loadProfilePageFace')){
 		function loadProfilePageFace(){
-	    $page_id = '1429871157244055'; // Page ID or username
-		$info_page = file_get_contents("https://graph.facebook.com/".$page_id);
-		$info_page = json_decode($info_page);
-	    return $info_page;
-}
+			$page_id = '1429871157244055'; // Page ID or username
+			$info_page = file_get_contents("https://graph.facebook.com/".$page_id);
+			$info_page = json_decode($info_page);
+			return $info_page;
+		}
 	}
-	
-
 }
 ?>
