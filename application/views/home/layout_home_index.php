@@ -484,9 +484,9 @@
                                  <img  alt="Arsenal 360" src="http://img.youtube.com/vi/<?php echo $clip_home['code']?>/sddefault.jpg">	
                                  <div class="video"></div>
                                  <div class="overlay"></div>
-                                 <div class="reveal">
+                                 <!--<div class="reveal">
                                     <p><?php echo strtoupper(get_yt_title($clip_home['code']))?></p>
-                                 </div>
+                                 </div>-->
                                  <h4><?php echo $clip_home['title']?></h4>
                               </a>
                               <!--/feature -->
