@@ -11,8 +11,8 @@ class MY_Controller extends CI_Controller
     }
     public function list_cate()
     {
-        $this->load->model('catemodel');
-        $this->data['list_cate']=$this->catemodel->load_cate();
+        $this->load->model('catenewhomemodel');
+        $this->data['list_cate']=$this->catenewhomemodel->load_cate_new();
     }
     public function info_company()
     {

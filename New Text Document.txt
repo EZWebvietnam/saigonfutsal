@@ -1,0 +1,10 @@
+$authToken = $this->fetchUrl("https://graph.facebook.com/oauth/access_token?grant_type=client_credentials&client_id={}&client_secret={$app_secret}");
+
+	$json_object = $this->fetchUrl("https://graph.facebook.com/1493427627540371/posts?access_token=CAAK98iQkDugBAHusVZBfG1x1BwX3ec2fi4vMrdXVGZAJIf5YP7yQCKtzanF8nNPZC8lFvndF0vQG1z9ul5VwoNw7fcyLaMtRRl8ZBOODsTorbX8u2fmDksw57d6OYXWfvJshJ5bKtSOZBqXM7fT02FGy17VCNg1ZBhaHgt24HPTDgDUyP5yPL2OvsaHu6kRDEZD");
+	$feedarray   = json_decode($json_object , true );
+	print_r($feedarray);exit;
+	foreach ( $feedarray as $feed_data )
+	{
+	    var_dump( $feed_data);
+	}
+	exit;

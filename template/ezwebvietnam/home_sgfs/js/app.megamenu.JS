@@ -10,19 +10,7 @@ app.megamenu = {
         if (app.device.sizeIs('small') || app.megamenu.initialised !== false) {
             return;
         }
-        $.getJSON('/ajax/mega-menu', function (response) {
-            $('#megamenu-news').after(response.news);
-            $('#megamenu-teams').after(response.teams);
-            $('#megamenu-fixtures').after(response.fixtures);
-            $('#megamenu-tickets').after(response.tickets);
-            $('#megamenu-history').after(response.history);
-            $('#megamenu-club').after(response.club);
-            $('#megamenu-fans').after(response.fans);
-            try {
-                twttr.widgets.load();
-            } catch (e) {}
-            app.megamenu.initialised = true;
-        });
+        
     },
     bindTouchEvents: function () {
         $('nav > ul > li > a').on('touchstart', function (e) {

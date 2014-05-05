@@ -23,5 +23,13 @@ class Newshomemodel extends CI_Model
 		$query=$this->db->query($sql);
 		return $query->result_array();
 	}
+	public function news_home_1($id_cate,$id_new_slide)
+	{
+		$id_new_slide = addslashes($id_new_slide);
+		$id_cate = intval($id_cate);
+		$sql="SELECT * FROM {$this->_name} WHERE id_new NOT IN ($id_new_slide) AND id_cate = $id_cate ORDER BY create_date DESC LIMIT 3";
+		$query=$this->db->query($sql);
+		return $query->result_array();
+	}
 }
 ?>

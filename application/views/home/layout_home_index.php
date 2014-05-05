@@ -116,66 +116,56 @@
                         <nav role="navigation">
                            <ul>
                               <li><a href="<?php echo base_url();?>" class="active">Trang chủ</a></li>
-                              <li><a href="/news" id="megamenu-news"><span>Tin tức</span></a>
-                              <div class="mega-nav" style="display: none;">
-								<div class="column">
-								   <ul>
-								      <li>
-								         <a href="/ticketexchange">Ticket Exchange</a>
-								      </li>
-								      <li>
-								         <a href="/tickets/arsenal-away-travel-uk">Domestic Travel</a>
-								      </li>
-								      <li>
-								         <a href="/tickets/arsenal-european-travel">European Travel</a>
-								      </li>
-								      <li>
-								         <a href="/tickets/ticket-categories-and-pricing">Ticket Categories/Pricing</a>
-								      </li>
-								      <li>
-								         <a href="/hospitality">Hospitality</a>
-								      </li>
-								      <li>
-								         <a href="/membership/tickets/disabled-supporters-information-page">Disabled Supporters Information Page</a>
-								      </li>
-								   </ul>
-								</div>
-								<div class="left-shadow"></div>
-								<div class="right-shadow"></div>
-								</div>
+                              <li>
+                                 <a href="<?php echo base_url();?>tin-tuc" id="megamenu-news"><span>Tin tức</span></a>
+                                 <div class="mega-nav" style="display: none;">
+                                    <div class="column last-column">
+                                       <ul>
+                                       		<?php 
+                                       		foreach($list_cate as $cate_new)
+                                       		{
+                                       		?>
+                                          <li>
+                                             <a href="<?php echo base_url();?>tin-tuc/<?php echo $cate_new['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($cate_new['title'])))?>"><?php echo $cate_new['title']?></a>
+                                          </li>
+                                          <?php } ?>
+                                       </ul>
+                                    </div>
+                                 </div>
                               </li>
                               <li><a href="/teams" id="megamenu-teams">Đội bóng</a></li>
-                              <li><a href="/teams" id="megamenu-teams">Sân bóng</a></li>
-                              <li><a href="/teams" id="megamenu-leagues">Giải đấu</a>
-                              <div class="mega-nav" style="display: none;">
-								<div class="column">
-								   <ul>
-								      <li>
-								         <a href="/ticketexchange">Ticket Exchange</a>
-								      </li>
-								      <li>
-								         <a href="/tickets/arsenal-away-travel-uk">Domestic Travel</a>
-								      </li>
-								      <li>
-								         <a href="/tickets/arsenal-european-travel">European Travel</a>
-								      </li>
-								      <li>
-								         <a href="/tickets/ticket-categories-and-pricing">Ticket Categories/Pricing</a>
-								      </li>
-								      <li>
-								         <a href="/hospitality">Hospitality</a>
-								      </li>
-								      <li>
-								         <a href="/membership/tickets/disabled-supporters-information-page">Disabled Supporters Information Page</a>
-								      </li>
-								   </ul>
-								</div>
-								<div class="left-shadow"></div>
-								<div class="right-shadow"></div>
-								</div>
+                              <li><a href="/teams" id="megamenu-stadium">Sân bóng</a></li>
+                              <li>
+                                 <a href="/teams" id="megamenu-leagues">Giải đấu</a>
+                                 <div class="mega-nav" style="display: none;">
+                                    <div class="column">
+                                       <ul>
+                                          <li>
+                                             <a href="/ticketexchange">Ticket Exchange</a>
+                                          </li>
+                                          <li>
+                                             <a href="/tickets/arsenal-away-travel-uk">Domestic Travel</a>
+                                          </li>
+                                          <li>
+                                             <a href="/tickets/arsenal-european-travel">European Travel</a>
+                                          </li>
+                                          <li>
+                                             <a href="/tickets/ticket-categories-and-pricing">Ticket Categories/Pricing</a>
+                                          </li>
+                                          <li>
+                                             <a href="/hospitality">Hospitality</a>
+                                          </li>
+                                          <li>
+                                             <a href="/membership/tickets/disabled-supporters-information-page">Disabled Supporters Information Page</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="left-shadow"></div>
+                                    <div class="right-shadow"></div>
+                                 </div>
                               </li>
                               <li><a href="/history" id="megamenu-history">Sự kiện</a></li>
-                              <li><a href="/the-club" id="megamenu-club">Media</a></li>
+                              <li><a href="/the-club" id="megamenu-sfgnew">Media</a></li>
                            </ul>
                         </nav>
                         <!--//navigation -->	        
@@ -196,13 +186,14 @@
                         <!--//county-select -->	        	    
                         <ul id="quick-links" style="height: 43px;">
                            <li>
-                           <a href="http://arsenaldirect.arsenal.com/?utm_source=NewArsenal.com&amp;utm_medium=OnlineShoppingButton&amp;utm_campaign=ArsenalOnlineShopping">Giới thiệu SGF</a><a href="#" class="hidden">more options</a></li>
+                              <a href="http://arsenaldirect.arsenal.com/?utm_source=NewArsenal.com&amp;utm_medium=OnlineShoppingButton&amp;utm_campaign=ArsenalOnlineShopping">Giới thiệu SGF</a><a href="#" class="hidden">more options</a>
+                           </li>
+                           <li><a href="http://www.arsenal.com/hospitality">Bản tin SGF</a></li>
                            <li><a href="http://www.arsenal.com/hospitality">Đăng ký tham dự giải</a></li>
                            <li><a href="https://www.arsenallotto.co.uk">Gửi bài viết</a></li>
                            <li><a href="/juniorgunners">Thị trường cầu thủ</a></li>
                            <li><a href="http://player.arsenal.com">Liên hệ</a></li>
-                           
-                        </ul>    
+                        </ul>
                         <div id="site-search">
                            <a class='search' href="/search">Tìm kiếm</a>
                            <form action="/search" method="get">
@@ -277,106 +268,144 @@
                <div id="wrapper" class="homepage">
                   <div id="content">
                      <article>
-                        <h1><a href="/news/news-archive?category=first">FUST News</a></h1>
+                     <h1><a href="/news/news-archive?category=first">Tin tức nổi bật</a></h1>
                         <section class="primary">
                            <div class="article-image image">
-                              <img  alt="Training 05/04/2014" src="/assets/_files/scaled/456x257/apr_14/gun__1396705340_training_050414.jpg">    
-                              <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span>Arsenal train ahead of Everton game</span></a>
+                           	<?php 
+                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image']) && $news_slide_1[0]['image']!='')
+                           	{
+                           	?>
+                              <img width="456" height="257" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_slide_1[0]['image']?>">  
+                              <?php } else {?>
+                               <img width="456" height="257" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <?php } ?>  
+                              <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_slide_1[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
-                              <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" >Arsenal train ahead of Everton game</a></h2>
-                              <p>Picture special from the training ground as Arsene Wenger's side prepare for Sunday's encounter at Goodison Park</p>
+                              <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_slide_1[0]['title']?></a></h2>
+                              
+                              <p><?php echo sub_string(loaibohtmltrongvanban($news_slide_1[0]['content']),112);?></p>
                            </div>
                         </section>
-                        <section class="secondary">
-                           <div class="article-image ">
-                              <img  alt="Matchday Show Everton v Arsenal" src="/assets/_files/scaled/120x68/mar_14/gun__1396289267_mds_everton_arsenal_711.jpeg">
-                              <a href="/arsenalmatchdayshow" ><span>#EFCvAFC: live audio on Arsenal Player</span></a>
-                           </div>
-                           <div class="article-info">
-                              <h2><a href="/arsenalmatchdayshow" >#EFCvAFC: live audio on Arsenal Player</a></h2>
-                              <p>Login for our Matchday Show with build-up, commentary and post-match debate </p>
-                           </div>
-                        </section>
-                        <section class="secondary">
-                           <div class="article-image video">
-                              <img  alt="Arsène Wenger" src="/assets/_files/scaled/120x68/feb_14/gun__1392632976_wenger_liverpool4.jpg">
-                              <a href="/news/news-archive/20140404/wenger-sunday-s-match-a-six-pointer" ><span>Wenger - Sunday’s match a six-pointer</span></a>
-                           </div>
-                           <div class="article-info">
-                              <h2><a href="/news/news-archive/20140404/wenger-sunday-s-match-a-six-pointer" >Wenger - Sunday’s match a six-pointer</a></h2>
-                              <p>'For us it's very difficult to imagine the impact it will have on finishing fourth'</p>
-                           </div>
-                        </section>
+                        
                         <section class="tertiary">
                            <ul>
-                              <li>
-                                 <a href="/news/news-archive/20140403/ox-everton-full-backs-a-massive-threat" class="video" >
-                                 Ox - Everton full backs a massive threat        </a>
-                              </li>
+                           <?php 
+                                    foreach($new_slide_sub as $slide_sub)
+                                    {
+                                    ?>
                               <li>
                                  <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
-                                 Arsenal Player of the Month - VOTE NOW        </a>
+                                 <?php echo sub_string($slide_sub['title'],50)?>        </a>
                               </li>
-                              <li>
-                                 <a href="/news/news-archive/20140401/march-goal-of-the-month-vote-now" class="video" >
-                                 March Goal of the Month - VOTE NOW        </a>
-                              </li>
+                              <?php } ?>
                            </ul>
                         </section>
-                        <section class="secondary">
-                           <div class="article-image ">
-                              <img  alt="Chalkboard" src="/assets/_files/scaled/120x68/oct_13/gun__1382108923_chalkboard.jpg">
-                              <a href="http://www.arsenal.com/match-menu/3632846/first-team/arsenal-v-manchester-city?tab=statscentre" ><span>Check out our Stats Centre</span></a>
+                        
+                        <h1><a href="/news/news-archive?category=first">Tin trong nước</a></h1>
+                        <section class="primary">
+                           <div class="article-image image">
+                           	<?php 
+                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_1[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_1[0]['image']) && $news_1[0]['image']!='')
+                           	{
+                           	?>
+                              <img width="456" height="257" alt="<?php echo $news_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_1[0]['image']?>">  
+                              <?php } else {?>
+                               <img width="456" height="257" alt="<?php echo $news_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <?php } ?>  
+                              <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_1[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
-                              <h2><a href="http://www.arsenal.com/match-menu/3632846/first-team/arsenal-v-manchester-city?tab=statscentre" >Check out our Stats Centre</a></h2>
-                              <p>Get the latest interactive heatmaps, chalkboard and player stats from the Manchester City game</p>
+                              <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_1[0]['title']?></a></h2>
+                              
+                              <p><?php echo sub_string(loaibohtmltrongvanban($news_1[0]['content']),112);?></p>
                            </div>
                         </section>
-                        <h2><a href="/news/news-archive?category=academy">Academy</a></h2>
+                        
+                        <section class="tertiary">
+                           <ul>
+                             <?php 
+                             foreach($news_1 as $new_1_)
+                             {
+                             if($new_1_['id_new']!=$news_1[0]['id_new'])
+                             {
+                             ?>
+                              <li>
+                                 <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
+                                 <?php echo sub_string($new_1_['title'],50);?>        </a>
+                              </li>
+                             <?php } }?> 
+                           </ul>
+                        </section>
+                        
+                        <h2><a href="/news/news-archive?category=academy">Tin quốc tế</a></h2>
                         <section class="primary">
-                           <div class="article-image ">
-                              <img  alt="Chuba Akpom Under 21s Everton" src="/assets/_files/scaled/456x257/apr_14/gun__1396556644_1_711x400.jpg">    
-                              <a href="/match/report/1314/post/reserves/under-21s-everton-2-1-arsenal-report" ><span>Under-21s: Everton 2-1 Arsenal - Report</span></a>
+                           <div class="article-image image">
+                           	<?php 
+                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_2[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_2[0]['image']) && $news_2[0]['image']!='')
+                           	{
+                           	?>
+                              <img width="456" height="257" alt="<?php echo $news_2[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_2[0]['image']?>">  
+                              <?php } else {?>
+                               <img width="456" height="257" alt="<?php echo $news_2[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <?php } ?>  
+                              <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_2[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
-                              <h2><a href="/match/report/1314/post/reserves/under-21s-everton-2-1-arsenal-report" >Under-21s: Everton 2-1 Arsenal - Report</a></h2>
-                              <p>Ainsley Maitland-Niles scores but Steve Gatting's side suffer narrow defeat on Merseyside in the Under-21 Premier League</p>
+                              <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_2[0]['title']?></a></h2>
+                              
+                              <p><?php echo sub_string(loaibohtmltrongvanban($news_2[0]['content']),112);?></p>
                            </div>
                         </section>
                         <section class="tertiary">
                            <ul>
+                             <?php 
+                             foreach($news_2 as $new_2_)
+                             {
+                             if($new_2_['id_new']!=$news_2[0]['id_new'])
+                             {
+                             ?>
                               <li>
-                                 <a href="/match/report/1314/post/u18/under-18s-arsenal-1-0-newcastle"  >
-                                 Under-18s: Arsenal 1-0 Newcastle        </a>
+                                 <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
+                                 <?php echo sub_string($new_2_['title'],50);?>        </a>
                               </li>
-                              <li>
-                                 <a href="/news/news-archive/20140402/tickets-available-for-youth-cup"  >
-                                 Tickets available for Youth Cup clash        </a>
-                              </li>
+                             <?php } }?> 
                            </ul>
                         </section>
-                        <section class="secondary">
-                           <div class="article-image ">
-                              <img  alt="Andries Jonker" src="/assets/_files/scaled/120x68/jan_14/gun__1390310332_jonker_andries4.jpg">
-                              <a href="/news/news-archive/20140403/youth-academy-coaches-re-organisation" ><span>Youth academy coaching re-organisation</span></a>
+                        
+                        <h2><a href="/news/news-archive?category=ladies">Bóng đá & Cuộc sống</a></h2>
+                        <section class="primary">
+                           <div class="article-image image">
+                           	<?php 
+                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_3[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_3[0]['image']) && $news_3[0]['image']!='')
+                           	{
+                           	?>
+                              <img width="456" height="257" alt="<?php echo $news_3[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_3[0]['image']?>">  
+                              <?php } else {?>
+                               <img width="456" height="257" alt="<?php echo $news_3[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <?php } ?>  
+                              <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_3[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
-                              <h2><a href="/news/news-archive/20140403/youth-academy-coaches-re-organisation" >Youth academy coaching re-organisation</a></h2>
-                              <p>New roles for Laraman and Ampadu as Dutch coaches join club following Jonker appointment</p>
+                              <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_3[0]['title']?></a></h2>
+                              
+                              <p><?php echo sub_string(loaibohtmltrongvanban($news_3[0]['content']),112);?></p>
                            </div>
                         </section>
-                        <h2><a href="/news/news-archive?category=ladies">Ladies</a></h2>
-                        <section class="primary">
-                           <div class="article-image ">
-                              <img  alt="Arsenal Ladies Season Ticket" src="/assets/_files/scaled/456x257/nov_13/gun__1385741759_ladies_season_ticket.jpg">    
-                              <a href="/news/news-archive/20140404/win-the-chance-to-see-the-ladies-train" ><span>Watch the Ladies train</span></a>
-                           </div>
-                           <div class="article-info">
-                              <h2><a href="/news/news-archive/20140404/win-the-chance-to-see-the-ladies-train" >Watch the Ladies train</a></h2>
-                              <p>We are offering our season ticket holders the chance to attend an Arsenal Ladies training session at London Colney</p>
-                           </div>
+                        <section class="tertiary">
+                           <ul>
+                             <?php 
+                             foreach($news_3 as $new_3_)
+                             {
+                             if($new_3_['id_new']!=$news_3[0]['id_new'])
+                             {
+                             ?>
+                              <li>
+                                 <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
+                                 <?php echo sub_string($new_3_['title'],50);?>        </a>
+                              </li>
+                             <?php } }?> 
+                           </ul>
                         </section>
                         <section class="social-holder medium-only small-only">
                            <h2>MẠNG XÃ HỘI</h2>
@@ -384,15 +413,15 @@
                               <ul class="social-icons">
                                  <li>
                                     <a href="https://www.facebook.com/SaigonFutsal" target="_blank">
-                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/fb_icon.png">                </a>
+                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/facebook_active.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://twitter.com/SaigonFootball" target="_blank">
-                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/tw_icon.png">                </a>
+                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/twitter_active.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://plus.google.com/102817370847800628226" target="_blank">
-                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/gp_icon.png">                </a>
+                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/google_active.png">                </a>
                                  </li>
                               </ul>
                               <!--/social-icons -->
@@ -513,15 +542,15 @@
                               <ul class="social-icons">
                                  <li>
                                     <a href="https://www.facebook.com/SaigonFutsal" target="_blank">
-                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/fb_icon.png">                </a>
+                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/facebook_active.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://twitter.com/SaigonFootball" target="_blank">
-                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/tw_icon.png">                </a>
+                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/twitter_active.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://plus.google.com/102817370847800628226" target="_blank">
-                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/gp_icon.png">                </a>
+                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/google_active.png">                </a>
                                  </li>
                               </ul>
                               <!--/social-icons -->
@@ -926,43 +955,35 @@
                         </article>
                         <article class="tweets">
                            <section class="player-tweets">
-                              <h3><a href="/news/player-tweets">Player Tweets</a></h3>
-                              <div class="module tweet" data-module-timestamp='1396720722'>
-                                 <p><a href="http://www.twitter.com/Alex_OxChambo">Alex_OxChambo</a></p>
-                                 <p>Just posted a photo <a href="http://t.co/t3aSixCwE6" target="_blank">http://t.co/t3aSixCwE6</a></p>
-                                 <figure class="pic-holder"><img src="/assets/images/diamonds/oxladechamberlain_diamond.png"></figure>
+                              <h3><a target="__blank" href="<?php echo  $profile_page->link?>">Cập nhật từ Fanpage</a></h3>
+                              <?php 
+                              $i = 1;
+                              foreach ($list_post_fb->data as $fppost) {
+                              	if($i<=5)
+                              	{
+
+             if (property_exists($fppost, 'message')) { // Some posts doesn't have message prop
+                
+             
+                              ?>
+                              <div class="module tweet" data-module-timestamp='<?php echo strtotime($fppost->created_time)?>'>
+                                 <p><a target="__blank" href="<?php echo  $profile_page->link?>"><?php echo $profile_page->name?></a></p>
+                                 <p><?php echo $fppost->message;?></p>
+                                 <figure class="pic-holder"><img src="http://graph.facebook.com/SaigonFutsal/picture?type=large"></figure>
                                  <span class="time"></span>
                               </div>
-                              <div class="module tweet" data-module-timestamp='1396718706'>
-                                 <p><a href="http://www.twitter.com/19SCazorla">19SCazorla</a></p>
-                                 <p>Que grande es <a href="http://www.twitter.com/RobiToral" target="_blank">@RobiToral</a> dando lecciones de f&uacute;tbol,nos veremos pronto crack un abrazo Brother.</p>
-                                 <figure class="pic-holder"><img src="/assets/images/diamonds/cazorla_diamond.png"></figure>
-                                 <span class="time"></span>
-                              </div>
-                              <div class="module tweet" data-module-timestamp='1396709230'>
-                                 <p><a href="http://www.twitter.com/19SCazorla">19SCazorla</a></p>
-                                 <p>Muchas gracias a los chicos del infantil A del juventud estadio por hacerme esta pancarta, !sois unos fen&oacute;menos! <a href="http://t.co/tSS9K0Tfef" target="_blank">http://t.co/tSS9K0Tfef</a></p>
-                                 <figure class="pic-holder"><img src="/assets/images/diamonds/cazorla_diamond.png"></figure>
-                                 <span class="time"></span>
-                              </div>
-                              <a href="/news/player-tweets" class="see-more">See more player tweets</a>
+                              <?php } }
+                              $i++;
+}?>
+                              <a target="__blank" href="<?php echo  $profile_page->link?>" class="see-more">Xem thêm</a>
                            </section>
-                           <section class="fan-tweets">
-                              <h3><span>Fan Tweets</span></h3>
-                              <div class="module tweet fan-tweet" data-module-timestamp='1396768320'>
-                                 <p><a href="http://www.twitter.com/ManikVasdev ">ManikVasdev </a></p>
-                                 <p><a href="http://www.twitter.com/Arsenal" target="_blank">@Arsenal</a> <a href="http://www.twitter.com/aaronramsey" target="_blank">@aaronramsey</a> He can act as a real motivation for the team! And goal scorer for arsenal! Looking forward to rambo. <a href="http://search.twitter.com/search?q=COYG" target="_blank">#COYG</a></p>
-                                 <span class="time"></span>
-                              </div>
-                           </section>
+                           
                         </article>
                      </div>
                      <!--/inner -->
                   </div>
                   <!--/wider-web -->
-                  
                   <!--/media-watch -->
-                  
                   <!--/arsenal-player -->
                   <div class="sponsors">
                      <div class="inner">

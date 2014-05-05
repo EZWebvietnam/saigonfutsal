@@ -176,10 +176,10 @@ h6 {
 h1,
 h2 {
   color: #2e2e2e;
-  font-size: 34px;
+  font-size: 24px;
   padding: 0 0 10px;
   background: url("../images/structure/sprite.png?v=1.7.3") no-repeat;
-  background-position: 0 -1054px;
+  background-position: 0 -1067px;
 }
 h3 {
   font-size: 18px;
@@ -668,6 +668,7 @@ nav > ul > li a {
   font-family: "agency-gothic-ct-cond-tt-n5", "agency-gothic-ct-cond-tt", arial, sans-serif;
   text-transform: uppercase;
   padding: 12px 12px 0 11px;
+  font-size: 16px;
 }
 nav > ul > li a:hover,
 nav ul .open > a {
@@ -691,15 +692,13 @@ nav > ul > li.open a.active:hover {
 .mega-nav {
   position: absolute;
   top: 150px;
-  left: 1;
   z-index: 99;
-  width: 198px;
-  height: 362px;
+  width: auto !important;
   display: none;
   background: #15212f;
-  margin: 0 0 0 -73px;
+  margin:  0 0 -73px;
   padding: 0 0 0 72px;
-  border-bottom: 10px solid #da0000;
+  border-bottom: 0px solid #da0000;
 }
 .mega-nav ul {
   list-style: none;
@@ -712,6 +711,7 @@ nav > ul > li.open a.active:hover {
   color: #99999F;
   padding: 9px 0;
   border-bottom: 1px solid #3A3F48;
+  margin-left: -55px;
 }
 .mega-nav .title {
   padding: 0 0 20px;
@@ -723,9 +723,10 @@ nav > ul > li.open a.active:hover {
   display: block;
   font-size: 14px;
   background: none;
-  font-weight: 700;
+  font-weight: 600;
   font-family: "ff-meta-web-pro-n4", "ff-meta-web-pro", arial, sans-serif;
-  text-transform: none;
+  
+  
 }
 .mega-nav p {
   margin: 3px 0 0;
@@ -773,10 +774,10 @@ nav > ul > li.open a.active:hover {
 .column {
   position: relative;
   float: left;
-  width: 193px;
-  height: 312px;
+  width: auto;
+  height: auto;
   font-size: 14px;
-  padding: 0 23px 50px;
+  /*padding: 0 23px 50px;*/
   border-left: 1px solid #3A3F48;
 }
 .column:first-child {
@@ -1316,7 +1317,7 @@ select.styled {
 }
 .promo-article a {
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
 }
 .promo-article ul {
   list-style: none;
@@ -1572,6 +1573,7 @@ article h2 a {
   color: #2e2e2e;
   font-weight: 500;
   font-family: "agency-gothic-ct-cond-tt-n5", "agency-gothic-ct-cond-tt", arial, sans-serif;
+  font-size: 24px;
 }
 .articles h1 {
   color: #2d2d2d;
@@ -2745,7 +2747,7 @@ aside h2 a:hover {
   float: left;
   width: 164px;
   color: #7d0c08;
-  font-size: 30px;
+  font-size: 15px;
   line-height: 30px;
   padding: 18px 14px;
   background: #fc0405;
@@ -11554,12 +11556,12 @@ footer .see-more:hover {
 .wider-web .player-tweets p:first-child a {
   padding: 0 0 0 28px;
   background: url("../images/structure/sprite.png?v=1.7.3") no-repeat;
-  background-position: 0 -500px;
+  background-position: 0 -400px;
 }
 .wider-web .fan-tweets p:first-child a:hover,
 .wider-web .player-tweets p:first-child a:hover {
   background: url("../images/structure/sprite.png?v=1.7.3") no-repeat;
-  background-position: 0 -1982px;
+  background-position: 0 -400px;
 }
 .wider-web .tweet .time {
   display: block;

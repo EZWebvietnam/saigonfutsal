@@ -851,16 +851,7 @@
     };
     var $a = (new na(navigator.userAgent, document)).parse();
     window.Typekit || (window.Typekit = {});
-    if (!window.Typekit.load) {
-        var Y = new Xa(new O("//fonts.arsenal.com/{id}.js"), new fa(window), $a, document.documentElement),
-            ab = new Za(window);
-        window.Typekit.load = function () {
-            Y.load.apply(Y, arguments)
-        };
-        window.Typekit.addKit = function () {
-            Y.S.apply(Y, arguments)
-        }
-    }
+    
     var bb = k,
         cb, $, bb = new O("//p.typekit.net/p.gif?a=649162&f=139.4648.4649.4650.4651.17903&h={host}&ht=sh&k=etz3vdg&s=1&_={_}");
     cb = new function () {
@@ -892,7 +883,5 @@
         value: '"agency-gothic-ct-cond-tt",sans-serif',
         name: "font-family"
     }]));
-    var db;
-    if (db = ab) db = !!ab.ja.__webfonttypekitmodule__;
-    db ? (ab.S($), ab.load()) : ($.c = $a, $.r = Va($.c, $.ea), window.Typekit.addKit($));
+    
 })(this, document);
