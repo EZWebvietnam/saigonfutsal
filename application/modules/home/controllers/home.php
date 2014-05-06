@@ -10,9 +10,9 @@ class Home extends MY_Controller
 		$this->load->model('newshomemodel');
 		$this->load->model('cliphomemodel');
 	}
-	
 	public function index()
 	{
+		$this->load->model('catenewhomemodel');
 		$this->load->helper('cookie'); 
 		if(!$this->input->cookie('visit_web', false))
         {
@@ -32,6 +32,7 @@ class Home extends MY_Controller
 		else{
 			$id_new_slide = 0;
 		}
+		$this->data['cate_info'] = $this->catenewhomemodel->load_cate_new_detail($this->data['news_slide_1'][0]['id_cate']);
 		$this->data['new_slide_sub']=$this->newshomemodel->news_home_sub($id_new_slide);
 		// Get new by category_id not in $id_new_slide
 		$this->data['news_1'] = $this->newshomemodel->news_home_1(1,$id_new_slide);

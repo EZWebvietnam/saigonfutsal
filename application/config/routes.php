@@ -40,17 +40,7 @@
 
 $route['default_controller'] = "home/index";
 $route['login-social/login-fb']='home/member/facebook';
-$route['trang-chu'] = "home/home/index";
-$route['san-pham'] = "home/product/list_product";
-$route['san-pham/page/(:any)'] = "home/product/list_product";
-$route['ref/(:any)'] = "home/home/index";
-
-$route['san-pham/(:any)-(:any)'] = "home/product/detail/$1";
-$route['san-pham/(:any)-(:any)/ref/(:any)'] = "home/product/detail/$1";
-
-$route['p_c-(:any)-(:any)/p_p-(:any)-(:any)'] = "home/product/detail/$3";
-$route['p_c-(:any)-(:any)'] = "home/product/list_product/$1";
-$route['p_c-(:any)-(:any)/page/(:any)'] = "home/product/list_product/$1";
+$route['tin-tuc/(:any)-(:any)/p(:any)-(:any)'] = 'home/news/detail_new/$1/$3';
 $route['cong-tac-vien'] = "ctv/productctv/index";
 $route['cong-tac-vien/login'] = "ctv/homectv/login";
 $route['cong-tac-vien/register'] = "home/home/register";
