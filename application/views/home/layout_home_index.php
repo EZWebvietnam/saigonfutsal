@@ -24,6 +24,7 @@
                <meta name="keywords" content="<?php echo $header['keywords']?>" />
                <meta property="fb:app_id" content="<?php echo $header['fbapp']?>">
                <link href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/css/styles.css?v=1.7.3" media="all" rel="stylesheet" type="text/css" >
+               <link href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/css/match.css" media="all" rel="stylesheet" type="text/css" >
                <script>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -121,10 +122,10 @@
                                  <div class="mega-nav" style="display: none;">
                                     <div class="column last-column">
                                        <ul>
-                                       		<?php 
-                                       		foreach($list_cate as $cate_new)
-                                       		{
-                                       		?>
+                                          <?php 
+                                             foreach($list_cate as $cate_new)
+                                             {
+                                             ?>
                                           <li>
                                              <a href="<?php echo base_url();?>tin-tuc/<?php echo $cate_new['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($cate_new['title'])))?>"><?php echo $cate_new['title']?></a>
                                           </li>
@@ -268,32 +269,30 @@
                <div id="wrapper" class="homepage">
                   <div id="content">
                      <article>
-                     <h1><a href="/news/news-archive?category=first">Tin tức nổi bật</a></h1>
+                        <h1><a href="/news/news-archive?category=first">Tin tức nổi bật</a></h1>
                         <section class="primary">
                            <div class="article-image image">
-                           	<?php 
-                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image']) && $news_slide_1[0]['image']!='')
-                           	{
-                           	?>
+                              <?php 
+                                 if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_slide_1[0]['image']) && $news_slide_1[0]['image']!='')
+                                 {
+                                 ?>
                               <img width="456" height="257" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_slide_1[0]['image']?>">  
                               <?php } else {?>
-                               <img width="456" height="257" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <img width="456" height="257" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
                               <?php } ?>  
                               <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_slide_1[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
                               <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_slide_1[0]['title']?></a></h2>
-                              
                               <p><?php echo sub_string(loaibohtmltrongvanban($news_slide_1[0]['content']),112);?></p>
                            </div>
                         </section>
-                        
                         <section class="tertiary">
                            <ul>
-                           <?php 
-                                    foreach($new_slide_sub as $slide_sub)
-                                    {
-                                    ?>
+                              <?php 
+                                 foreach($new_slide_sub as $slide_sub)
+                                 {
+                                 ?>
                               <li>
                                  <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
                                  <?php echo sub_string($slide_sub['title'],50)?>        </a>
@@ -301,110 +300,103 @@
                               <?php } ?>
                            </ul>
                         </section>
-                        
                         <h1><a href="/news/news-archive?category=first">Tin trong nước</a></h1>
                         <section class="primary">
                            <div class="article-image image">
-                           	<?php 
-                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_1[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_1[0]['image']) && $news_1[0]['image']!='')
-                           	{
-                           	?>
+                              <?php 
+                                 if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_1[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_1[0]['image']) && $news_1[0]['image']!='')
+                                 {
+                                 ?>
                               <img width="456" height="257" alt="<?php echo $news_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_1[0]['image']?>">  
                               <?php } else {?>
-                               <img width="456" height="257" alt="<?php echo $news_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <img width="456" height="257" alt="<?php echo $news_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
                               <?php } ?>  
                               <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_1[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
                               <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_1[0]['title']?></a></h2>
-                              
                               <p><?php echo sub_string(loaibohtmltrongvanban($news_1[0]['content']),112);?></p>
                            </div>
                         </section>
-                        
                         <section class="tertiary">
                            <ul>
-                             <?php 
-                             foreach($news_1 as $new_1_)
-                             {
-                             if($new_1_['id_new']!=$news_1[0]['id_new'])
-                             {
-                             ?>
+                              <?php 
+                                 foreach($news_1 as $new_1_)
+                                 {
+                                 if($new_1_['id_new']!=$news_1[0]['id_new'])
+                                 {
+                                 ?>
                               <li>
                                  <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
                                  <?php echo sub_string($new_1_['title'],50);?>        </a>
                               </li>
-                             <?php } }?> 
+                              <?php } }?> 
                            </ul>
                         </section>
-                        
                         <h2><a href="/news/news-archive?category=academy">Tin quốc tế</a></h2>
                         <section class="primary">
                            <div class="article-image image">
-                           	<?php 
-                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_2[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_2[0]['image']) && $news_2[0]['image']!='')
-                           	{
-                           	?>
+                              <?php 
+                                 if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_2[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_2[0]['image']) && $news_2[0]['image']!='')
+                                 {
+                                 ?>
                               <img width="456" height="257" alt="<?php echo $news_2[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_2[0]['image']?>">  
                               <?php } else {?>
-                               <img width="456" height="257" alt="<?php echo $news_2[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <img width="456" height="257" alt="<?php echo $news_2[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
                               <?php } ?>  
                               <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_2[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
                               <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_2[0]['title']?></a></h2>
-                              
                               <p><?php echo sub_string(loaibohtmltrongvanban($news_2[0]['content']),112);?></p>
                            </div>
                         </section>
                         <section class="tertiary">
                            <ul>
-                             <?php 
-                             foreach($news_2 as $new_2_)
-                             {
-                             if($new_2_['id_new']!=$news_2[0]['id_new'])
-                             {
-                             ?>
+                              <?php 
+                                 foreach($news_2 as $new_2_)
+                                 {
+                                 if($new_2_['id_new']!=$news_2[0]['id_new'])
+                                 {
+                                 ?>
                               <li>
                                  <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
                                  <?php echo sub_string($new_2_['title'],50);?>        </a>
                               </li>
-                             <?php } }?> 
+                              <?php } }?> 
                            </ul>
                         </section>
-                        
                         <h2><a href="/news/news-archive?category=ladies">Bóng đá & Cuộc sống</a></h2>
                         <section class="primary">
                            <div class="article-image image">
-                           	<?php 
-                           	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_3[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_3[0]['image']) && $news_3[0]['image']!='')
-                           	{
-                           	?>
+                              <?php 
+                                 if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_3[0]['image'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$news_3[0]['image']) && $news_3[0]['image']!='')
+                                 {
+                                 ?>
                               <img width="456" height="257" alt="<?php echo $news_3[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $news_3[0]['image']?>">  
                               <?php } else {?>
-                               <img width="456" height="257" alt="<?php echo $news_3[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                              <img width="456" height="257" alt="<?php echo $news_3[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
                               <?php } ?>  
                               <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_3[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
                               <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_3[0]['title']?></a></h2>
-                              
                               <p><?php echo sub_string(loaibohtmltrongvanban($news_3[0]['content']),112);?></p>
                            </div>
                         </section>
                         <section class="tertiary">
                            <ul>
-                             <?php 
-                             foreach($news_3 as $new_3_)
-                             {
-                             if($new_3_['id_new']!=$news_3[0]['id_new'])
-                             {
-                             ?>
+                              <?php 
+                                 foreach($news_3 as $new_3_)
+                                 {
+                                 if($new_3_['id_new']!=$news_3[0]['id_new'])
+                                 {
+                                 ?>
                               <li>
                                  <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
                                  <?php echo sub_string($new_3_['title'],50);?>        </a>
                               </li>
-                             <?php } }?> 
+                              <?php } }?> 
                            </ul>
                         </section>
                         <section class="social-holder medium-only small-only">
@@ -440,17 +432,17 @@
                         <section class="small-only">
                            <h2>Don't Miss</h2>
                            <?php 
-                              foreach($list_clip_home as $clip_home)
+                              foreach($list_clip_home as $k=>$clip_home)
                               {
                               ?>
-                           <a href="https://www.youtube.com/watch?v=<?php echo $clip_home['code']?>&feature=youtu.be" class="feature">
-                              <img  alt="<?php echo $clip_home['title']?>" src="http://img.youtube.com/vi/<?php echo $clip_home['code']?>/sddefault.jpg">	
+                           <a target="_blank" href="https://www.youtube.com/watch?v=<?php echo $clip_home?>&feature=youtu.be" class="feature">
+                              <img  alt="<?php echo strtoupper(get_yt_title($clip_home))?>" src="http://img.youtube.com/vi/<?php echo $clip_home?>/sddefault.jpg">	
                               <div class="video"></div>
                               <div class="overlay"></div>
                               <div class="reveal">
-                                 <p><?php echo $clip_home['title']?></p>
+                                 <p><?php echo $clip_home?></p>
                               </div>
-                              <h4><?php echo $clip_home['title']?></h4>
+                              <h4><?php echo strtoupper(get_yt_title($clip_home))?></h4>
                            </a>
                            <!--/feature -->
                            <?php } ?>
@@ -476,18 +468,18 @@
                         <div class="widgets">
                            <h2>Don't Miss</h2>
                            <?php 
-                              foreach($list_clip_home as $clip_home)
+                              foreach($list_clip_home as $k=>$clip_home)
                               {
                               ?>
                            <div class="widget">
-                              <a href="https://www.youtube.com/watch?v=<?php echo $clip_home['code']?>&feature=youtu.be" class="feature">
-                                 <img  alt="Arsenal 360" src="http://img.youtube.com/vi/<?php echo $clip_home['code']?>/sddefault.jpg">	
+                              <a target="_blank" href="https://www.youtube.com/watch?v=<?php echo $clip_home?>&feature=youtu.be" class="feature">
+                                 <img  alt="Arsenal 360" src="http://img.youtube.com/vi/<?php echo $clip_home ?>/sddefault.jpg">	
                                  <div class="video"></div>
                                  <div class="overlay"></div>
                                  <!--<div class="reveal">
                                     <p><?php echo strtoupper(get_yt_title($clip_home['code']))?></p>
-                                 </div>-->
-                                 <h4><?php echo $clip_home['title']?></h4>
+                                    </div>-->
+                                 <h4><?php echo strtoupper(get_yt_title($clip_home))?></h4>
                               </a>
                               <!--/feature -->
                            </div>
@@ -504,7 +496,37 @@
                         <h2><a href="/news/news-archive?category=club">Club News</a></h2>
                         <ul class="article-list">
                            <li class="primary">
-                              <div id="div-gpt-ad-1353671982241-23" class="large-only ad-club-news" style="width:192px; height:165px;" data-attr-pushdown="0"></div>
+                              <div class="main-width" id="next-match" data-event-id="1506174">
+                                 <div class="stage" title="Spanish League">
+                                    Liga Spain    
+                                 </div>
+                                 <div class="date" title="Monday 12 May">
+                                    Monday 12 May    
+                                 </div>
+                                 <div id="button-left">
+                                    
+                                 </div>
+                                 <div class="logo_team">
+                                    <div class="team_home">
+                                       <img width="60" height="60" src="<?php echo base_url();?>file/uploads/teams/fust_logo.png" alt="Elche">
+                                    </div>
+                                    <div class="vs ">
+                                       <a href="http://www.whatsthescore.com/football/spain/spanish-league/elche-barcelona-m1506174.html" target="_blank">
+                                       01:00                </a>
+                                       <span title="Not started">
+                                       NS                    </span>
+                                    </div>
+                                    <div class="team_away">
+                                       <img width="60" height="60" src="<?php echo base_url();?>file/uploads/teams/musvn.png" alt="Elche">
+                                    </div>
+                                    <p class="teams-names">
+                                       <span title="FUST">FUST</span>-<span title="MUSVN">MUSVN</span>
+                                    </p>
+                                 </div>
+                                 <div id="button-right">
+                                   
+                                 </div>
+                              </div>
                            </li>
                         </ul>
                         <ul class="article-list">
@@ -957,15 +979,15 @@
                            <section class="player-tweets">
                               <h3><a target="__blank" href="<?php echo  $profile_page->link?>">Cập nhật từ Fanpage</a></h3>
                               <?php 
-                              $i = 1;
-                              foreach ($list_post_fb->data as $fppost) {
-                              	if($i<=5)
-                              	{
-
-             if (property_exists($fppost, 'message')) { // Some posts doesn't have message prop
-                
-             
-                              ?>
+                                 $i = 1;
+                                 foreach ($list_post_fb->data as $fppost) {
+                                 	if($i<=5)
+                                 	{
+                                 
+                                 if (property_exists($fppost, 'message')) { // Some posts doesn't have message prop
+                                 
+                                 
+                                 ?>
                               <div class="module tweet" data-module-timestamp='<?php echo strtotime($fppost->created_time)?>'>
                                  <p><a target="__blank" href="<?php echo  $profile_page->link?>"><?php echo $profile_page->name?></a></p>
                                  <p><?php echo $fppost->message;?></p>
@@ -973,11 +995,10 @@
                                  <span class="time"></span>
                               </div>
                               <?php } }
-                              $i++;
-}?>
+                                 $i++;
+                                 }?>
                               <a target="__blank" href="<?php echo  $profile_page->link?>" class="see-more">Xem thêm</a>
                            </section>
-                           
                         </article>
                      </div>
                      <!--/inner -->

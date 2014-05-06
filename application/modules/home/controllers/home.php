@@ -13,7 +13,6 @@ class Home extends MY_Controller
 	
 	public function index()
 	{
-		
 		$this->load->helper('cookie'); 
 		if(!$this->input->cookie('visit_web', false))
         {
@@ -39,9 +38,9 @@ class Home extends MY_Controller
 		$this->data['news_2'] = $this->newshomemodel->news_home_1(2,$id_new_slide);
 		$this->data['news_3'] = $this->newshomemodel->news_home_1(3,$id_new_slide);
 		//
-		$this->data['list_post_fb'] = loadPostFace();
-		$this->data['profile_page'] = loadProfilePageFace();
-		$this->data['list_clip_home']=$this->cliphomemodel->clip_famous();
+		$this->data['list_post_fb'] = loadPostFace($this->config->item('pageid'));
+		$this->data['profile_page'] = loadProfilePageFace($this->config->item('pageid'));
+		$this->data['list_clip_home']=getVideosYouTube($this->config->item('youtubechanel'));
 		$this->load->view('home/layout_home_index',$this->data);
 	}
 }

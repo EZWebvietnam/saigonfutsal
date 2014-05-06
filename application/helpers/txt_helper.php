@@ -877,12 +877,9 @@ if(!function_exists('columnSort_desc')){
 		}	
 	}
 	if(!function_exists('loadPostFace')){
-		function loadPostFace(){
-			$page_id = '1429871157244055'; // Page ID or username
-			$token = '553435274702353|OaJc7d2WCoDv83AaR4JchNA_Jgw'; // Valid access token, I used app token here but you might want to use a user token .. up to you
-
-			$page_posts = file_get_contents('https://graph.facebook.com/'.$page_id.'/posts?fields=message&access_token='.$token); // > fields=message < since you want to get only 'message' property (make your call faster in milliseconds) you can remove it
-
+		function loadPostFace($page_id){
+			$token = '553435274702353|OaJc7d2WCoDv83AaR4JchNA_Jgw'; 
+			$page_posts = file_get_contents('https://graph.facebook.com/'.$page_id.'/posts?fields=message&access_token='.$token);
 			$pageposts = json_decode($page_posts); 
 			return $pageposts;
 		}
@@ -893,15 +890,14 @@ if(!function_exists('columnSort_desc')){
 		}
 	}
 	if(!function_exists('loadProfilePageFace')){
-		function loadProfilePageFace(){
-			$page_id = '1429871157244055'; // Page ID or username
+		function loadProfilePageFace($page_id){
 			$info_page = file_get_contents("https://graph.facebook.com/".$page_id);
 			$info_page = json_decode($info_page);
 			return $info_page;
 		}
 	}
 	if(!function_exists('getVideosYouTube')){
-		function getVideos($channel){
+		function getVideosYouTube($channel){
 			if($channel == ""){
 				return false;   
 			}
@@ -919,7 +915,18 @@ if(!function_exists('columnSort_desc')){
 				$ApiLink = str_replace("http://gdata.youtube.com/feeds/base/videos/", "", $ApiLink);
 				array_push($ids, $ApiLink);
 			}
-			return $ids;    
+			$j = 1;
+			$data_clip = array();
+			foreach($ids as $k=>$v)
+			{
+				if($j<=3)
+				{
+					$data_clip[]=$v;
+				}
+				
+				$j++;
+			}
+			return $data_clip;    
 		}
 	}
 }
