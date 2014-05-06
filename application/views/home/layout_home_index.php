@@ -584,6 +584,16 @@
                            </div>
                            <!--/social -->
                         </div>
+						<div class="widget ">
+                           <h2>SGF TRÊN FACEBOOK</h2>
+                           <ul class="article-list">
+						   <li class="primary">
+                              <div class="fb-like-box" data-href="https://www.facebook.com/SaigonFutsal" data-width="263" data-height="292" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+							  </li>
+                              <!--social-links -->
+                           </ul>
+                           <!--/social -->
+                        </div>
                         <!--/widget -->
                         <div class="widget">
                            <div id="div-gpt-ad-1353671982241-2" class="large-only ad-tall" style="width:170px; height:530px;" data-attr-pushdown="0"></div>
@@ -682,296 +692,21 @@
                      <div class="inner">
                         <h2>The Wider Web</h2>
                         <article>
-                           <section class="image-day">
-                              <h3><span>Image of the Day</span></h3>
-                              <figure id="image-of-the-day">
-                                 <img  alt="day_95" src="/assets/_files/scaled/456x328/apr_14/gun__1396768275_10155724_10152142530662713_211.jpg">                        
-                                 <figcaption>Aaron Ramsey trains ahead of today's clash with Everton</figcaption>
-                                 <a  href="/assets/_files/scaled/900x647/apr_14/gun__1396768275_10155724_10152142530662713_211.jpg" title='Aaron Ramsey trains ahead of today's clash with Everton'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/626x700/apr_14/gun__1396691294_zp_10_Ramsey-goal-3_1628.jpg" title='Welcome back Rambo! Aaron's back in full training'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/700x700/apr_14/gun__1396599521_ADAMS_GOAL_930405_3___C_SPO.jpeg" title='On this day in 1993, Tony Adams scores winner at Wembley '>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x632/apr_14/gun__1396511728_08_Arsenal_v_Ev.jpg" title='Mikel Arteta scoring from the spot against Everton'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x644/apr_14/gun__1396421054_zp_02_Rosicky-goal-1_928.jpg" title='Goal of the Month contender Tomas Rosicky'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/700x700/apr_14/gun__1396334922_nelson_sammy.jpeg" title='Happy birthday to former Gunner Sammy Nelson'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/501x700/mar_14/gun__1396248984_zp_Rocastle_David_900825_CSp_1.jpg" title='RIP Rocky Rocastle, who died 13 years ago today'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x674/mar_14/gun__1396167110_10151929_10152130673902713_102.jpg" title='Mathieu Flamini celebrates his goal against City'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x661/mar_14/gun__1396126612_170555464DP013_Arsenal_v_Ma.jpg" title='Tomas Rosicky in action against Man City'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/700x700/mar_14/gun__1395998357_fabregas_juventus.jpg" title='Eight years ago, Arsenal beat Juve in the Champions League'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x659/mar_14/gun__1395908779_PA-13259034.jpg" title='Mikel Arteta scores against Man City in 2012'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x620/mar_14/gun__1395785397_170555516DP009_Arsenal_v_Sw.jpg" title='Olivier Giroud scores Arsenal's second against Swansea'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/mar_14/gun__1395652729_gun__1384159347_carter_glasgow.jpg" title='Arsenal Ladies return to Champions League action tonight'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x671/mar_14/gun__1395503494_170561698DP002_Chelsea_v_Ar.jpg" title='Tomas Rosicky in action against Chelsea'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x594/mar_14/gun__1395389855_zp_Wenger-Celebrates-040425AFC.jpg" title='#Wenger1000: The boss celebrates winning 03/04 title'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/466x700/mar_14/gun__1395303165_206530.jpg" title='Happy birthday to former Gunner Paul Merson!'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/653x700/mar_14/gun__1395218408_479121993DP023_Barcelona_v_.jpg" title='Happy 19th birthday to Hector Bellerin'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x626/mar_14/gun__1395149295_10_Barcelona_v_.jpg" title='The youth team take a tour of the Nou Camp'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x566/mar_14/gun__1395049332_zp_20_Arsenal-fans-1_9500.jpg" title='The Arsenal fans celebrate victory at White Hart Lane'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x643/mar_14/gun__1395003307_170626993DP004_Tottenham_Ho.jpg" title='Tomas Rosicky powers home the winner against Spurs'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/mar_14/gun__1394873678_gun__1388920912_cazorla_spurs2.jpg" title='Cazorla celebrates his goal against Spurs in the FA Cup'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x633/mar_14/gun__1394784897_PA-1083402.jpg" title='16 years ago, Overmars scored the winner at Old Trafford'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x536/mar_14/gun__1394698471_07_Arsenal_v_To.jpg" title='Tomas Rosicky scores against Spurs in the FA Cup'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x645/mar_14/gun__1394613996_463412429_SM_5899_29D8253BA2F4.jpg" title='Lukas Podolski fires home Arsenal's equaliser in Munich'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x645/mar_14/gun__1394581227_463412429_SM_5899_29D8253BA2F4.jpg" title='Lukas Podolski scores Arsenal's equaliser in Munich'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/531x700/mar_14/gun__1394438829_09_Arsenal_v_Ev.jpg" title='Olivier Giroud in full flight against Everton'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/613x700/mar_14/gun__1394356355_13_Arsenal_v_Ev.jpg" title='Olivier and Mesut celebrate against Everton'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/590x700/mar_14/gun__1394291273_Arteta.jpg" title='Mikel celebrates his penalty against Everton'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/565x700/mar_14/gun__1394178986_zp_27_Flamini-2_8101.jpg" title='Happy 30th birthday to Mathieu Flamini!'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/mar_14/gun__1394095143_gun__1386578693_ozil_everton1.jpg" title='Mesut Ozil celebrates his goal v Everton in December'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x763/mar_14/gun__1394006874_PM_Arsenal_Collage.jpeg" title='Per Mertesacker in his first Arsenal shirt'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x600/mar_14/gun__1393939354_PA-2260867-1.jpg" title='On this day in 1987, we beat Spurs in the Littlewoods Cup'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x626/mar_14/gun__1393834312_03_Stoke_City_v.jpg" title='Bacary Sagna fights for possession against Stoke'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x683/mar_14/gun__1393786251_170622798DP001_Stoke_City_v.jpg" title='Mikel Arteta in action against Stoke City'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x683/mar_14/gun__1393695442_170622798DP001_Stoke_City_v.jpg" title='Mikel Arteta in action against Stoke City'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/575x700/feb_14/gun__1393575179_zp_13_Ozil-2_1077.jpg" title='Mesut Ozil is back in the squad for Saturday'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/537x700/feb_14/gun__1393489221_PA-14389313.jpg" title='Mikel Arteta in action at Stoke last season'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x696/feb_14/gun__1393402258_469135687DP005_EFA_Youth_Ch.jpg" title='Chuba Akpom in action against Shakhtar Donetsk'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/feb_14/gun__1393317217_gun__1379521694_marseillevarse.jpg" title='The youth team resume their European campaign tonight'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/677x700/feb_14/gun__1393233786_PA-398275.jpg" title='On this day in 1951, Jack Kelsey made his debut'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x721/feb_14/gun__1393147535_10_Arsenal_v_Su.jpg" title='The team celebrate Rosicky's goal against Sunderland'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x599/feb_14/gun__1393075133_zp_Bergkamp004_5284.jpg" title='Dennis Bergkamp - immortalised at Emirates Stadium'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x615/feb_14/gun__1392969536_PA-2937636.jpg" title='Eight years ago, Henry scored the winner at Real Madrid'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x599/feb_14/gun__1392891854_Card_display.jpg" title='The fans' card display at Emirates Stadium'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x599/feb_14/gun__1392849428_1939965_10152056706997713_1476.jpg" title='The teams line up before the Bayern game'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x663/feb_14/gun__1392714682_158765609DP001_Arsenal_v_FC.jpg" title='Podolski heads in against Bayern last season'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/628x700/feb_14/gun__1392623473_468815407DP058_Arsenal_v_Li.jpg" title='Mertesacker celebrates reaching the last eight of the FA Cup'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x678/feb_14/gun__1392577591_468815407DP015_Arsenal_v_Li.jpg" title='Podolski celebrates his goal against Liverpool'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x600/feb_14/gun__1392454780_PA-573081.jpg" title='RIP Sir Tom Finney'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/516x700/feb_14/gun__1392369175_Sagna-2-131102PAFC.jpg" title='Happy 31st birthday Bacary Sagna'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/602x700/feb_14/gun__1392242597_Giroud.jpg" title='Olivier Giroud and Rafael collide in the air'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/575x700/feb_14/gun__1392119015_Henry-final-whistle-4E7D88.jpg" title='On this day in 2012, Thierry Henry scores last goal for Club'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x785/feb_14/gun__1392022300_Diaby-goal-3-020210MAFC.jpg" title='Four years ago, Diaby scored the winner against Liverpool'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x605/feb_14/gun__1391937542_zp_13_Arteta-goal-1_3308.jpg" title='Mikel Arteta scores from the spot against Liverpool'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/feb_14/gun__1391872166_jenks.jpg" title='Happy 22nd Birthday to Carl Jenkinson'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/612x700/feb_14/gun__1391759887_zp_13_Chambo-1st-goal-5_9291.jpg" title='The Ox... our 14th different league scorer this season'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/feb_14/gun__1391673861_gun__1357904332_match09_liverp.jpg" title='Santi Cazorla celebrates his goal at Anfield last season'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x676/feb_14/gun__1391587202_Toral_goal_12_131106PAFC.jpg" title='Happy 19th birthday to Jon Toral'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/447x700/feb_14/gun__1391506247_Campbell-Kevin-2-AFC-1.jpg" title='Happy 44th birthday to former Gunner Kevin Campbell'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x609/feb_14/gun__1391414819_170554306DP008_Arsenal_v_Cr.jpg" title='The Ox lifts home his first goal against Palace'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x660/feb_14/gun__1391364236_oxsecond.jpeg" title='The Ox scores his second goal against Crystal Palace'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x703/feb_14/gun__1391296169_train.jpg" title=''>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/547x700/jan_14/gun__1391198827_zp_466606757_SM_7580_DC_1CD52C.jpg" title='Arsenal's latest signing... Kim Kallstrom'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x641/jan_14/gun__1391069640_170620834DP004_Southampton_.jpg" title='Cazorla's goal against Southampton was his fifth this month'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/646x700/jan_14/gun__1390983284_Santi.jpg" title='Santi Cazorla celebrates his goal at Southampton'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/jan_14/gun__1390947410_gun__1390945597_PA-Cazorla.jpg" title='Santi Cazorla celebrates his goal at Southampton'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x599/jan_14/gun__1390809485_07_Arsenal_v_Co.jpg" title='Emirates Stadium on Friday night'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x739/jan_14/gun__1390725850_zp_21_Zelalem_2780.jpg" title='Happy 17th birthday to Gedion Zelalem!'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x694/jan_14/gun__1390600331_poldigoal.jpg" title='Lukas Podolski celebrates against Coventry'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/jan_14/gun__1390464992_gun__1372864487_mannone2.jpg" title='Man of the moment... former Gunner Vito Mannone!'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x642/jan_14/gun__1390382312_zp_463207903DP017_Barclays_U21.jpg" title='Lukas Podolski watches the under-21s'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/555x700/jan_14/gun__1390292294_PA-4315678.jpg" title='Seven years ago, Henry scored the winner against United'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/534x700/jan_14/gun__1390206208_PA-2834323.jpg" title='On this day in 2006, Arsenal signed Theo Walcott'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x674/jan_14/gun__1390123603_06_Arsenal_v_Fu.jpg" title='Santi Cazorla fires home his first against Fulham'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x700/jan_14/gun__1390071675_170555439DP004_Arsenal_v_Fu.jpg" title='Santi Cazorla celebrates his first goal against Fulham'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x709/jan_14/gun__1389944160_zp_15_Podolski-3_8452_Fulham_2.jpg" title='Lukas Podolski celebrates his goal against Fulham in August'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x635/jan_14/gun__1389859448_Bendtner_goal_1.jpg" title='Happy birthday Nicklas Bendtner, who is 26 today!'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x794/aug_13/gun__1375350139_gun__1366792812_zp_Kanu_Cele_9.jpg" title='On this day in 1999, Kanu signed for Arsenal'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/513x700/jan_14/gun__1389653391_Giroud.jpg" title='Olivier Giroud celebrates his goal at Villa Park'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x669/jan_14/gun__1389536543_zp_461579235_SM_5233_33_13B3F3.jpg" title='Lukas Podolski in training ahead of the Aston Villa game'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/467x700/jan_14/gun__1389432320_480791.jpg" title='On this day in 1979 Brian Talbot signed for Arsenal'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/593x700/jan_14/gun__1389340966_461723885DP023_U21_League_C.jpg" title='The Ox in action for the under-21s last night'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/jan_14/gun__1389254501_gun__1376491306_feelgood_henry.jpg" title='Two years ago, Henry scored the winner against Leeds'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/618x700/jan_14/gun__1389169765_zp_11_FA_Youth_Cup_8255.jpg" title='Chuba Akpom celebrates scoring against Peterborough'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x667/jan_14/gun__1389083762_Walcott_goal_4.jpg" title='#GetWellSoonTheo'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/513x700/jan_14/gun__1388994991_484744.jpg" title='Herbert Chapman died 80 years ago today'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x536/jan_14/gun__1388912773_460679323DP005_Arsenal_v_To.jpg" title='Tomas Rosicky scores Arsenal's second against Spurs'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/654x700/jan_14/gun__1388863810_Caz.jpg" title='Sabti Cazorla celebrates his goal against Tottenham'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x506/jan_14/gun__1388738286_gun__1364397886_adams_facupsem.jpg" title='Tony Adams scores against Spurs in the FA Cup in 1993'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/900x614/jan_14/gun__1388652243_Walcott_goal_2.jpg" title='Theo Walcott clips in the second goal against Cardiff'>
-                                 View the large version of this image
-                                 </a>
-                                 <a style="display:none;" href="/assets/_files/scaled/700x700/jan_14/gun__1388536830_happy_new_year_1000x1000.jpg" title='Happy New Year to every Arsenal fan!'>
-                                 View the large version of this image
-                                 </a>
-                              </figure>
-                           </section>
                            <section class="best-blog">
                               <h3><span>Best of the blogs</span></h3>
                               <div class="secondary">
+							  <?php 
+							  foreach($tsn_list_new as $tsn_new)
+							  {
+							  ?>
                                  <div class="article-image ">
-                                    <img  alt="Best of the Blogs - Stumbling and Mumbling" src="/assets/_files/scaled/120x67/mar_14/gun__1395841038_bestoftheblogs_stumbling.jpg">                            <a href="/news/news-archive/20140326/football-as-financial-economics"><span>Football as financial economics</span></a>
+                                    <img width="120" height="67" alt="<?php echo $tsn_new['title'][0]?>" src="<?php echo base_url();?>file/uploads/teams/tsn.png"/>                            <a target="__blank" href="<?php echo $tsn_new['link'][0]?>"><span><?php echo sub_string($tsn_new['title'][0],50)?></span></a>
                                  </div>
                                  <div class="article-info">
-                                    <h2><a href="/news/news-archive/20140326/football-as-financial-economics">Football as financial economics</a></h2>
-                                    <p>Writing for Stumbling and Mumbling, Chris Dillow discusses 'negative beta players'</p>
+                                    <h2><a target="__blank" href="<?php echo $tsn_new['link'][0]?>"><?php echo sub_string($tsn_new['title'][0],50)?></a></h2>
+                                    <p><?php echo $tsn_new['description'][0]?></p>
                                  </div>
+								 <?php } ?>
                               </div>
                            </section>
                         </article>

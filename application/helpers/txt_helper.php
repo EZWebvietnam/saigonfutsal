@@ -902,7 +902,7 @@ if(!function_exists('columnSort_desc')){
 				return false;   
 			}
 			/* Get number of videos */
-			$books = simplexml_load_file('http://gdata.youtube.com/feeds/base/users/'.$channel.'/uploads?max-results=1&start-index=1');
+			$books = simplexml_load_file('https://gdata.youtube.com/feeds/api/users/'.$channel.'/playlists?v=2');
 			$numb_videos = $books->children( 'openSearch', true )->totalResults; 
 			settype($numb_videos, "integer");
 
@@ -917,7 +917,10 @@ if(!function_exists('columnSort_desc')){
 			}
 			$j = 1;
 			$data_clip = array();
-			foreach($ids as $k=>$v)
+			shuffle($ids); 
+			$data_clip = array_slice($ids, 0, 3);
+			
+			/*foreach($ids as $k=>$v)
 			{
 				if($j<=3)
 				{
@@ -925,7 +928,7 @@ if(!function_exists('columnSort_desc')){
 				}
 				
 				$j++;
-			}
+			}*/
 			return $data_clip;    
 		}
 	}

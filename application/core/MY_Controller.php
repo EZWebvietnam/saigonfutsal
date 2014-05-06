@@ -90,5 +90,14 @@ class MY_Controller extends CI_Controller
         $this->load->model('productmodel');
         $this->data['captcha_question'] = $this->productmodel->random_captcha();
     }
+	public function load_xml_tsn()
+	{
+		$this->load->library('xmlparse');
+		$array = $this->xmlparse->xmlToArray('http://www.thaisonnamfc.vn/category/tin-tuc/tin-cau-lac-bo/feed/');
+		$array_to_parse = $array['channel'][0]['item'];
+		shuffle($array_to_parse); 
+		$array_new_tsn = array_slice($array_to_parse, 0, 3);
+		$this->data['tsn_list_new'] = $array_new_tsn;
+	}
 }
 ?>

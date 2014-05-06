@@ -3,10 +3,10 @@ class Home extends MY_Controller
 {
 	public function __construct()
 	{
-		
 		parent::__construct();
 		parent::load_header();
 		parent::list_cate();
+		parent::load_xml_tsn();
 		$this->load->model('newshomemodel');
 		$this->load->model('cliphomemodel');
 	}
