@@ -178,10 +178,27 @@
                            <!--//logged out -->
                         </div>
                         <div id="country-select">
-                           <a href="#">Select your Country</a>
+						<style>
+							#country-select > a
+							{
+								
+								background: url(<?php echo base_url(); ?>template/ezwebvietnam/home_sgfs/images/vn_icon.png) no-repeat !important;
+							}
+							#country-select .usa
+							{
+								background: url(<?php echo base_url(); ?>template/ezwebvietnam/home_sgfs/images/vn_icon_.png) left no-repeat;
+								background-position: right;
+							}
+							#country-select .japan
+							{
+								background: url(<?php echo base_url(); ?>template/ezwebvietnam/home_sgfs/images/usa_icon_.png) left no-repeat;
+								background-position: right;
+							}
+						</style>
+                           <a  href="#">Select your Country</a>
                            <ul>
-                              <li><a href="http://www.arsenal.com/usa" class="usa">USA</a></li>
-                              <li><a href="http://jp-arsenal.com" class="japan">Japan</a></li>
+                              <li><a href="http://www.arsenal.com/usa" class="usa">Vietnam</a></li>
+                              <li><a href="http://jp-arsenal.com" class="japan">USA</a></li>
                            </ul>
                         </div>
                         <!--//county-select -->	        	    
