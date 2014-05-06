@@ -197,8 +197,8 @@
 						</style>
                            <a  href="#">Select your Country</a>
                            <ul>
-                              <li><a href="http://www.arsenal.com/usa" class="usa">Vietnam</a></li>
-                              <li><a href="http://jp-arsenal.com" class="japan">USA</a></li>
+                              <li><a href="<?php echo full_url_($_SERVER)?>" class="usa">Vietnam</a></li>
+                              <li><a href="<?php echo full_url_($_SERVER)?>" class="japan">USA</a></li>
                            </ul>
                         </div>
                         <!--//county-select -->	        	    
