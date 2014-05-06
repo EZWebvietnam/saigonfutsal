@@ -2,54 +2,6 @@
 <project name="E:\xampp\htdocs\saigonfutsal\saigonfutsa.clpprj">
 	<settings><PM_URL><![CDATA[http://localhost/saigonfutsal/]]></PM_URL><PM_HOME_URL><![CDATA[http://localhost/saigonfutsal/]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";"/><added value=""/><errors version="4.5">
 		<errfile name="E:\xampp\htdocs\saigonfutsal\application\views\home\layout_home_index.php">
-			<error val="175;689;181;689;2002;1;"/>
-			<error val="186;689;195;689;2002;1;"/>
-			<error val="174;689;175;689;2002;1;"/>
-			<error val="181;689;186;689;2002;1;"/>
-			<error val="181;692;186;692;2002;1;"/>
-			<error val="189;692;194;692;2002;1;"/>
-			<error val="186;692;189;692;2002;1;"/>
-			<error val="180;692;181;692;2002;1;"/>
-			<error val="194;692;204;692;2002;1;"/>
-			<error val="195;722;203;722;2002;1;"/>
-			<error val="187;722;188;722;2002;1;"/>
-			<error val="188;722;195;722;2002;1;"/>
-			<error val="203;722;212;722;2002;1;"/>
-			<error val="195;758;205;758;2002;1;"/>
-			<error val="205;758;208;758;2002;1;"/>
-			<error val="208;758;216;758;2002;1;"/>
-			<error val="194;758;195;758;2002;1;"/>
-			<error val="191;761;201;761;2002;1;"/>
-			<error val="201;761;204;761;2002;1;"/>
-			<error val="204;761;212;761;2002;1;"/>
-			<error val="190;761;191;761;2002;1;"/>
-			<error val="178;809;186;809;2002;1;"/>
-			<error val="173;809;178;809;2002;1;"/>
-			<error val="172;809;173;809;2002;1;"/>
-			<error val="186;809;198;809;2002;1;"/>
-			<error val="164;818;167;818;2002;1;"/>
-			<error val="151;818;156;818;2002;1;"/>
-			<error val="156;818;164;818;2002;1;"/>
-			<error val="167;818;176;818;2002;1;"/>
-			<error val="176;818;185;818;2002;1;"/>
-			<error val="191;875;202;875;2002;1;"/>
-			<error val="187;875;191;875;2002;1;"/>
-			<error val="169;875;176;875;2002;1;"/>
-			<error val="168;875;169;875;2002;1;"/>
-			<error val="176;875;187;875;2002;1;"/>
-			<error val="171;878;179;878;2002;1;"/>
-			<error val="199;878;205;878;2002;1;"/>
-			<error val="166;878;171;878;2002;1;"/>
-			<error val="195;878;199;878;2002;1;"/>
-			<error val="210;878;217;878;2002;1;"/>
-			<error val="165;878;166;878;2002;1;"/>
-			<error val="179;878;191;878;2002;1;"/>
-			<error val="205;878;210;878;2002;1;"/>
-			<error val="191;878;195;878;2002;1;"/>
-			<error val="194;947;202;947;2002;1;"/>
-			<error val="186;947;187;947;2002;1;"/>
-			<error val="187;947;194;947;2002;1;"/>
-			<error val="202;947;209;947;2002;1;"/>
 			<error val="28;116;46;116;2002;1;"/>
 			<error val="20;24;41;24;2002;1;"/>
 		</errfile>
@@ -696,7 +648,7 @@
 		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\home_sgfs\js\app.megamenu.JS" crc="-1754384499"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\home_sgfs\js\app.gallery.JS" crc="-254857315"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\home_sgfs\css\styles.css" crc="1063597336"/>
-		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\home_sgfs\css\match.css" crc="150829686"/>
+		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\home_sgfs\css\match.css" crc="-740752754"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\home_sgfs\index.php" crc="1762369474"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\admin_cp\js\core\tabui.js" crc="138214408"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\template\ezwebvietnam\admin_cp\js\core\price_format.js" crc="717436132"/>
@@ -4079,7 +4031,7 @@
 		<file name="E:\xampp\htdocs\saigonfutsal\application\views\includes\main_content.php" crc="-960605801"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\views\includes\header.php" crc="567071101"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\views\includes\footer.php" crc="-155124102"/>
-		<file name="E:\xampp\htdocs\saigonfutsal\application\views\home\layout_home_index.php" crc="2062878060"/>
+		<file name="E:\xampp\htdocs\saigonfutsal\application\views\home\layout_home_index.php" crc="-164760407"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\views\ctv\login_layout_ctv.php" crc="-419169464"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\views\ctv\index_layout_ctv.php" crc="-617558202"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\views\admin\login_layout_ctv.php" crc="-419169464"/>
@@ -4128,7 +4080,7 @@
 		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\home\models\cliphomemodel.php" crc="1801410290"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\home\models\catenewhomemodel.php" crc="-1161124467"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\home\controllers\member.php" crc="1706547607"/>
-		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\home\controllers\home.php" crc="809259343"/>
+		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\home\controllers\home.php" crc="2043279510"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\ctv\views\send_key_success.php" crc="1541560543"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\ctv\views\index_ctv_view.php" crc="2034666963"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\modules\ctv\views\forget_pass.php" crc="-882956632"/>
@@ -4243,6 +4195,7 @@
 		<file name="E:\xampp\htdocs\saigonfutsal\application\libraries\lib\class.soap_parser.php" crc="1385280750"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\libraries\lib\class.soap_fault.php" crc="2035282391"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\libraries\lib\class.nusoap_base.php" crc="1941526828"/>
+		<file name="E:\xampp\htdocs\saigonfutsal\application\libraries\xmlparse.php" crc="178069347"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\libraries\xml_writer.php" crc="-1821497880"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\libraries\Tank_auth.php" crc="-1655640158"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\libraries\NL.php" crc="-405586930"/>
@@ -4263,7 +4216,7 @@
 		<file name="E:\xampp\htdocs\saigonfutsal\application\language\english\tank_auth_lang.php" crc="-1904706149"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\language\dutch\tank_auth_lang.php" crc="367665551"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\language\chinese\tank_auth_lang.php" crc="1287768021"/>
-		<file name="E:\xampp\htdocs\saigonfutsal\application\helpers\txt_helper.php" crc="-191367298"/>
+		<file name="E:\xampp\htdocs\saigonfutsal\application\helpers\txt_helper.php" crc="-1035543656"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\helpers\recaptcha_helper.php" crc="1821177188"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\errors\error_php.php" crc="-849541546"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\errors\error_general.php" crc="1544288480"/>
@@ -4271,7 +4224,7 @@
 		<file name="E:\xampp\htdocs\saigonfutsal\application\errors\error_404.php" crc="1088258718"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\core\MY_Router.php" crc="-454898828"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\core\MY_Loader.php" crc="274926708"/>
-		<file name="E:\xampp\htdocs\saigonfutsal\application\core\MY_Controller.php" crc="-577533716"/>
+		<file name="E:\xampp\htdocs\saigonfutsal\application\core\MY_Controller.php" crc="1858439345"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\config\user_agents.php" crc="674814304"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\config\tank_auth.php" crc="-231770000"/>
 		<file name="E:\xampp\htdocs\saigonfutsal\application\config\smileys.php" crc="689261140"/>

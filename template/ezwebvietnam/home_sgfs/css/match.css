@@ -102,6 +102,7 @@ padding: 0;
 margin: 0;
 width: 100%;
 background: none;
+margin-left: -25px;
 }
 #next-match .logo_team .teams-names span {
 font: bold 15px/20px arial, sans-serif;
