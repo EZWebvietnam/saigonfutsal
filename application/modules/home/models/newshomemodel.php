@@ -9,11 +9,8 @@ class Newshomemodel extends CI_Model
 	}
 	public function news_home_famous()
 	{
-		$this->db->select();
-		$this->db->where('is_famous',1);
-		$this->db->order_by('rand()');
-		$this->db->limit(1);
-		$query = $this->db->get("{$this->_name}");
+		$sql="SELECT * FROM {$this->_name} WHERE is_famous = 1 ORDER BY rand() LIMIT 1";
+		$query = $this->db->query($sql);
 		return $query->result_array();
 	}
 	public function news_home_sub($id_new_slide)

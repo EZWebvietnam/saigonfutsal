@@ -1357,6 +1357,13 @@
                         <!--/dm-both -->
                      </div>
                      <!--/dm-register-confirmation -->
+					  <script type="text/javascript">
+                        $(function() {
+                            app.auth.register.international.supportedCountryIds = [45,102,240,133,74,206];
+                            app.auth.register.international.countryLanguageTranslations = {"232":{"value_local_language":"Local Language","value_english_language":"English"},"45":{"value_local_language":"\u7b80\u4f53\u4e2d\u6587","value_english_language":"\u82f1\u8bed"},"102":{"value_local_language":"Bahasa Indonesia","value_english_language":"Inggris"},"240":{"value_local_language":"Ti\u1ebfng Vi\u1ec7t","value_english_language":"Ti\u1ebfng Anh"},"133":{"value_local_language":"Bahasa Malaysia","value_english_language":"Bahasa Inggeris"},"74":{"value_local_language":"Fran\u00e7ais","value_english_language":"Anglais"},"206":{"value_local_language":"Espa\u00f1ol","value_english_language":"Ingl\u00e9s"}};
+                            app.auth.register.international.newsletterMessageTranslations = {"232":{"country_newsletter_message":"Your Monthly Membership Newsletter will be in your preferred language selected above. All other emails referenced below are currently only available in English."},"45":{"country_newsletter_message":"\u76ee\u524d\u6bcf\u6708\u5b98\u65b9\u7f51\u7edc\u4f1a\u5458\u901a\u8baf\u5c06\u4ee5\u60a8\u6ce8\u518c\u65f6\u9009\u62e9\u7684\u504f\u597d\u8bed\u8a00\u4e3a\u60a8\u5448\u73b0. \u4ee5\u4e0b\u5176\u4ed6\u7684\u7535\u5b50\u901a\u8baf\u6682\u65f6\u5c06\u4ec5\u63d0\u4f9b\u82f1\u6587\u7248\u672c."},"102":{"country_newsletter_message":"Buletin Keanggotaan Bulanan diterbitkan dalam bahasa yang Anda pilih di atas. Semua email lain yang tertera di bawah ini hanya tersedia dalam bahasa Inggris."},"240":{"country_newsletter_message":"B\u1ea3n tin Th\u00e0nh vi\u00ean H\u00e0ng th\u00e1ng s\u1ebd c\u00f3 \u1edf ng\u00f4n ng\u1eef \u01b0a th\u00edch \u0111\u01b0\u1ee3c ch\u1ecdn \u1edf tr\u00ean c\u1ee7a b\u1ea1n. T\u1ea5t c\u1ea3 c\u00e1c email kh\u00e1c \u0111\u01b0\u1ee3c n\u00eau d\u01b0\u1edbi \u0111\u00e2y hi\u1ec7n ch\u1ec9 c\u00f3 b\u1eb1ng ti\u1ebfng Anh."},"133":{"country_newsletter_message":"Surat Berita Keahlian Bulanan anda akan dicetak dalam bahasa pilihan anda seperti di atas. Semua e-mel lain yang dirujuk di bawah hanya terdapat dalam Bahasa Inggeris buat masa ini."},"74":{"country_newsletter_message":"Votre newsletter mensuelle sera dans la langue que vous avez s\u00e9lectionn\u00e9e ci-dessus. Tous les autres e-mails r\u00e9f\u00e9renc\u00e9s ci-dessous sont actuellement disponibles en anglais uniquement."},"206":{"country_newsletter_message":"El Bolet\u00edn mensual para miembros se le enviar\u00e1 en su idioma preferido, seleccionado arriba. El resto de LOS bolet\u00ednes electr\u00f3nicos referidos a continuaci\u00f3n est\u00e1n disponibles solo en ingl\u00e9s por el momento."}};
+                        });
+                     </script>
                      <div id="dm-benefits">
                         <div class="dm-both">
                            <figure>
@@ -1397,6 +1404,11 @@
                         <!--/dm-both -->
                      </div>
                      <!--/dm-forgot -->
+					 <script type="text/javascript">
+                        $(function() {
+                            app.auth.translations = {"forgotpassword":{"unknown_user_message":"Sorry, we don't recognise that membership number or email address. Please try again or email us at digitalmembershiphelp@arsenal.co.uk if you have a query.","missing_email_message":"Please provide an email address or a membership number"},"registration":{"missing_terms_and_conditions":"You must agree to the Arsenal Terms & Conditions in order to register","unknown_error_message":"An unknown error was encountered","invalid_fields_message":"Fields highlighted in red were invalid","mandatory_fields_message":"Fields marked with a * are mandatory"}};
+                        });
+                     </script>
                      <div id="dm-forgot-confirmation" class="dm-forgotten">
                         <div class="dm-both">
                            <h1>Forgotten your password</h1>
@@ -1412,6 +1424,10 @@
                   </div>
                </div>
                <script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/js/app.poll.js"></script>
+			   <script type="text/javascript">
+                  //<!--
+                     app.auth.baseDomain = '';    //-->
+               </script>
                <script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/js/script.js"></script><!--
                   Start of DoubleClick Floodlight Tag: Please do not remove
                   Activity name of this tag: Arsenal Partnership
