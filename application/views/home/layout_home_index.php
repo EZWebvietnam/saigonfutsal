@@ -476,6 +476,7 @@
                         </section>
                         <section class="tertiary small-only">
                            <ul>
+                           <!--
                               <li>
                                  <a href="/news/news-archive/20140403/semi-final-mascot-pictures" class="image" >
                                  Youngster receives FA Cup mascot prize        </a>
@@ -484,6 +485,7 @@
                                  <a href="/news/news-archive/20140403/new-york-tickets-details-confirmed-soon"  >
                                  New York ticket details confirmed soon        </a>
                               </li>
+                              -->
                            </ul>
                         </section>
                      </article>
@@ -558,6 +560,7 @@
                            
                         </ul>
                         <ul class="article-list">
+                        <!--
                            <li>
                               <a href="/news/news-archive/20140403/semi-final-mascot-pictures" class="image" >
                               Youngster receives FA Cup mascot prize        </a>
@@ -566,6 +569,7 @@
                               <a href="/news/news-archive/20140403/new-york-tickets-details-confirmed-soon"  >
                               New York ticket details confirmed soon        </a>
                            </li>
+                           -->
                         </ul>
                         <h2><a href="/news/news-archive?category=club">Bảng Xếp Hạng</a></h2>
                         <ul class="article-list">
@@ -706,6 +710,7 @@
                            </li>
                         </ul>
                         <ul class="article-list">
+                        <!--
                            <li>
                               <a href="/news/news-archive/20140403/semi-final-mascot-pictures" class="image" >
                               Youngster receives FA Cup mascot prize        </a>
@@ -714,6 +719,7 @@
                               <a href="/news/news-archive/20140403/new-york-tickets-details-confirmed-soon"  >
                               New York ticket details confirmed soon        </a>
                            </li>
+                           -->
                         </ul>
                      </div>
                      <!--/widgets -->
@@ -797,15 +803,10 @@
                   <div class="smallprint">
                      <div class="inner">
                         <small>
-                           &copy; Arsenal Broadband Limited 2014 - 
-                           <a href="/terms-of-use">Terms of Use</a> - 
-                           <a href="/privacy-policy">Privacy Policy</a> - 
-                           <!--<a href="/privacy-policy">Cookie Policy</a> - -->
-                           <a href="/cookie-policy">Cookie Policy</a> - 
-                           <a href="/website-accessibility">Website accessibility statement</a> - 
-                           Site powered by <a href="http://www.eu.ntt.com/en/index.html">NTT Europe Online</a> | 
-                           <a href="http://www.rippleffect.com">Rippleffect</a> | 
-                           <a href="http://www.ostmodern.co.uk/">Ostmodern</a>
+                           &copy; Saigon Futsal Community <?php echo date('Y');?> - 
+                            - 
+                           Site powered by <a target="_blank" href="https://www.facebook.com/ezwebvietnam">EZWeb Việt Nam</a> | 
+                           <a href="http://fustit.com">FUST-IT</a>
                         </small>
                      </div>
                      <!--/inner -->

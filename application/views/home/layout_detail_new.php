@@ -385,15 +385,10 @@
                   <div class="smallprint">
                      <div class="inner">
                         <small>
-                           &copy; Arsenal Broadband Limited 2014 - 
-                           <a href="/terms-of-use">Terms of Use</a> - 
-                           <a href="/privacy-policy">Privacy Policy</a> - 
-                           <!--<a href="/privacy-policy">Cookie Policy</a> - -->
-                           <a href="/cookie-policy">Cookie Policy</a> - 
-                           <a href="/website-accessibility">Website accessibility statement</a> - 
-                           Site powered by <a href="http://www.eu.ntt.com/en/index.html">NTT Europe Online</a> | 
-                           <a href="http://www.rippleffect.com">Rippleffect</a> | 
-                           <a href="http://www.ostmodern.co.uk/">Ostmodern</a>
+                           &copy; Saigon Futsal Community <?php echo date('Y');?> - 
+                            - 
+                           Site powered by <a target="_blank" href="https://www.facebook.com/ezwebvietnam">EZWeb Việt Nam</a> | 
+                           <a href="http://fustit.com">FUST-IT</a>
                         </small>
                      </div>
                      <!--/inner -->
