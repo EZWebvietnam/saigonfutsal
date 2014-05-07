@@ -44,5 +44,9 @@ class Home extends MY_Controller
 		$this->data['list_clip_home']=getVideosYouTube($this->config->item('youtubechanel'));
 		$this->load->view('home/layout_home_index',$this->data);
 	}
+	public function result()
+	{
+		$this->load->view('home/bxh_layout');
+	}
 }
 ?>

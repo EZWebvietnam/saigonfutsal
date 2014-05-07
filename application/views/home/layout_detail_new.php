@@ -227,7 +227,7 @@
                            <cite>
                               <span class="author"><?php echo $new_detail[0]['author_name']?></span>
                               <span class="date"><?php echo date('d',$new_detail[0]['create_date']);?> <?php echo date('M',$new_detail[0]['create_date']);?> <?php echo date('Y',$new_detail[0]['create_date']);?></span>
-                              <div class="fb-like" data-href="<?php echo full_url_($_SERVER);?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+                              <div class="fb-like" data-href="https://www.facebook.com/SaigonFutsal" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div><div class="fb-like" data-href="<?php echo full_url_($_SERVER);?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
                            </cite>
                         </section>
                         <section class="share-articles">

@@ -548,6 +548,11 @@
                               </div>
                            </li>
                         </ul>
+						<ul class="article-list">
+                           <li>
+                           </li>
+                           
+                        </ul>
                         <ul class="article-list">
                            <li>
                               <a href="/news/news-archive/20140403/semi-final-mascot-pictures" class="image" >
@@ -558,13 +563,16 @@
                               New York ticket details confirmed soon        </a>
                            </li>
                         </ul>
-                        <h2><a href="/news/news-archive?category=club">Club News</a></h2>
+                        <h2><a href="/news/news-archive?category=club">Bảng Xếp Hạng</a></h2>
                         <ul class="article-list">
                            <li class="primary">
-                              <div id="div-gpt-ad-1353671982241-23" class="large-only ad-club-news" style="width:192px; height:165px;" data-attr-pushdown="0"></div>
+                              <!-- BEGIN of Soccerway widget HTML fragment  -->
+<!-- Personal code for this widget: XXXEvtH2ZXXgitg1g -->
+<iframe src="http://widgets.soccerway.com/widget/free/classic/competition/8/662#d=255x287&f=table,table_colmp,scroll&cbackground=FFFFFF&ctext=000000&ctitle=F85F00&cshadow=E8E8E8&cbutton=C0C0C0&cbuttontext=000000&chighlight=FF0000&tbody_family=Tahoma,sans-serif&tbody_size=9&tbody_weight=normal&tbody_style=normal&tbody_decoration=none&tbody_transform=none&ttitle_family=Impact,sans-serif&ttitle_size=13&ttitle_weight=normal&ttitle_style=normal&ttitle_decoration=none&ttitle_transform=none&ttab_family=Tahoma,sans-serif&ttab_size=9&ttab_weight=normal&ttab_style=normal&ttab_decoration=none&ttab_transform=none" width="255" height="287" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+<!-- END of Soccerway widget HTML fragment -->
                            </li>
                         </ul>
-                        <ul class="article-list">
+                        <!--<ul class="article-list">
                            <li>
                               <a href="/news/news-archive/20140403/semi-final-mascot-pictures" class="image" >
                               Youngster receives FA Cup mascot prize        </a>
@@ -573,7 +581,7 @@
                               <a href="/news/news-archive/20140403/new-york-tickets-details-confirmed-soon"  >
                               New York ticket details confirmed soon        </a>
                            </li>
-                        </ul>
+                        </ul>-->
                         <div class="widget">
                            <div id="div-gpt-ad-1353671982241-1" class="large-only ad-small" style="width:170px; height:237px;" data-attr-pushdown="0"></div>
                         </div>
