@@ -424,15 +424,19 @@
                               <ul class="social-icons">
                                  <li>
                                     <a href="https://www.facebook.com/SaigonFutsal" target="_blank">
-                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/facebook_active.png">                </a>
+                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/facebook.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://twitter.com/SaigonFootball" target="_blank">
-                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/twitter_active.png">                </a>
+                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/twitter.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://plus.google.com/102817370847800628226" target="_blank">
-                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/google_active.png">                </a>
+                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/gplus.png">                </a>
+                                 </li>
+								  <li>
+                                    <a href="https://www.youtube.com/user/SaigonFutsal" target="_blank">
+                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/youtube.png">                </a>
                                  </li>
                               </ul>
                               <!--/social-icons -->
@@ -591,15 +595,19 @@
                               <ul class="social-icons">
                                  <li>
                                     <a href="https://www.facebook.com/SaigonFutsal" target="_blank">
-                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/facebook_active.png">                </a>
+                                    <img  alt="Facebook" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/facebook.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://twitter.com/SaigonFootball" target="_blank">
-                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/twitter_active.png">                </a>
+                                    <img  alt="Twitter" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/twitter.png">                </a>
                                  </li>
                                  <li>
                                     <a href="https://plus.google.com/102817370847800628226" target="_blank">
-                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/google_active.png">                </a>
+                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/gplus.png">                </a>
+                                 </li>
+								 <li>
+                                    <a href="https://www.youtube.com/user/SaigonFutsal" target="_blank">
+                                    <img  alt="Google Plus" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/images/youtube.png">                </a>
                                  </li>
                               </ul>
                               <!--/social-icons -->
