@@ -10,6 +10,17 @@ class News extends MY_Controller
 	}
 	public function detail_new($id_cate,$id_post)
 	{
+		$this->load->helper('cookie'); 
+		if(!$this->input->cookie('visit_web', false))
+        {
+		    $cookie = array(
+		                    'name'   => 'visit_web',
+		                    'value'  => 'visit_web',
+		                    'expire' =>  5184000,
+		                    'secure' => false
+		                );
+		    $this->input->set_cookie($cookie);
+	    }
 		$id_post = explode('-',$id_post);
 		$id_post = $id_post[0];
 		$id_cate = explode('-',$id_cate);

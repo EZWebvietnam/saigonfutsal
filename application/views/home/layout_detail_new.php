@@ -76,6 +76,10 @@
                <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
             </head>
             <body >
+			<?php 
+                  if(!$this->input->cookie('visit_web', false))
+                        {
+                  ?>
                <div id="cookie-wrapper" style='display: none;'>
                   <div id="cookie-header">
                      <p class="straptext"><span>Cookies on the Arsenal Website</span><br />We use cookies to improve your browsing experience and help us improve our websites. For more information, please <a target='_blank' href="/cookie-policy">click here</a>. By continuing to use our website, you agree to our use of such cookies.</p>
@@ -85,6 +89,7 @@
                      </div>
                   </div>
                </div>
+			   <?php } ?>
                <div id="div-gpt-ad-1353671982241-11" class="small-only ad-mobile-top" style="width:320px; height:50px;" data-attr-pushdown="0"></div>
                <header>
                   <div class="header-wrap">
@@ -220,8 +225,8 @@
                            	<?php echo $new_detail[0]['content']?>
                                           
                            <cite>
-                              <span class="author">Nik Brumsack</span>
-                              <span class="date">27 Apr 2014</span>
+                              <span class="author"><?php echo $new_detail[0]['author_name']?></span>
+                              <span class="date"><?php echo date('d',$new_detail[0]['create_date']);?> <?php echo date('M',$new_detail[0]['create_date']);?> <?php echo date('Y',$new_detail[0]['create_date']);?></span>
                               <div class="fb-like" data-href="<?php echo full_url_($_SERVER);?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
                            </cite>
                         </section>
