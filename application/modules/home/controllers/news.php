@@ -38,5 +38,36 @@ class News extends MY_Controller
 		$this->data['new_detail_top'] = $this->newshomemodel->new_detail_top($id_post);
 		$this->load->view('home/layout_detail_new',$this->data);
 	}
+	public function list_new($id_cate = null)
+	{
+		
+		$id_cate = explode('-',$id_cate);
+		$id_cate = $id_cate[0];
+		if(empty($id_cate)|| !is_numeric($id_cate))
+		{
+			show_404();exit;
+		}
+		$this->load->helper('url');
+        $config['uri_segment'] = 5;
+        $page = $this->uri->segment(4);
+        $config['per_page'] = 10;
+        $config['total_rows'] = $this->newshomemodel->count_new_cate($id_cate);
+        if ($page == '') {
+            $page = 1;
+        }
+        $page1 = ($page - 1) * $config['per_page'];
+        if (!is_numeric($page)) {
+            show_404();
+            exit;
+        }
+        $num_pages = ceil($config['total_rows'] / $config['per_page']);
+        $array_sv = $this->newshomemodel->list_new_cate($id_cate,$config['per_page'], $page1);
+        $this->data['total_page'] = $num_pages;
+        $this->data['offset'] = $page1;
+        $this->data['page'] = $page;
+        $this->data['total'] = $config['total_rows'];
+        $this->data['list'] = $array_sv;
+		$this->load->view('home/layout_list',$this->data);
+	}
 }
 ?>

@@ -51,5 +51,19 @@ class Newshomemodel extends CI_Model
 		$query=$this->db->query($sql);
 		return $query->result_array();
 	}
+	public function list_new_cate($id_cate,$number,$offset)
+	{
+		$id_cate = intval($id_cate);
+		$sql ="SELECT *,{$this->_name}.title as title_new,cate_new.title as title_cate FROM {$this->_name} INNER JOIN cate_new ON cate_new.id_catenew = {$this->_name}.id_cate WHERE  id_cate = $id_cate  ORDER BY {$this->_name}.id_new LIMIT ?,?";
+		$query=$this->db->query($sql,array($offset,$number));
+		return $query->result_array();	
+	}
+	public function count_new_cate($id_cate)
+	{
+		$id_cate = intval($id_cate);
+		$sql ="SELECT *,{$this->_name}.title as title_new,cate_new.title as title_cate FROM {$this->_name} INNER JOIN cate_new ON cate_new.id_catenew = {$this->_name}.id_cate WHERE  id_cate = $id_cate  ORDER BY {$this->_name}.id_new";
+		$query=$this->db->query($sql);
+		return count($query->result_array());	
+	}
 }
 ?>
