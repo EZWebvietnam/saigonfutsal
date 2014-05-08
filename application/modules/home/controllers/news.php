@@ -6,6 +6,7 @@ class News extends MY_Controller
 		parent::__construct();
 		parent::load_header();
 		parent::list_cate();
+		parent::list_most_read();
 		$this->load->model('newshomemodel');
 	}
 	public function detail_new($id_cate,$id_post)
@@ -40,7 +41,9 @@ class News extends MY_Controller
 	}
 	public function list_new($id_cate = null)
 	{
-		
+		$this->load->model('catenewhomemodel');
+		$detail_cate = $this->catenewhomemodel->load_cate_new_detail($id_cate);
+		$link_cate = base_url().'tin-tuc/'.$detail_cate[0]['id_catenew'].'-'.mb_strtolower(url_title(removesign($detail_cate[0]['title'])));
 		$id_cate = explode('-',$id_cate);
 		$id_cate = $id_cate[0];
 		if(empty($id_cate)|| !is_numeric($id_cate))
@@ -67,6 +70,36 @@ class News extends MY_Controller
         $this->data['page'] = $page;
         $this->data['total'] = $config['total_rows'];
         $this->data['list'] = $array_sv;
+		$this->data['link_page'] = $link_cate;
+		$this->data['title']=$detail_cate[0]['title'].' | SaigonFutsal.com';
+		$this->load->view('home/layout_list',$this->data);
+	}
+	public function list_news()
+	{
+		
+		$this->load->helper('url');
+		$link_cate = base_url().'tin-tuc';
+        $config['uri_segment'] = 5;
+        $page = $this->uri->segment(3);
+        $config['per_page'] = 10;
+        $config['total_rows'] = $this->newshomemodel->count_new();
+        if ($page == '') {
+            $page = 1;
+        }
+        $page1 = ($page - 1) * $config['per_page'];
+        if (!is_numeric($page)) {
+            show_404();
+            exit;
+        }
+        $num_pages = ceil($config['total_rows'] / $config['per_page']);
+        $array_sv = $this->newshomemodel->list_new($config['per_page'], $page1);
+        $this->data['total_page'] = $num_pages;
+        $this->data['offset'] = $page1;
+        $this->data['page'] = $page;
+        $this->data['total'] = $config['total_rows'];
+        $this->data['list'] = $array_sv;
+		$this->data['link_page'] = $link_cate;
+		$this->data['title']='Tin tức | SaigonFutsal.com';
 		$this->load->view('home/layout_list',$this->data);
 	}
 }

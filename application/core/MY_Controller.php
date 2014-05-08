@@ -14,11 +14,6 @@ class MY_Controller extends CI_Controller
         $this->load->model('catenewhomemodel');
         $this->data['list_cate']=$this->catenewhomemodel->load_cate_new();
     }
-    public function info_company()
-    {
-        $this->load->model('faq');
-        $this->data['info_company'] = $this->faq->info_com();
-    }
     public function load_clip()
     {
         $this->load->model('productmodel');
@@ -98,6 +93,11 @@ class MY_Controller extends CI_Controller
 		shuffle($array_to_parse); 
 		$array_new_tsn = array_slice($array_to_parse, 0, 3);
 		$this->data['tsn_list_new'] = $array_new_tsn;
+	}
+	public function list_most_read()
+	{
+		$this->load->model('newshomemodel');
+		$this->data['list_most_read'] = $this->newshomemodel->new_detail_top(0);
 	}
 }
 ?>

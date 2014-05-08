@@ -299,10 +299,10 @@
                               <?php } else {?>
                               <img width="456" height="257" alt="<?php echo $news_slide_1[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
                               <?php } ?>  
-                              <a href="/news/news-archive/20140405/training-pre-everton-gallery" ><span><?php echo $news_slide_1[0]['title']?></span></a>
+                              <a href="<?php echo base_url();?>tin-tuc/<?php echo $cate_info[0]['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($cate_info[0]['title'])))?>/p<?php echo $news_slide_1[0]['id_new']?>-<?php echo mb_strtolower(url_title(removesign($news_slide_1[0]['title'])))?>" ><span><?php echo $news_slide_1[0]['title']?></span></a>
                            </div>
                            <div class="article-info">
-                              <h2><a href="/news/news-archive/20140405/training-pre-everton-gallery" ><?php echo $news_slide_1[0]['title']?></a></h2>
+                              <h2><a href="<?php echo base_url();?>tin-tuc/<?php echo $cate_info[0]['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($cate_info[0]['title'])))?>/p<?php echo $news_slide_1[0]['id_new']?>-<?php echo mb_strtolower(url_title(removesign($news_slide_1[0]['title'])))?>" ><?php echo $news_slide_1[0]['title']?></a></h2>
                               <p><?php echo sub_string(loaibohtmltrongvanban($news_slide_1[0]['content']),112);?></p>
                            </div>
                         </section>
@@ -311,9 +311,10 @@
                               <?php 
                                  foreach($new_slide_sub as $slide_sub)
                                  {
+								 	$cate_slide = $this->catenewhomemodel->load_cate_new_detail($slide_sub['id_cate']);
                                  ?>
                               <li>
-                                 <a href="/news/news-archive/20140401/arsenal-player-of-the-month-vote-now"  >
+                                 <a href="<?php echo base_url();?>tin-tuc/<?php echo $cate_slide[0]['id_catenew']?>-<?php echo  mb_strtolower(url_title(removesign($cate_slide[0]['title'])))?>/p<?php echo $slide_sub['id_new'] ?>-<?php echo mb_strtolower(url_title(removesign($slide_sub['title']))) ?>"  >
                                  <?php echo sub_string($slide_sub['title'],50)?>        </a>
                               </li>
                               <?php } ?>
@@ -412,7 +413,7 @@
                                  {
                                  ?>
                               <li>
-                                 <a href="<?php echo base_url();?>tin-tuc/3-bong-da-cuoc-song/p<?php echo $new_3_[0]['id_new']?>-<?php echo mb_strtolower(url_title(removesign($new_3_[0]['title'])))?>"  >
+                                 <a href="<?php echo base_url();?>tin-tuc/3-bong-da-cuoc-song/p<?php echo $new_3_['id_new']?>-<?php echo mb_strtolower(url_title(removesign($new_3_['title'])))?>"  >
                                  <?php echo sub_string($new_3_['title'],50);?>        </a>
                               </li>
                               <?php } }?> 

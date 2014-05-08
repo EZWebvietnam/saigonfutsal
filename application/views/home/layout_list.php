@@ -12,15 +12,18 @@
          <html class="no-js">
             <!--<![endif]-->
             <head>
-               <title>Team News | News | Arsenal.com</title>
+               <title><?php echo $title ?></title>
                <meta charset="utf-8">
-               <meta name="author" content="Rippleffect Ltd." >
-               <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1" >
-               <meta name="msvalidate.01" content="4A33AA4076C3CD85A873140AEC2AE1B5" >
-               <meta name="description" content="Please note: The injury news on Arsenal.com is updated only from Arsene Wenger's press conferences and his interviews with Arsenal Player. " >
+              <link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/<?php echo $header['icon']?>" type="image/x-icon"/>
+               <meta name="author" content="<?php echo $header['author']?>" >
+               <meta name="viewport" content="<?php echo $header['viewport']?>" >
+               <meta name="msvalidate.01" content="<?php echo $header['msvalidate']?>" >
+               <meta name="robots" content="<?php echo $header['robots']?>">
+               <meta name="google-site-verification" content="<?php echo $header['google']?>" />
+               <meta name="keywords" content="<?php echo $header['keywords']?>" />
+               <meta property="fb:app_id" content="<?php echo $header['fbapp']?>">
+               <meta name="description" content="<?php echo $title ?>" >
                <link href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/css/styles.css?v=1.9.8" media="all" rel="stylesheet" type="text/css" >
-               <link href="http://feeds.arsenal.com/arsenal-news" rel="alternate" type="application/rss+xml" title="Arsenal FC News Feed" >
-               <link href="/assets/images/ico/favicon.ico" rel="shortcut icon" >
                <script type="text/javascript">
                   //<!--
                      var _gaq = _gaq || [];
@@ -85,9 +88,9 @@
                         <a href="/" id="logo">Arsenal.com</a>	        
                         <nav role="navigation">
                            <ul>
-                              <li><a href="<?php echo base_url();?>" class="active">Trang chủ</a></li>
+                              <li><a href="<?php echo base_url();?>">Trang chủ</a></li>
                               <li>
-                                 <a href="<?php echo base_url();?>tin-tuc" id="megamenu-news"><span>Tin tức</span></a>
+                                 <a href="<?php echo base_url();?>tin-tuc" id="megamenu-news"  class="active"><span>Tin tức</span></a>
                                  <div class="mega-nav" style="display: none;">
                                     <div class="column last-column">
                                        <ul>
@@ -234,16 +237,22 @@
                      	if($page==1 && $total_page == 1)
                      	{
                      	?>
-                       <a class="prev inactive">Older</a>
-    					<a class="next inactive">Newer</a>
+                       <a class="prev inactive">Cũ hơn</a>
+    					<a class="next inactive">Mới hơn</a>
                         <?php } else { 
                         	if($page == $total_page)
                         	{ ?>
-								<a class="prev" href="/news/news-archive?page=<?php $page -1 ?>">Cũ hơn</a>
+								<a class="prev" href="<?php echo $link_page?>/page/<?php echo $page -1 ?>">Cũ hơn</a>
                         		<a class="next inactive">Mới hơn</a>
-							<?php } else { ?>
-								<a class="prev" href="/news/news-archive?page=<?php $page -1 ?>">Cũ hơn</a>
-                        		<a class="next" href="/news/news-archive?page=<?php $page + 1 ?>">Mới hơn</span>
+							<?php } else { 
+								if($page -1 == 0)
+								{
+								?>
+								<a class="prev inactive">Cũ hơn</a>
+								<?php  } else {?>
+								<a class="prev" href="<?php echo $link_page?>/page/<?php echo $page -1 ?>">Cũ hơn</a>
+								<?php } ?>
+                        		<a class="next" href="<?php echo $link_page?>/page/<?php echo $page + 1 ?>">Mới hơn</span>
 								<?php }
 							}
                         ?>
@@ -258,10 +267,15 @@
                         <div class='widget most-read'>
                            <h2>Most Read</h2>
                            <ul>
-                              <li><span>1</span><a href="/news/news-archive/20140507/arsenal-player-of-the-season-vote-now">Arsenal Player of the Season - VOTE NOW</a></li>
-                              <li><span>2</span><a href="/news/news-archive/20140507/giroud-wins-goal-of-the-month">Giroud wins Goal of the Month</a></li>
-                              <li><span>3</span><a href="/news/news-archive/20140506/walcott-surprises-fa-cup-final-mascot">Walcott surprises FA Cup final mascot</a></li>
-                              <li><span>4</span><a href="/news/news-archive/20140505/szczesny-my-regrets-over-title-race">Szczesny - My regrets over title race</a></li>
+						   <?php 
+						   $i = 1;
+						   foreach($list_most_read as $most_read)
+						   {
+						   	
+						   ?>
+                              <li><span><?php echo $i;?></span><a href="/news/news-archive/20140507/arsenal-player-of-the-season-vote-now"><?php echo $most_read['title_new'] ?></a></li>
+                              
+							  <?php $i++; } ?>
                            </ul>
                         </div>
                         <div id="div-gpt-ad-1353671982241-5" class="large-only ad-small" style="width:170px; height:237px;" data-attr-pushdown="0"></div>
