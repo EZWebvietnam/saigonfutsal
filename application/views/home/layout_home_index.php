@@ -447,7 +447,7 @@
                            <div id="div-gpt-ad-1353671982241-14" class="medium-only ad-wide" style="width:434px; height:208px;" data-attr-pushdown="0"></div>
                            <div id="div-gpt-ad-1353671982241-15" class="medium-only ad-wide" style="width:434px; height:208px;" data-attr-pushdown="0"></div>
                         </div>
-                        <section class="small-only">
+                        <!--<section class="small-only">
                            <h2>Don't Miss</h2>
                            <?php 
                               foreach($list_clip_home as $k=>$clip_home)
@@ -462,9 +462,9 @@
                               </div>
                               <h4><?php echo strtoupper(get_yt_title($clip_home))?></h4>
                            </a>
-                           <!--/feature -->
+                         
                            <?php } ?>
-                        </section>
+                        </section> -->
                         <h2 class="small-only"><a href="/news/news-archive?category=club">Club News</a></h2>
                         <section class="primary small-only">
                            <div id="div-gpt-ad-1353671982241-24" class="small-only ad-club-news" style="width:192px; height:165px;" data-attr-pushdown="0"></div>
@@ -485,7 +485,7 @@
                         </section>
                      </article>
                      <aside>
-                        <div class="widgets">
+                        <!--<div class="widgets">
                            <h2>Don't Miss</h2>
                            <?php 
                               foreach($list_clip_home as $k=>$clip_home)
@@ -496,15 +496,13 @@
                                  <img  alt="Arsenal 360" src="http://img.youtube.com/vi/<?php echo $clip_home ?>/sddefault.jpg">	
                                  <div class="video"></div>
                                  <div class="overlay"></div>
-                                 <!--<div class="reveal">
-                                    <p><?php echo strtoupper(get_yt_title($clip_home['code']))?></p>
-                                    </div>-->
+                                 
                                  <h4><?php echo strtoupper(get_yt_title($clip_home))?></h4>
                               </a>
-                              <!--/feature -->
+                              
                            </div>
                            <?php } ?>
-                        </div>
+                        </div>-->
                         <!--/widgets -->
                      </aside>
                      <!--/content-sidebar -->
