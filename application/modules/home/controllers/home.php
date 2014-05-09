@@ -39,14 +39,18 @@ class Home extends MY_Controller
 		$this->data['news_2'] = $this->newshomemodel->news_home_1(2,$id_new_slide);
 		$this->data['news_3'] = $this->newshomemodel->news_home_1(3,$id_new_slide);
 		//
-		$this->data['list_post_fb'] = loadPostFace($this->config->item('pageid'));
-		$this->data['profile_page'] = loadProfilePageFace($this->config->item('pageid'));
+		//$this->data['list_post_fb'] = loadPostFace($this->config->item('pageid'));
+		//$this->data['profile_page'] = loadProfilePageFace($this->config->item('pageid'));
 		$this->data['list_clip_home']=getVideosYouTube($this->config->item('youtubechanel'));
 		$this->load->view('home/layout_home_index',$this->data);
 	}
 	public function result()
 	{
 		$this->load->view('home/bxh_layout');
+	}
+	public function login(){
+	print_r(json_decode($this->input->post('data_fb')));exit;
+
 	}
 }
 ?>

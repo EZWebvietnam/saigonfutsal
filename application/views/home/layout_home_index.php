@@ -85,13 +85,7 @@
                   } catch (e) {
                   }
                </script>
-               <script type="text/javascript">
-                  var timeout = setTimeout("location.reload(true);",300000);
-                  function resetTimeout() {
-                    clearTimeout(timeout);
-                    timeout = setTimeout("location.reload(true);",300000);
-                  }
-               </script>
+               
             </head>
             <body >
                <?php 
@@ -754,27 +748,27 @@
                         </article>
                         <article class="tweets">
                            <section class="player-tweets">
-                              <h3><a target="__blank" href="<?php echo  $profile_page->link?>">Cập nhật từ Fanpage</a></h3>
-                              <?php 
-                                 $i = 1;
-                                 foreach ($list_post_fb->data as $fppost) {
-                                 	if($i<=5)
-                                 	{
-                                 
-                                 if (property_exists($fppost, 'message')) { // Some posts doesn't have message prop
-                                 
-                                 
-                                 ?>
-                              <div class="module tweet" data-module-timestamp='<?php echo strtotime($fppost->created_time)?>'>
-                                 <p><a target="__blank" href="<?php echo  $profile_page->link?>"><?php echo $profile_page->name?></a></p>
-                                 <p><?php echo $fppost->message;?></p>
-                                 <figure class="pic-holder"><img src="http://graph.facebook.com/SaigonFutsal/picture?type=large"></figure>
-                                 <span class="time"></span>
-                              </div>
-                              <?php } }
-                                 $i++;
-                                 }?>
-                              <a target="__blank" href="<?php echo  $profile_page->link?>" class="see-more">Xem thêm</a>
+                              <h3><a target="__blank" href="http://www.facebook.com/saigonfutsal">Cập nhật từ Fanpage</a></h3>
+							  <script>
+							  	
+								$(document).ready(function () {
+								     $.getJSON("https://graph.facebook.com/1429871157244055/posts?fields=message&access_token=553435274702353|OaJc7d2WCoDv83AaR4JchNA_Jgw", function (data) {
+									 	
+								         $.each(data.data, function (i, data) {
+										 	if(i<=6)
+											{
+												
+											
+								             var jsondata = "<div class='module tweet' data-module-timestamp='"+data.created_time+"'><p><a target='__blank' href='http://www.facebook.com/saigonfutsal'>Cộng Đồng Futsal Sài Gòn</a></p><p>"+data.message+"</p><figure class='pic-holder'><img src='http://graph.facebook.com/SaigonFutsal/picture?type=large'></figure><span class='time'></span>";
+								             $("#results").append(jsondata);
+											 }
+								         });
+								     });
+								     return false;
+								 });
+							  </script>
+							  <div id="results"></div>
+                              <a target="__blank" href="http://www.facebook.com/saigonfutsal" class="see-more">Xem thêm</a>
                            </section>
                         </article>
                      </div>
