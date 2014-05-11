@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2014 at 09:00 PM
+-- Generation Time: May 11, 2014 at 11:07 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `saigonfutsal`
 --
-
+CREATE DATABASE IF NOT EXISTS `saigonfutsal` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `saigonfutsal`;
 
 -- --------------------------------------------------------
 
@@ -122,6 +123,29 @@ INSERT INTO `news` (`id_new`, `title`, `content`, `image`, `is_famous`, `id_cate
 (8, 'Van Gaal triệu tập 20 cầu thủ chuẩn bị World Cup', 'HLV tuyển Hà Lan, Louis van Gaal bắt đầu chiến dịch World Cup 2014 bằng cách triệu tập 20 cầu thủ lên trại huấn luyện quốc gia.\r\nDo các giải VĐQG Hà Lan, Eredivisie đã kết thúc, sớm hơn các giải VĐQG hàng đầu ở châu Âu, nên Van Gaal tận dụng thời gian triệu tập và đánh giá các tài năng trong nước.\r\n\r\n\r\nVan Gaal bắt đầu tuyển chọn cầu thủ dự World Cup\r\nDanh sách 20 cầu thủ được triệu tập lần này đến phần lớn từ Ajax (đội vô địch) và các đội bóng tên tuổi khác của Hà Lan như Feyenoord, PSV và Twente.\r\n\r\nBên cạnh sự vắng mặt của các ngôi sao hàng đầu như Robben hay Van Persie, lần triệu tập này cũng không có sự góp mặt của các cầu thủ AZ, Heerenveen, Vitesse và Groningen, những đội đang phải đá play-off tranh vé dự Europa League.\r\n\r\nDự kiến, ngày 13/5 tới, Van Gaal sẽ công bố danh sách sơ bổ của tuyển Hà Lan dự World Cup 2014. Cơ hội góp mặt của các cầu thủ được triệu tập sớm phụ thuộc rất nhiều vào những gì họ sẽ thể hiện trong một tuần ăn tập cùng nhau sắp tới.\r\n\r\nDanh sách cụ thể\r\n\r\nThủ môn: Jasper Cillessen (Ajax), Kenneth Vermeer (Ajax), Jeroen Zoet (PSV)\r\n\r\nHậu vệ: Daley Blind (Ajax), Daryl Janmaat (Feyenoord), Terence Kongolo (Feyenoord), Bruno Martins Indi (Feyenoord), Karim Rekik (PSV), Joel Veltman (Ajax), Stefan de Vrij (Feyenoord).\r\n\r\nTiền vệ: Jean-Paul Boetius (Feyenoord), Jordy Clasie (Feyenoord), Davy Klaassen (Ajax), Tonny Vilhena (Feyenoord), Georginio Wijnaldum (PSV).\r\n\r\nTiền đạo: Luc Castaignos (Twente), Memphis Depay (PSV), Jurgen Locadia (PSV), Luciano Narsingh (PSV), Quincy Promes (Twente).', 'VanGaal.jpg', 0, 2, 0, 0, 0),
 (9, 'Cách mạng tại Barca và M.U: Khi Fabregas là nhân vật chính', 'Trong mùa Hè năm nay, nhiều khả năng sẽ có bom tấn xảy ra, mà nhân vật chính sẽ là Cesc Fabregas.\r\nSau một mùa giải đáng thất vọng, với cả tinh thần lẫn phong độ, chắc chắn Barca sẽ cải tổ đội hình vào mùa Hè năm nay. M.U cũng vậy, cũng sẽ có những thay đổi toàn bộ, và có thể Fabregas sẽ là điểm nhấn trong hai cuộc cách mạng này. Rời Arsenal đến Barca, đội bóng mà tiền vệ người Tây Ban Nha dành tình cảm rất nhiều. Tuy nhiên, nhìn vào tình hình hiện tại, có rất nhiều lý do để Fabregas rời khỏi Nou Camp.\r\n\r\n\r\nFabregas sẽ đến M.U? Ảnh: Internet.\r\nVai trò của cựu tiền vệ Arsenal trong đội hình Barca hiện giờ như là một mảnh vá chiến thuật, anh không được dùng nhiều đúng với khả năng của mình. Thậm chí trong lần ra sân gặp Bilbao mới đây, các CĐV đã lo ó khi Fabregas vào sân thay Xavi.\r\n\r\nDù đã đứng ra bảo vệ cậu học trò, nhưng sau đó Tata Martino một lần nữa buộc Fabregas trên băng ghế dự bị trong trận làm khách ở El Madrigal. Và trong trận gặp Getafe, cảnh tượng tương tự lại diễn ra với anh, có thể thấy, Fabregas cũng không còn được cơ hội để thể hiện mình.\r\n\r\nTrong trận đấu này, tiền vệ người Tây Ban Nha chỉ được vào sân khi Barca gặp bế tắc. Và cũng chính anh đã làm được điều mà các CĐV mong đợi khi châm ngòi trong bàn thắng của Sanchez.\r\n\r\nĐang ở vào độ chín của sự nghiệp, rõ ràng Fabregas cần được thi đấu và thể hiện mình nhiều hơn. Nhưng tại Barca, anh khó có thể cạnh tranh được với những Xavi hay Iniesta. Tuy nhiên, nếu anh đến M.U, mọi chuyện ắt hẳn sẽ khác, bởi môi trường Premier League không phải là nơi xa lạ với anh, đồng thời viễn cảnh trở thành nhạc trưởng của Quỷ đỏ sẽ là một khởi đầu mới thật tươi sáng với Fabregas.', '1Fabregas.jpg', 0, 2, 0, 0, 0),
 (10, 'Cận cảnh những hot girl trên sân futsal', 'Cổ vũ hết mình khi đội tuyển thi đấu, các cổ động viên xinh đẹp đã góp thêm sức mạnh giúp tuyển futsal Việt Nam làm nên lịch sử khi lần đầu giành quyền vào tứ kết giải vô địch châu Á.\r\nTrong những ngày qua, các khán đài nhà thi đấu Phú Thọ (TP.HCM) luôn được nhuộm đỏ bởi màu áo của CĐV mỗi khi đội tuyển futsal Việt Nam thi đấu. Sự cổ vũ không biết mệt mỏi của họ đã trở thành động lực giúp đội tuyển thi đấu thành công tại giải vô địch futsal châu Á.\r\n', '953677e62cd186.jpg', 0, 3, 0, 222, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teams`
+--
+
+CREATE TABLE IF NOT EXISTS `teams` (
+  `id_team` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `about` text COLLATE utf8_unicode_ci NOT NULL,
+  `logo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `cover` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `create_date` int(11) NOT NULL,
+  PRIMARY KEY (`id_team`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id_team`, `name`, `about`, `logo`, `cover`, `create_date`) VALUES
+(1, 'FUST-Futsal Saigon United', 'sss', 'fust_logo.png', '10256383_1418461401749374_2157980116406398285_n.jpg', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

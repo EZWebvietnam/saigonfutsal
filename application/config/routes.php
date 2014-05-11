@@ -40,7 +40,7 @@
 
 $route['default_controller'] = "home/index";
 $route['login-social/login-fb']='home/member/facebook';
-
+$route['fust']='home/clubs/fust';
 $route['tin-tuc/(:any)-(:any)/p(:any)-(:any)'] = 'home/news/detail_new/$1/$3';
 $route['tin-tuc/(:any)-(:any)'] = 'home/news/list_new/$1';
 $route['tin-tuc/(:any)-(:any)/page/(:any)'] = 'home/news/list_new/$1';

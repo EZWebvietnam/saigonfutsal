@@ -161,7 +161,7 @@
                               </li>
                               <li><a href="/history" id="megamenu-history">Sự kiện</a></li>
                               <li><a href="/the-club" id="megamenu-sfgnew">Media</a></li>
-							  <li><a href="/the-club" id="megamenu-fust">FUST</a></li>
+							  <li><a href="<?php echo base_url();?>fust" id="megamenu-fust">FUST</a></li>
                            </ul>
                         </nav>
                         <!--//navigation -->	        
