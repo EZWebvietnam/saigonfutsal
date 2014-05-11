@@ -447,24 +447,6 @@
                            <div id="div-gpt-ad-1353671982241-14" class="medium-only ad-wide" style="width:434px; height:208px;" data-attr-pushdown="0"></div>
                            <div id="div-gpt-ad-1353671982241-15" class="medium-only ad-wide" style="width:434px; height:208px;" data-attr-pushdown="0"></div>
                         </div>
-                        <!--<section class="small-only">
-                           <h2>Don't Miss</h2>
-                           <?php 
-                              foreach($list_clip_home as $k=>$clip_home)
-                              {
-                              ?>
-                           <a target="_blank" href="https://www.youtube.com/watch?v=<?php echo $clip_home?>&feature=youtu.be" class="feature">
-                              <img  alt="<?php echo strtoupper(get_yt_title($clip_home))?>" src="http://img.youtube.com/vi/<?php echo $clip_home?>/sddefault.jpg">	
-                              <div class="video"></div>
-                              <div class="overlay"></div>
-                              <div class="reveal">
-                                 <p><?php echo $clip_home?></p>
-                              </div>
-                              <h4><?php echo strtoupper(get_yt_title($clip_home))?></h4>
-                           </a>
-                         
-                           <?php } ?>
-                        </section> -->
                         <h2 class="small-only"><a href="/news/news-archive?category=club">Club News</a></h2>
                         <section class="primary small-only">
                            <div id="div-gpt-ad-1353671982241-24" class="small-only ad-club-news" style="width:192px; height:165px;" data-attr-pushdown="0"></div>
@@ -485,24 +467,28 @@
                         </section>
                      </article>
                      <aside>
-                        <!--<div class="widgets">
-                           <h2>Don't Miss</h2>
-                           <?php 
-                              foreach($list_clip_home as $k=>$clip_home)
-                              {
-                              ?>
-                           <div class="widget">
-                              <a target="_blank" href="https://www.youtube.com/watch?v=<?php echo $clip_home?>&feature=youtu.be" class="feature">
-                                 <img  alt="Arsenal 360" src="http://img.youtube.com/vi/<?php echo $clip_home ?>/sddefault.jpg">	
-                                 <div class="video"></div>
-                                 <div class="overlay"></div>
-                                 
-                                 <h4><?php echo strtoupper(get_yt_title($clip_home))?></h4>
-                              </a>
-                              
-                           </div>
-                           <?php } ?>
-                        </div>-->
+                        <div class="widgets">
+                           <h2>VIDEO CLIP</h2>
+                           <script>
+							  	
+								$(document).ready(function () {
+								     $.getJSON("https://gdata.youtube.com/feeds/api/videos?q=saigonfutsal&max-results=10&v=2&alt=jsonc&orderby=viewCount", function (data) {
+									 	
+								         $.each(data.data.items, function (i, dtclip) {
+								         	var i_div = Math.floor(Math.random()*11);
+								             var jsondata = "<div class='widget'><a target='_blank' href='"+dtclip.player.default+"' class='feature'><img  alt='"+dtclip.title+"' src='"+dtclip.thumbnail.hqDefault+"'><div class='video'></div><div class='overlay'></div><h4>"+dtclip.title+"</h4></a> </div>";		
+								            	if(i_div%2==0)
+								            	{
+													$("#results_clip").append(jsondata);
+												}
+								             
+								         });
+								     });
+								     return false;
+								 });
+							  </script>
+                           <div id="results_clip"></div>
+                        </div>
                         <!--/widgets -->
                      </aside>
                      <!--/content-sidebar -->
@@ -511,12 +497,12 @@
                   <!-- large-sidebar -->	
                   <aside class="sidebar large-only">
                      <div class="widgets">
-                        <h2><a href="/news/news-archive?category=club">Club News</a></h2>
+                        <h2><a href="/news/news-archive?category=club">Cập nhập kết quả</a></h2>
                         <ul class="article-list">
                            <li class="primary">
                               <div class="main-width" id="next-match" data-event-id="1506174">
                                  <div class="stage" title="Spanish League">
-                                    Liga Spain    
+                                    Giao Hữu  
                                  </div>
                                  <div class="date" title="Monday 12 May">
                                     Monday 12 May    
