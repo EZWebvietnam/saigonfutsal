@@ -472,7 +472,7 @@
                            <script>
 							  	
 								$(document).ready(function () {
-								     $.getJSON("https://gdata.youtube.com/feeds/api/videos?q=saigonfutsal&max-results=10&v=2&alt=jsonc&orderby=viewCount", function (data) {
+								     $.getJSON("https://gdata.youtube.com/feeds/api/videos?q=SaigonFutSal&max-results=10&v=2&alt=jsonc&orderby=viewCount", function (data) {
 									 	
 								         $.each(data.data.items, function (i, dtclip) {
 								         	var i_div = Math.floor(Math.random()*11);
@@ -553,10 +553,7 @@
                         <h2><a href="/news/news-archive?category=club">Bảng Xếp Hạng</a></h2>
                         <ul class="article-list">
                            <li class="primary">
-                              <!-- BEGIN of Soccerway widget HTML fragment  -->
-<!-- Personal code for this widget: XXXEvtH2ZXXgitg1g -->
-<iframe src="http://widgets.soccerway.com/widget/free/classic/competition/8/662#d=255x287&f=table,table_colmp,scroll&cbackground=FFFFFF&ctext=000000&ctitle=F85F00&cshadow=E8E8E8&cbutton=C0C0C0&cbuttontext=000000&chighlight=FF0000&tbody_family=Tahoma,sans-serif&tbody_size=9&tbody_weight=normal&tbody_style=normal&tbody_decoration=none&tbody_transform=none&ttitle_family=Impact,sans-serif&ttitle_size=13&ttitle_weight=normal&ttitle_style=normal&ttitle_decoration=none&ttitle_transform=none&ttab_family=Tahoma,sans-serif&ttab_size=9&ttab_weight=normal&ttab_style=normal&ttab_decoration=none&ttab_transform=none" width="255" height="287" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe>
-<!-- END of Soccerway widget HTML fragment -->
+                             <iframe src="http://laban.vn/api/html/football/football-table?utm_source=znews&amp;u…" style="width: 246px; height: 400px; overflow: hidden;"></iframe>
                            </li>
                         </ul>
                         <!--<ul class="article-list">
