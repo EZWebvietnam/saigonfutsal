@@ -5,12 +5,32 @@ class Member extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->library('session');
+		$this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->library('tank_auth');
+        $this->lang->load('tank_auth');
 	}
 	public function facebook()
 	{
 		if($this->input->post())
 		{
-			print_r($this->input->post());exit;
+			$uid = $this->input->post('uid');
+			$email = $this->input->post('email');
+			$full_name = $this->input->post('firstname').' '.$this->input->post('middlename').' '.$this->input->post('lastname');
+			$token = $this->input->post('access_token');
+			$username = explode('@',$this->input->post('email'));
+			$username = $username[0];
+			$email_activation = $this->config->item('email_activation', 'tank_auth');
+			$password_1 = rand_string(6);
+			$password = $this->tank_auth->hash_password($password_1);
+			$data_create = $this->tank_auth->create_user($username,$email,$password,$full_name,0,0,$email_activation,$uid);
+			if(!is_null($data_create))
+			{
+				
+				$data_email = array('full_name'=>$full_name,'username'=>$username,'password'=>$password_1);
+				$this->_send_email('activate',$email,$email,$data_email,'Đăng ký thành viên');
+				echo '2222';exit;
+			}
 		}
 		else
 		{
@@ -43,5 +63,15 @@ class Member extends MY_Controller
 			}
 		}
 	}
+	function _send_email($type, $to, $email, &$data, $title) {
+        /*$this->load->library('email');*/
+        $this->load->library('maillinux');
+        /*$this->load->library('mailer');
+        $from = MAIL_ADMIN;*/
+        $from = MAIL_ADMIN;
+        $subject = $title;
+        $messsage = $this->load->view('email/' . $type . '-html', $data, TRUE);
+        $this->maillinux->SendMail($from, $email, $subject, $messsage);
+    }
 }
 ?>

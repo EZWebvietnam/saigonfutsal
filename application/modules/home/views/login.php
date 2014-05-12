@@ -5,7 +5,7 @@
 	<input type="hidden"  name="firstname" id="firstname"/>
 	<input type="hidden"  name="lastname" id="lastname"/>
 	<input type="hidden"  name="middlename" id="middlename"/>
-	<input type="hidden" value="<?php echo $token; ?>" id="access_token"/>
+	<input type="hidden" value="<?php echo $token; ?>" name="access_token" id="access_token"/>
 </form>
 <div id="test">
 </div>
@@ -22,7 +22,7 @@
 			document.forms.fb_login.firstname.value=response.first_name;
 			document.forms.fb_login.lastname.value=response.last_name;
 			document.forms.fb_login.middlename.value=response.middle_name;
-			document.forms.fb_login.access_token.value=response.access_token;
+			document.forms.fb_login.access_token.value=a;
 			document.forms.fb_login.submit();
         	}
 		});
