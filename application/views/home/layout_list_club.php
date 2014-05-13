@@ -12,27 +12,18 @@
          <html class="no-js">
             <!--<![endif]-->
             <head>
-               <title><?php echo $new_detail[0]['title']?></title>
+               <title><?php echo $title?></title>
                <meta charset="utf-8">
-              <link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/<?php echo $header['icon']?>" type="image/x-icon"/>
+               <link rel="shortcut icon" href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/<?php echo $header['icon']?>" type="image/x-icon"/>
                <meta name="author" content="<?php echo $header['author']?>" >
                <meta name="viewport" content="<?php echo $header['viewport']?>" >
                <meta name="msvalidate.01" content="<?php echo $header['msvalidate']?>" >
                <meta name="robots" content="<?php echo $header['robots']?>">
+               <meta name="description" content="<?php echo $header['description']?>" >
                <meta name="google-site-verification" content="<?php echo $header['google']?>" />
                <meta name="keywords" content="<?php echo $header['keywords']?>" />
-               <meta property="fb:app_id" content="<?php echo $header['fbapp']?>">	 
-               <meta name="description" content="'<?php echo sub_string(loaibohtmltrongvanban( $new_detail[0]['content']),108)?>'" >
-               <meta property="og:url" content="<?php echo full_url_($_SERVER);?>" >
-               <meta property="og:title" content="<?php echo $new_detail[0]['title']?>" >
-               <meta property="og:image" content="<?php echo $new_detail[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $new_detail[0]['image']?>" >
-               <meta property="og:description" content="'<?php echo sub_string(loaibohtmltrongvanban( $new_detail[0]['content']),108)?>'" >
-               <meta name="twitter:site" content="@SaigonFootball" >
-               <meta name="twitter:title" content="<?php echo $new_detail[0]['title']?>" >
-               <meta name="twitter:description" content="<?php echo sub_string(loaibohtmltrongvanban( $new_detail[0]['content']),108)?>" >
-               <meta name="twitter:card" content="summary_large_image" >
-               <meta name="twitter:image:src" content="<?php echo base_url();?>file/uploads/news/<?php echo $new_detail[0]['image']?>" >
-               <link href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/css/styles.css?v=1.9.7" media="all" rel="stylesheet" type="text/css" >
+               <meta property="fb:app_id" content="<?php echo $header['fbapp']?>">
+               <link href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/css/styles.css?v=1.9.8" media="all" rel="stylesheet" type="text/css" >
                <script type="text/javascript">
                   //<!--
                      var _gaq = _gaq || [];
@@ -53,20 +44,15 @@
                </script>
                <script type="text/javascript">
                   //<!--
-                     googletag.cmd.push(function() {googletag.defineSlot('/16242290/arsenal_web_ros_tall', [170, 530], 'div-gpt-ad-1353671982241-6').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_web_ros_small', [170, 237], 'div-gpt-ad-1353671982241-5').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_web_top_story', [192, 165], 'div-gpt-ad-1353671982241-26').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_web_in_page', [290, 160], 'div-gpt-ad-1353671982241-28').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_tablet_ros_wide', [434, 208], 'div-gpt-ad-1353671982241-16').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_tablet_ros_small', [170, 237], 'div-gpt-ad-1353671982241-17').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_tablet_top_story', [192, 165], 'div-gpt-ad-1353671982241-27').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_tablet_in_page', [290, 160], 'div-gpt-ad-1353671982241-30').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_mob_ros_bottom', [320, 50], 'div-gpt-ad-1353671982241-11').addService(googletag.pubads());
-                     googletag.defineSlot('/16242290/arsenal_mob_in_page', [290, 160], 'div-gpt-ad-1353671982241-29').addService(googletag.pubads()); googletag.pubads().enableAsyncRendering(); googletag.enableServices();});    //-->
+                     googletag.cmd.push(function() {googletag.defineSlot('/16242290/arsenal_web_tickets_tall', [170, 530], 'div-gpt-ad-1353671982241-8').addService(googletag.pubads());
+                     googletag.defineSlot('/16242290/arsenal_web_tickets_small', [170, 237], 'div-gpt-ad-1353671982241-7').addService(googletag.pubads());
+                     googletag.defineSlot('/16242290/arsenal_tablet_tickets_wide', [434, 208], 'div-gpt-ad-1353671982241-20').addService(googletag.pubads());
+                     googletag.defineSlot('/16242290/arsenal_tablet_tickets_small', [170, 237], 'div-gpt-ad-1353671982241-21').addService(googletag.pubads());
+                     googletag.defineSlot('/16242290/arsenal_mob_tickets_bottom', [320, 50], 'div-gpt-ad-1353671982241-12').addService(googletag.pubads()); googletag.pubads().enableAsyncRendering(); googletag.enableServices();});    //-->
                </script>
                <script type="text/javascript">
                   //<!--
-                     var dfpSlots={"web":["div-gpt-ad-1353671982241-6","div-gpt-ad-1353671982241-5","div-gpt-ad-1353671982241-26","div-gpt-ad-1353671982241-28"],"tablet":["div-gpt-ad-1353671982241-16","div-gpt-ad-1353671982241-17","div-gpt-ad-1353671982241-27","div-gpt-ad-1353671982241-30"],"mobile":["div-gpt-ad-1353671982241-11","div-gpt-ad-1353671982241-29"]}    //-->
+                     var dfpSlots={"web":["div-gpt-ad-1353671982241-8","div-gpt-ad-1353671982241-7"],"tablet":["div-gpt-ad-1353671982241-20","div-gpt-ad-1353671982241-21"],"mobile":["div-gpt-ad-1353671982241-12"]}    //-->
                </script>
                <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/ico/apple-touch-icon-144-precomposed.png">
                <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/ico/apple-touch-icon-114-precomposed.png">
@@ -76,10 +62,6 @@
                <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
             </head>
             <body >
-			<?php 
-                  if(!$this->input->cookie('visit_web', false))
-                        {
-                  ?>
                <div id="cookie-wrapper" style='display: none;'>
                   <div id="cookie-header">
                      <p class="straptext"><span>Cookies on the Arsenal Website</span><br />We use cookies to improve your browsing experience and help us improve our websites. For more information, please <a target='_blank' href="/cookie-policy">click here</a>. By continuing to use our website, you agree to our use of such cookies.</p>
@@ -89,17 +71,16 @@
                      </div>
                   </div>
                </div>
-			   <?php } ?>
-               <div id="div-gpt-ad-1353671982241-11" class="small-only ad-mobile-top" style="width:320px; height:50px;" data-attr-pushdown="0"></div>
+               <div id="div-gpt-ad-1353671982241-12" class="small-only ad-mobile-top" style="width:320px; height:50px;" data-attr-pushdown="0"></div>
                <header>
                   <div class="header-wrap">
                      <div class="inner">
                         <a href="/" id="logo">Arsenal.com</a>	        
                         <nav role="navigation">
                            <ul>
-                              <li><a id="trang_chu" href="<?php echo base_url();?>">Trang chủ</a></li>
+                              <li><a href="<?php echo base_url();?>" >Trang chủ</a></li>
                               <li>
-                                 <a class="active" id="tin_tuc" href="<?php echo base_url();?>tin-tuc" id="megamenu-news"><span>Tin tức</span></a>
+                                 <a href="<?php echo base_url();?>tin-tuc" id="megamenu-news"><span>Tin tức</span></a>
                                  <div class="mega-nav" style="display: none;">
                                     <div class="column last-column">
                                        <ul>
@@ -116,9 +97,9 @@
                                  </div>
                               </li>
                                <li><a href="<?php echo base_url();?>doi-bong" id="megamenu-teams">Đội bóng</a></li>
-                              <li><a id="san_bong" href="/teams" id="megamenu-stadium">Sân bóng</a></li>
+                              <li><a href="/teams" id="megamenu-stadium">Sân bóng</a></li>
                               <li>
-                                 <a id="giai_dau" href="/teams" id="megamenu-leagues">Giải đấu</a>
+                                 <a href="/teams" id="megamenu-leagues">Giải đấu</a>
                                  <div class="mega-nav" style="display: none;">
                                     <div class="column">
                                        <ul>
@@ -146,9 +127,9 @@
                                     <div class="right-shadow"></div>
                                  </div>
                               </li>
-                              <li><a id="su_kien" href="/history" id="megamenu-history">Sự kiện</a></li>
-                              <li><a id="media" href="/the-club" id="megamenu-sfgnew">Media</a></li>
-							  <li><a id="fust" href="<?php echo base_url();?>fust" id="megamenu-fust">FUST</a></li>
+                              <li><a href="/history" id="megamenu-history">Sự kiện</a></li>
+                              <li><a href="/the-club" id="megamenu-sfgnew">Media</a></li>
+							  <li><a href="<?php echo base_url();?>fust" id="megamenu-fust">FUST</a></li>
                            </ul>
                         </nav>
                         <!--//navigation -->	        
@@ -207,159 +188,99 @@
                      </div>
                   </div>
                </header>
-               <div id='wrapper' class='articles '>
-                  <div id='content'>
+               
+               <!--//end of portal header-->
+               <div id="wrapper" class="articles">
+                  <div id="content">
                      <article>
-                     	<?php 
-                     	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$new_detail[0]['image']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$new_detail[0]['image']) && $new_detail[0]['image']!='')
-                     	{
-                     	?>
-                        <figure class="article-figure">
-                           <img width="711" height="400"  alt="<?php echo $new_detail[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $new_detail[0]['image']?>">        
-                           <figcaption><?php echo $new_detail[0]['title']?></figcaption>
-                        </figure>
-                        <?php } ?>
-                        <h1><?php echo $new_detail[0]['title']?></h1>
-                        <section class="article-text">
-                           
-                           	<?php echo $new_detail[0]['content']?>
-                                          
-                           <cite>
-                              <span class="author"><?php echo $new_detail[0]['author_name']?></span>
-                              <span class="date"><?php echo date('d',$new_detail[0]['create_date']);?> <?php echo date('M',$new_detail[0]['create_date']);?> <?php echo date('Y',$new_detail[0]['create_date']);?></span>
-                              <div class="fb-like" data-href="https://www.facebook.com/SaigonFutsal" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div><div class="fb-like" data-href="<?php echo full_url_($_SERVER);?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-                           </cite>
-                        </section>
-                        <section class="share-articles">
-                           <h2>Share this Story</h2>
+                        <h2 class="ticket-heading">DANH SÁCH ĐỘI BÓNG</h2>
+                        <div id="ticket-titles">
                            <ul>
-                              <li><a class="st_sharethis_custom share">Share</a></li>
-                              <li><a class="st_facebook_custom facebook">Facebook</a></li>
-                              <li><a class="st_twitter_custom twitter">Twitter</a></li>
-                              <li><a class="st_googleplus_custom googleplus">Google+</a></li>
-                              <li><a class="st_pinterest_custom pinterest">Pintrest</a></li>
-                              <li><a class="st_email_custom email">Email</a></li>
-                              <li><a class="print" onclick="window.print();">Print</a></li>
-                              <li class="small-only">
-                                 <div class="fb-like" data-href="<?php echo full_url_($_SERVER);?>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-                              </li>
+                              <li class="fixture-title">Tên đội</li>
+                              <li class="on-sale-soon-title">Cáp kèo</li>
+                              <li class="now-selling-title">Gia nhập</li>
                            </ul>
-                        </section>
-                     </article>
-                     <?php 
-                     if(!empty($list_post_with_cate))
-                     {
-                     ?>
-                     <article class="related-articles">
-                        <div class="stories">
-                           <h2>Related Stories</h2>
-                           <h3 class="cluster-title">
-                           <a href="/match-menu/3710777/academy/arsenal-v-newcastle-united"><?php echo $list_post_with_cate[0]['title_new']?></a>
-                           </h3>
-                           <section class="secondary">
-                              <div class="article-image ">
-                              <?php 
-                              if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$list_post_with_cate[0]['image']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$list_post_with_cate[0]['image']) && $list_post_with_cate[0]['image']!='')
-                              {
-                              ?>
-                                 <img  alt="<?php echo $list_post_with_cate[0]['title']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $list_post_with_cate[0]['image']?>"/>
-                                <?php } else {?>
-                                <img  alt="<?php echo $list_post_with_cate[0]['title']?>" src="<?php echo base_url();?>file/uploads/no_image.gif"/>
-                                <?php } ?>
-                                 <a href="<?php echo base_url();?>tin-tuc/<?php echo $list_post_with_cate[0]['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($list_post_with_cate[0]['title_cate'])))?>/p<?php echo $list_post_with_cate[0]['id_new']?>-<?php echo mb_strtolower(url_title(removesign($list_post_with_cate[0]['title_new'])))?>" ><span>‘<?php echo $list_post_with_cate[0]['title_new']?>’</span></a>
-                              </div>
-                              <div class="article-info">
-                                 <h2><a href="<?php echo base_url();?>tin-tuc/<?php echo $list_post_with_cate[0]['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($list_post_with_cate[0]['title_cate'])))?>/p<?php echo $list_post_with_cate[0]['id_new']?>-<?php echo mb_strtolower(url_title(removesign($list_post_with_cate[0]['title_new'])))?>" >‘<?php echo $list_post_with_cate[0]['title_new']?>’</a></h2>
-                                 <p><?php echo sub_string(loaibohtmltrongvanban($list_post_with_cate[0]['content']),114)?></p>
-                              </div>
-                           </section>
-                           <section class="tertiary">
-                              <ul>
-                              <?php 
-                              foreach($list_post_with_cate as $new_cate)
-                              {
-                              	if($new_cate['id_new']!=$list_post_with_cate[0]['id_new'])
-                              	{
-                              ?>
-                                 <li>
-                                    <a href="<?php echo base_url();?>tin-tuc/<?php echo $new_cate['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($new_cate['title_cate'])))?>/p<?php echo $new_cate['id_new']?>-<?php echo mb_strtolower(url_title(removesign($new_cate['title_new'])))?>"  >
-                                    <?php echo sub_string($new_cate['title_new'],50)?>       </a>
-                                 </li>
-                               <?php } } ?>  
-                              </ul>
-                           </section>
                         </div>
-                        <!--/stories -->
+						<?php 
+						foreach($list as $team)
+						{
+						?>
+                        <div class="ticket-holder">
+                           <div class="ticket-info">
+                              <div class="fixture-ticket-info">
+                                 <div class="crest">
+                                    <figure>
+									<?php 
+									if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/teams/'.$team['logo']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/teams/'.$team['logo']) && $team['logo']!='')
+									{
+										
+									
+									?>
+									<img src="<?php echo base_url();?>file/uploads/teams/<?php echo $team['logo']?>" />
+									<?php } else {?>
+									<img src="<?php echo base_url();?>file/uploads/no_image.gif" />
+									<?php } ?>
+									</figure>
+                                 </div>
+                                 <!--/crest -->
+                                 <div class="match-info">
+                                    <h3>
+                                       <a href="/match/report/1314/tickets/first-team/fa-cup-final-ticket-policy" ><?php echo $team['name']?></a>
+                                    </h3>
+                                    
+                                   <div class="link-list">
+                        <ul>
+                           <a href="http://www.alwaysaheadofthegame.com ">Thành viên</a>
+						   <a href="http://www.alwaysaheadofthegame.com ">Kết quả các trận đấu gần đây</a>
+                        </ul>
+                     </div>
+									
+                                 </div>
+                                 <!--/match-info -->
+                              </div>
+                              <!--/fixture-ticket-info -->
+                              <div class="sale-info">
+                                 <div class="on-sale">
+								 <a href="https://www.eticketing.co.uk/arsenal/" class="red-btn buy-now" style="width:105px !important;"><span>Cáp kèo</span></a>
+                                 </div>
+                                 <!--/on-sale -->
+                                 <div class="now-selling">
+                                    <a href="https://www.eticketing.co.uk/arsenal/" class="red-btn buy-now" style="width:105px !important;"><span>Gia nhập</span></a>
+                                 </div>
+                                 <!--/now-selling -->
+                              </div>
+                              <!--/sale-info -->
+                           </div>
+                           <!--/ticket-info -->
+                           
+                        </div>
+                        <?php } ?>
+                        <!--/ticket-holder -->
+                        <div id="ticket-footer"></div>
+                        
+                        <!--/link-list slice -->
+                       
+                        <!--/image-small slice -->
                      </article>
-                     <?php } ?>
-                     <div class="ad-holder full-width-ads">
-                        <div id="div-gpt-ad-1353671982241-17" class="medium-only ad-small" style="width:170px; height:237px;" data-attr-pushdown="0"></div>
-                        <div id="div-gpt-ad-1353671982241-16" class="medium-only ad-wide" style="width:434px; height:208px;" data-attr-pushdown="0"></div>
+                     <div class="ad-holder">
+                        <div id="div-gpt-ad-1353671982241-20" class="medium-only ad-wide" style="width:434px; height:208px;" data-attr-pushdown="0"></div>
                      </div>
                   </div>
                   <aside class="sidebar">
                      <div class="widgets">
-                        <div id="div-gpt-ad-1353671982241-5" class="large-only ad-small" style="width:170px; height:237px;" data-attr-pushdown="0"></div>
-                        <?php 
-                        if(!empty($new_detail_top))
-                        {
-                        ?>
-                        <div class="widget">
-                           <h2><a href="/news/news-archive">Top Stories</a></h2>
-                           <ul class="article-list">
-                              <li class="primary">
-                                 <div class="article-image ">
-                                 	<?php 
-                                 	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$new_detail_top[0]['image']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$new_detail_top[0]['image']) && $new_detail_top[0]['image']!='')
-                                 	{
-                                 	?>
-                                    <img width="192" height="108"  alt="<?php echo $new_detail_top[0]['title_new']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $new_detail_top[0]['image']?>">
-                                    <?php } else {?>
-                                    <img width="192" height="108"  alt="<?php echo $new_detail_top[0]['title_new']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
-                                    <?php } ?>
-                                                            <a href="<?php echo base_url();?>tin-tuc/<?php echo $new_detail_top[0]['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($new_detail_top[0]['title_cate'])))?>/p<?php echo $new_detail_top[0]['id_new']?>-<?php echo mb_strtolower(url_title(removesign($new_detail_top[0]['title_new'])))?>"><span></span></a>
-                                 </div>
-                                 <div class="article-info">
-                                    <h2><a href="<?php echo base_url();?>tin-tuc/<?php echo $new_detail_top[0]['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($new_detail_top[0]['title_cate'])))?>/p<?php echo $new_detail_top[0]['id_new']?>-<?php echo mb_strtolower(url_title(removesign($new_detail_top[0]['title_new'])))?>"><?php echo $new_detail_top[0]['title_new']?></a></h2>
-                                    <p><?php echo sub_string(loaibohtmltrongvanban($new_detail_top[0]['content']),109)?></p>
-                                 </div>
-                              </li>
-                           </ul>
+                        <div class="widget side-text">
+                           <h2>Ticket Services </h2>
+                           <p>Please note that all fixture dates and times are subject to change and revised details will be posted on Arsenal.com. It is the responsibility of all supporters to check these details for every game purchased.</p>
+                           <p><a title="Contact Arsenal" href="/the-club/contact-arsenal">Contact Us</a><br><span>If you have any questions related to membership or our ticketing services speak to us</span></p>
+                           <p><span><a href="https://www.eticketing.co.uk/arsenal/login.aspx?ReturnUrl=%2farsenal%2fmyaccount%2fdefault.aspx" target="_blank">Manage your membership</a><br>If you need to update your membership details then click here.</span></p>
+                           <p><span><span><a title="Members - Ticket on sale date reminders" href="/membership/members-ticket-on-sale-date-reminders">Arsenal Fixture and Ticket Alerts</a><br><span>Red and Silver members can now download the dates of when your priority ticket window opens into your own email calendar</span></span></span></p>
+                           <p><span><span><span><a href="http://www.arsenal.com/tickettransfer">Ticket Transfer</a><br>Ticket Transfer is the Club&rsquo;s new ticketing facility which gives Gold and Platinum Members the ability to electronically transfer their ticket to a game they cannot attend to a family member or friend &ndash; once the fixture has sold out.</span></span></span></p>
+                           <p><span><span><a title="Arsenal Ticket Exchange" href="/ticketexchange"><span>Arsenal Ticket Exchange</span></a><br>Are you a Platinum or Gold member and unable to make a home match? Why not use our online ticketing service where you can sell your ticket to a fellow Arsenal fan<br></span></span></p>
+                           <p><span><span><span><a href="/membership/tickets/disabled-supporters-information-page">Disabled Supporters' Information</a><br>Ticket availability, contact details and matchday information for disabled supporters&nbsp;</span></span></span></p>
                         </div>
-                        <!--/widget-->
-                        <?php 
-                        foreach($new_detail_top as $new_top)
-                        {
-                        	if($new_top['id_new'] !=$new_detail_top[0]['id_new'])
-                        	{
-                        ?>
-                        <div class="widget">
-                           <ul class="article-list">
-                              <li class="primary">
-                                 <div class="article-image ">
-                                 	<?php 
-                                 	if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$new_top['image']) && is_file(PATH_FOLDER.ROT_DIR.'file/uploads/news/'.$new_top['image']) && $new_top['image']!='')
-                                 	{
-                                 	?>
-                                    <img width="192" height="108"  alt="<?php echo $new_top['title_new']?>" src="<?php echo base_url();?>file/uploads/news/<?php echo $new_top['image']?>">
-                                    <?php } else {?>
-                                    <img width="192" height="108"  alt="<?php echo $new_top['title_new']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
-                                    <?php } ?>
-                                                            <a href="<?php echo base_url();?>tin-tuc/<?php echo $new_top['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($new_top['title_cate'])))?>/p<?php echo $new_top['id_new']?>-<?php echo mb_strtolower(url_title(removesign($new_top['title_new'])))?>"><span></span></a>
-                                 </div>
-                                 <div class="article-info">
-                                    <h2><a href="<?php echo base_url();?>tin-tuc/<?php echo $new_top['id_catenew']?>-<?php echo mb_strtolower(url_title(removesign($new_top['title_cate'])))?>/p<?php echo $new_top['id_new']?>-<?php echo mb_strtolower(url_title(removesign($new_top['title_new'])))?>"><?php echo $new_top['title_new']?></a></h2>
-                                    <p><?php echo sub_string(loaibohtmltrongvanban($new_top['content']),109)?></p>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                        <?php } } ?>
-                        <!--/widget-->
-                        <?php } ?>
-                        <div id="div-gpt-ad-1353671982241-6" class="large-only ad-tall" style="width:170px; height:530px;" data-attr-pushdown="0"></div>
-                       
-                        <!--/widget-->
+                        <!--/widget -->            
+                        <div id="div-gpt-ad-1353671982241-7" class="large-only ad-small" style="width:170px; height:237px;" data-attr-pushdown="0"></div>
+                        <div id="div-gpt-ad-1353671982241-8" class="large-only ad-tall" style="width:170px; height:530px;" data-attr-pushdown="0"></div>
                      </div>
                   </aside>
                </div>
@@ -1024,16 +945,7 @@
                <script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/js/app.poll.js"></script>
                <script type="text/javascript">
                   //<!--
-                     app.auth.baseDomain = '';    //-->
-               </script>
-               <script type="text/javascript">
-                  //<!--
-                     var switchTo5x=false;    //-->
-               </script>
-               <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-               <script type="text/javascript">
-                  //<!--
-                     stLight.options({publisher: "44b25252-e07d-4363-9048-cbfc1760e60f"});    //-->
+                     app.auth.baseDomain = "https://www.arsenal.com";    //-->
                </script>
                <script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/js/app.megamenu.js"></script><!--
                   Start of DoubleClick Floodlight Tag: Please do not remove
@@ -1058,6 +970,6 @@
                </noscript>
                <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
                <img src="http://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=arsenal.com&ex-hargs=v%3D1.0%3Bc%3DARSNL%3Bp%3DARSNL_H" width="1px" height="1px" border="0">
-               <!-- 28-04-2014 07:07:16 :: eul3300038 -->
+               <!-- 12-05-2014 05:16:54 :: eul3300039 -->
             </body>
          </html>

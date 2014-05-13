@@ -106,7 +106,7 @@
                                     </div>
                                  </div>
                               </li>
-                              <li><a href="/teams" id="megamenu-teams">Đội bóng</a></li>
+                               <li><a href="<?php echo base_url();?>doi-bong" id="megamenu-teams">Đội bóng</a></li>
                               <li><a href="/teams" id="megamenu-stadium">Sân bóng</a></li>
                               <li>
                                  <a href="/teams" id="megamenu-leagues">Giải đấu</a>

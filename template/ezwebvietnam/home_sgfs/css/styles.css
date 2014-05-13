@@ -5815,7 +5815,7 @@ section .video-container .red-btn:hover {
 }
 .junior,
 .sale-info .junior-gunners {
-  background: #ffffff url("/assets/images/structure/ticket-borders.png") no-repeat;
+  background: #ffffff url("../assets/images/structure/ticket-borders.png") no-repeat;
   background-position: 0 50%;
 }
 .silver {
