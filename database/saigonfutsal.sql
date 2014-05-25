@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2014 at 11:07 AM
+-- Generation Time: May 25, 2014 at 07:56 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -92,6 +92,22 @@ INSERT INTO `clips` (`id_clip`, `title`, `code`, `create_date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `futsal_stadium`
+--
+
+CREATE TABLE IF NOT EXISTS `futsal_stadium` (
+  `id_san` int(11) NOT NULL AUTO_INCREMENT,
+  `ten_san` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `dia_chi` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `chu_san` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `sdt` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `create_date` int(11) NOT NULL,
+  PRIMARY KEY (`id_san`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `news`
 --
 
@@ -137,6 +153,8 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `logo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `cover` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `create_date` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `noi_quy` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id_team`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
@@ -144,8 +162,130 @@ CREATE TABLE IF NOT EXISTS `teams` (
 -- Dumping data for table `teams`
 --
 
-INSERT INTO `teams` (`id_team`, `name`, `about`, `logo`, `cover`, `create_date`) VALUES
-(1, 'FUST-Futsal Saigon United', 'sss', 'fust_logo.png', '10256383_1418461401749374_2157980116406398285_n.jpg', 1);
+INSERT INTO `teams` (`id_team`, `name`, `about`, `logo`, `cover`, `create_date`, `status`, `noi_quy`) VALUES
+(1, 'Futsal United Saigon (FUST)', 'sss', 'fust_logo.png', '10256383_1418461401749374_2157980116406398285_n.jpg', 1, 1, 'nội quy đội bóng');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) COLLATE utf8_bin NOT NULL,
+  `full_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8_bin NOT NULL,
+  `address` varchar(255) COLLATE utf8_bin NOT NULL,
+  `password` varchar(255) COLLATE utf8_bin NOT NULL,
+  `email` varchar(100) COLLATE utf8_bin NOT NULL,
+  `activated` tinyint(1) NOT NULL DEFAULT '1',
+  `banned` tinyint(1) NOT NULL DEFAULT '0',
+  `ban_reason` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `new_password_key` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `new_password_requested` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `new_email` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `new_email_key` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `last_ip` varchar(40) COLLATE utf8_bin NOT NULL,
+  `last_login` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `birthday` varchar(255) COLLATE utf8_bin NOT NULL,
+  `img` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `role` int(11) NOT NULL DEFAULT '3',
+  `login_id` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `full_name`, `phone`, `address`, `password`, `email`, `activated`, `banned`, `ban_reason`, `new_password_key`, `new_password_requested`, `new_email`, `new_email_key`, `last_ip`, `last_login`, `created`, `modified`, `birthday`, `img`, `role`, `login_id`) VALUES
+(1, 'giangbeo', 'Nguyễn Trường Giang', '01667039939', 'HCM', '$2a$08$av0xeUt7pYqEymtq0ENPN.65FaINVis/64LmuohuAdt8ND8exqVs2', 'nguyentruonggiang91@gmail.com', 1, 0, NULL, NULL, NULL, NULL, 'ad9147af77ea0a71cb1045eb8c144048', '::1', '2014-04-02 02:07:19', '2014-03-21 08:25:47', '2014-04-02 00:07:19', '', '', 1, ''),
+(2, 'BeoBeBoi', 'Nguyên Trường Giang', '01667039939', 'HCM', '$2a$08$zpxFIYeeZMa2lmPlMt..DeOpdK3D6pRabov1xaSLE6sz3nvEyUUbS', 'beobeboi91@gmail.com', 1, 0, NULL, NULL, NULL, NULL, 'ab37717509a2f5b5e6c4335e8e960710', '::1', '2014-04-13 10:06:27', '2014-03-27 16:59:43', '2014-04-13 08:06:27', '2014/03/05', '', 4, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_autologin`
+--
+
+CREATE TABLE IF NOT EXISTS `user_autologin` (
+  `key_id` char(32) COLLATE utf8_bin NOT NULL,
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `user_agent` varchar(150) COLLATE utf8_bin NOT NULL,
+  `last_ip` varchar(40) COLLATE utf8_bin NOT NULL,
+  `last_login` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`key_id`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_product`
+--
+
+CREATE TABLE IF NOT EXISTS `user_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `create_date` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `user_product`
+--
+
+INSERT INTO `user_product` (`id`, `id_user`, `id_product`, `create_date`) VALUES
+(13, 1, 1, 1395600943),
+(14, 1, 6, 1395770910),
+(15, 1, 5, 1395770917);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_profiles`
+--
+
+CREATE TABLE IF NOT EXISTS `user_profiles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `country` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `website` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `user_profiles`
+--
+
+INSERT INTO `user_profiles` (`id`, `user_id`, `country`, `website`) VALUES
+(1, 1, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_role`
+--
+
+CREATE TABLE IF NOT EXISTS `user_role` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `is_staff` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `user_role`
+--
+
+INSERT INTO `user_role` (`id`, `name`, `is_staff`) VALUES
+(1, 'Administrator', 1),
+(2, 'Staff', 1),
+(3, 'Member', 0),
+(4, 'Volunteer', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
