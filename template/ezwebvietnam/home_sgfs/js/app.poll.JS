@@ -1326,10 +1326,10 @@ app.auth = {
             app.auth.clearErrors();
             var data = $(this).serialize();
             if (!$login.find('#username').val() || !$login.find('#password').val()) {
-                app.auth.displayErrors(['Please provide a username/membership number and password']);
+                app.auth.displayErrors(['Vui lòng điền email và password']);
                 return;
             }
-            var loginUrl = '/auth/login';
+            var loginUrl = base_url+'/dang-nhap';
             var opts = {
                 type: 'post',
                 url: loginUrl,
@@ -1355,13 +1355,7 @@ app.auth = {
                     }
                 }
             };
-            if (app.device.hasCors()) {
-                opts.url = app.auth.baseDomain + loginUrl;
-                opts.crossDomain = true;
-                opts.xhrFields = {
-                    withCredentials: true
-                };
-            }
+            
             $.ajax(opts);
         });
         $login.find('input').placeholder();
@@ -1380,20 +1374,19 @@ app.auth = {
     clearErrors: function () {
         $('#dm-login').find('.error-row').remove();
     },
-    displayErrors: function (messages) {
-        var $loginForm = $('#dm-login').find('form');
-        var $loginErrors;
-        if (messages[0] == 'Username does not exist') {
+    displayErrors: function (messages) {var $loginForm = $('#dm-login').find('form');
+        var $loginErrors;		
+        if (messages[0] == 'L') {
             $loginErrors = $('<div>', {
                 'class': 'row error-row email-not-found'
             });
-            $loginErrors.append('<h4>Email not found</h4><p>If you are a Red, Silver, Gold, Platinum or Junior Gunners member, log in ' + 'using your membership number. If not, please <a href="javascript:void(0);">register as a Digital Member</a></p>').prependTo($loginForm).off('click', 'a').on('click', 'a', app.auth.showRegister);
+            $loginErrors.append('<h4>Email không tồn tại</h4><p>Vui lòng đăng ký một tài khoản mới</p>').prependTo($loginForm).off('click', 'a').on('click', 'a', app.auth.showRegister);
         } else {
             $loginErrors = $('<div>', {
                 'class': 'row error-row'
             });
-            if (messages[0] == 'Your Membership has expired.') {
-                $loginErrors.append('<p>Your membership has expired. Click <a href="https://www.eticketing.co.uk/arsenal/memberships.aspx?findmembership=1">here</a> ' + 'to renew your membership or <a class="register-link" href="javascript:void(0);">join for FREE as a digital member</a></p>').prependTo($loginForm).off('click', 'a').on('click', 'a.register-link', app.auth.showRegister);
+            if (messages[0] == 'P') {
+                $loginErrors.append('<p>Password của bạn không chính xác. Nếu quên password Click Quên mật khẩu? ' + ' để khôi phục lại password </p>').prependTo($loginForm).off('click', 'a').on('click', 'a.register-link', app.auth.showRegister);
             } else {
                 $.each(messages, function (i, m) {
                     $loginErrors.append($('<p>', {
@@ -1563,9 +1556,10 @@ app.auth.register = {
         var translations = app.auth.translations.registration;
         var $register = app.auth.register.getRegisterTab();
         $register.find('form').submit(function (e) {
+			
             e.preventDefault();
             app.auth.register.clearErrors();
-            var registerUrl = '/auth/register';
+            var registerUrl = base_url+'/auth/register';
             if (true === app.auth.register.formIsValid($register)) {
                 if (!$register.find('#login-terms:checked').length) {
                     app.auth.register.displayErrors(translations.missing_terms_and_conditions);
@@ -1579,7 +1573,6 @@ app.auth.register = {
                         dataType: 'json',
                         success: function (data) {
                             if (data.success) {
-                                _gaq.push(['_trackPageview', '/register-success.html']);
                                 app.auth.register.showThankYou();
                             } else if (data.messages) {
                                 app.auth.register.displayErrors(data.messages);

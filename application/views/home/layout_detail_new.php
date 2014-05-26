@@ -74,6 +74,18 @@
                <link rel="apple-touch-icon-precomposed" href="/assets/images/ico/apple-touch-icon-57-precomposed.png">
                <script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/js/etz3vdg.js"></script>
                <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+			   <?php 
+			   if($_SERVER['SERVER_NAME']=='localhost')
+			   {
+			   ?>
+               <script>
+			   var base_url = 'http://'+document.domain+'/saigonfutsal';
+			   </script>
+			   <?php } else {?>
+			   <script>
+			   var base_url = 'http://'+document.domain;
+			   </script>
+			   <?php } ?>
             </head>
             <body >
 			<?php 
@@ -400,43 +412,33 @@
                      <div id="dm-login">
                         <div class="dm-left">
                            <figure>
-                              <figcaption class="benefits">Access to all Arsenal Player Videos<br />Receive the digital member e-newsletter</figcaption>
+                              <figcaption class="benefits"></figcaption>
                            </figure>
-                           <a href="#" class="benefits-link bind-benefits"><span>What benefits do you get with Arsenal</span><span>Digital Membership?</span></a>
-                           <a href="#" class="btn red-btn bind-register">Sign up for FREE</a>
+                           <a href="#" class="btn red-btn bind-register">Đăng ký thành viên</a>
+                           <a href="<?php echo base_url();?>login-fb" class="btn red-btn bind-register">Login Facebook</a>
                         </div>
                         <div class="dm-right">
-                           <h1>Returning member log in</h1>
+                           <h1>Đăng nhập</h1>
                            <form class="login-form">
                               <div class="row email-row">
-                                 <label>Email Address or Arsenal Membership number</label>
+                                 <label>Email</label>
                                  <input type="text" name="username" id="username" value="" placeholder="Email Address or Arsenal Membership number">                
-                                 <p class="extra-info">Red, Silver, Gold, Platinum and Junior Gunner Members should log in using your membership number</p>
                               </div>
                               <div class="row password-row">
                                  <label>Password</label>
-                                 <input type="password" name="password" id="password" value="" placeholder="Password">                <a href="#" class="forgot bind-forgot">Forgotten Password?</a>
-                                 <a href="https://www.eticketing.co.uk/arsenal/login.aspx?ReturnUrl=%2farsenal%2fmyaccount%2fdefault.aspx" class="activate-member">Login or activate your Membership</a>
+                                 <input type="password" name="password" id="password" value="" placeholder="Password">                <a href="#" class="forgot bind-forgot">Quên mật khẩu?</a>
+                                 
                               </div>
                               <div class="row remember-row">
-                                 <label>Remember me</label>
-                                 <input type="hidden" name="remember_me" value="0"><input type="checkbox" name="remember_me" id="remember_me" value="1" checked="checked" class="styled">                
-                                 <input type="submit" name="login" id="login" value="Log in">            
+                                 <input type="submit" name="login" id="login" value="Đăng nhập">            
                               </div>
                            </form>
                         </div>
                      </div>
-                     <div id="dm-register" class="locale-en " data-show-thankyou="1">
+                     <div id="dm-register">
                         <div class="dm-both">
                            <figure>
-                              <figcaption class="strapline">
-                                 <span>Access to all Arsenal Player Videos</span>
-                                 <span class="divider">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                                 <span class="clear">Receive the digital member e-newsletter</span>
-                                 <a href="javascript:void(0);" class="benefits-link bind-benefits">
-                                 <span class="first-line">What benefits do you get with Arsenal</span><span class="second-line">Digital Membership?</span>
-                                 </a>
-                              </figcaption>
+                              
                            </figure>
                            <form autocomplete="off">
                               <div class="full-select">
@@ -454,18 +456,16 @@
                                  </div>
                               </div>
                               <!--/full-select -->
-                              <div class="login-row clearfix"><label for="login-forename" class="required"><span>*</span> Forename</label>
-                                 <input type="text" name="forename" id="login-forename" value="">
+                              <div class="login-row clearfix"><label for="login-forename" class="required"><span>*</span> Họ và tên</label>
+                                 <input type="text" name="fullname" id="login-forename" value="">
                               </div>
-                              <div class="login-row clearfix"><label for="login-surname" class="required"><span>*</span> Surname</label>
-                                 <input type="text" name="surname" id="login-surname" value="">
-                              </div>
+                              
                               <div class="login-row dob clearfix">
                                  <label class='required'>
-                                 <span>*</span> Date of Birth</label>
+                                 <span>*</span> Ngày sinh</label>
                                  <div class="select-holder">
                                     <select name="dob_day" id="login-day">
-                                       <option value="0">Day</option>
+                                       <option value="0">Ngày</option>
                                        <option value="1">1</option>
                                        <option value="2">2</option>
                                        <option value="3">3</option>
@@ -501,7 +501,7 @@
                                  </div>
                                  <div class="select-holder">
                                     <select name="dob_month" id="login-month">
-                                       <option value="0">Month</option>
+                                       <option value="0">Tháng</option>
                                        <option value="1">Jan</option>
                                        <option value="2">Feb</option>
                                        <option value="3">Mar</option>
@@ -518,7 +518,7 @@
                                  </div>
                                  <div class="select-holder">
                                     <select name="dob_year" id="login-year">
-                                       <option value="0">Year</option>
+                                       <option value="0">Năm</option>
                                        <option value="2014">2014</option>
                                        <option value="2013">2013</option>
                                        <option value="2012">2012</option>
@@ -623,320 +623,49 @@
                                     </select>
                                  </div>
                               </div>
-                              <p id="junior-register-message" style="display:none;">
-                                 Please ensure that you enter your parents email address and <a href="/privacy-cookie-policy" target="_blank">click here</a> to review our privacy policy for those who are under 13. Please note that an email address can only be used once to register as a Digital Member so you cannot register for both an adult and junior membership under the same email address.            
-                              </p>
+                              <p id="junior-register-message" style="display:none;">Please ensure that you enter your parents email address and <a href="/privacy-cookie-policy" target="_blank">click here</a> to review our privacy policy for those who are under 13. Please note that an email address can only be used once to register as a Digital Member so you cannot register for both an adult and junior membership under the same email address.</p>
                               <div class="half-width">
-                                 <div class="login-row clearfix"><label for="login-contact" class="optional">Mobile Number</label>
+                                 <div class="login-row clearfix"><label for="login-contact" class="optional">Số điện thoại</label>
                                     <input type="text" name="contact_no" id="login-contact" value="">
                                  </div>
-                                 <div class="full-select">
-                                    <div class="login-row clearfix">
-                                       <label for="login-country" class="required"><span>*</span> Country</label>
-                                       <div class="select-holder">
-                                          <select name="country" id="login-country">
-                                             <option value="1">Afghanistan</option>
-                                             <option value="2">Aland Islands</option>
-                                             <option value="3">Albania</option>
-                                             <option value="4">Algeria</option>
-                                             <option value="5">American Samoa</option>
-                                             <option value="6">Andorra</option>
-                                             <option value="7">Angola</option>
-                                             <option value="8">Anguilla</option>
-                                             <option value="9">Antarctica</option>
-                                             <option value="10">Antigua and Barbuda</option>
-                                             <option value="11">Argentina</option>
-                                             <option value="12">Armenia</option>
-                                             <option value="13">Aruba</option>
-                                             <option value="14">Australia</option>
-                                             <option value="15">Austria</option>
-                                             <option value="16">Azerbaijan</option>
-                                             <option value="17">Bahamas</option>
-                                             <option value="18">Bahrain</option>
-                                             <option value="19">Bangladesh</option>
-                                             <option value="20">Barbados</option>
-                                             <option value="21">Belarus</option>
-                                             <option value="22">Belgium</option>
-                                             <option value="23">Belize</option>
-                                             <option value="24">Benin</option>
-                                             <option value="25">Bermuda</option>
-                                             <option value="26">Bhutan</option>
-                                             <option value="27">Bolivia</option>
-                                             <option value="28">Bosnia and Herzegovina</option>
-                                             <option value="29">Botswana</option>
-                                             <option value="30">Bouvet Island</option>
-                                             <option value="31">Brazil</option>
-                                             <option value="32">British Indian Ocean Territory</option>
-                                             <option value="33">Brunei Darussalam</option>
-                                             <option value="34">Bulgaria</option>
-                                             <option value="35">Burkina Faso</option>
-                                             <option value="36">Burundi</option>
-                                             <option value="37">Cambodia</option>
-                                             <option value="38">Cameroon</option>
-                                             <option value="39">Canada</option>
-                                             <option value="40">Cape Verde</option>
-                                             <option value="41">Cayman Islands</option>
-                                             <option value="42">Central African Republic</option>
-                                             <option value="43">Chad</option>
-                                             <option value="44">Chile</option>
-                                             <option value="45">China</option>
-                                             <option value="46">Christmas Island</option>
-                                             <option value="47">Cocos (Keeling) Islands</option>
-                                             <option value="48">Colombia</option>
-                                             <option value="49">Comoros</option>
-                                             <option value="50">Congo</option>
-                                             <option value="51">Congo,The Democratic Republic Of The</option>
-                                             <option value="52">Cook Islands</option>
-                                             <option value="53">Costa Rica</option>
-                                             <option value="54">Cote D'ivoire</option>
-                                             <option value="55">Croatia</option>
-                                             <option value="56">Cuba</option>
-                                             <option value="57">Cyprus</option>
-                                             <option value="58">Czech Republic</option>
-                                             <option value="59">Denmark</option>
-                                             <option value="60">Djibouti</option>
-                                             <option value="61">Dominica</option>
-                                             <option value="62">Dominican Republic</option>
-                                             <option value="63">Ecuador</option>
-                                             <option value="64">Egypt</option>
-                                             <option value="65">El Salvador</option>
-                                             <option value="66">Equatorial Guinea</option>
-                                             <option value="67">Eritrea</option>
-                                             <option value="68">Estonia</option>
-                                             <option value="69">Ethiopia</option>
-                                             <option value="70">Falkland Islands (Malvinas)</option>
-                                             <option value="71">Faroe Islands</option>
-                                             <option value="72">Fiji</option>
-                                             <option value="73">Finland</option>
-                                             <option value="74">France</option>
-                                             <option value="75">French Guiana</option>
-                                             <option value="76">French Polynesia</option>
-                                             <option value="77">French Southern Territories</option>
-                                             <option value="78">Gabon</option>
-                                             <option value="79">Gambia</option>
-                                             <option value="80">Georgia</option>
-                                             <option value="81">Germany</option>
-                                             <option value="82">Ghana</option>
-                                             <option value="83">Gibraltar</option>
-                                             <option value="84">Greece</option>
-                                             <option value="85">Greenland</option>
-                                             <option value="86">Grenada</option>
-                                             <option value="87">Guadeloupe</option>
-                                             <option value="88">Guam</option>
-                                             <option value="89">Guatemala</option>
-                                             <option value="90">Guernsey</option>
-                                             <option value="91">Guinea</option>
-                                             <option value="92">Guinea-bissau</option>
-                                             <option value="93">Guyana</option>
-                                             <option value="94">Haiti</option>
-                                             <option value="95">Heard Island and Mcdonald Islands</option>
-                                             <option value="97">Honduras</option>
-                                             <option value="98">Hong Kong</option>
-                                             <option value="99">Hungary</option>
-                                             <option value="100">Iceland</option>
-                                             <option value="101">India</option>
-                                             <option value="102">Indonesia</option>
-                                             <option value="103">Iran,Islamic Republic Of</option>
-                                             <option value="104">Iraq</option>
-                                             <option value="105">Ireland</option>
-                                             <option value="106">Isle of Man</option>
-                                             <option value="107">Israel</option>
-                                             <option value="108">Italy</option>
-                                             <option value="109">Jamaica</option>
-                                             <option value="110">Japan</option>
-                                             <option value="111">Jersey</option>
-                                             <option value="112">Jordan</option>
-                                             <option value="113">Kazakhstan</option>
-                                             <option value="114">Kenya</option>
-                                             <option value="115">Kiribati</option>
-                                             <option value="116">Korea,Democratic People's Republic Of</option>
-                                             <option value="117">Korea,Republic Of</option>
-                                             <option value="118">Kuwait</option>
-                                             <option value="119">Kyrgyzstan</option>
-                                             <option value="120">Lao People's Democratic Republic</option>
-                                             <option value="121">Latvia</option>
-                                             <option value="122">Lebanon</option>
-                                             <option value="123">Lesotho</option>
-                                             <option value="124">Liberia</option>
-                                             <option value="125">Libyan Arab Jamahiriya</option>
-                                             <option value="126">Liechtenstein</option>
-                                             <option value="127">Lithuania</option>
-                                             <option value="128">Luxembourg</option>
-                                             <option value="129">Macao</option>
-                                             <option value="130">Macedonia,The Former Yugoslav Rep</option>
-                                             <option value="131">Madagascar</option>
-                                             <option value="132">Malawi</option>
-                                             <option value="133">Malaysia</option>
-                                             <option value="134">Maldives</option>
-                                             <option value="135">Mali</option>
-                                             <option value="136">Malta</option>
-                                             <option value="137">Marshall Islands</option>
-                                             <option value="138">Martinique</option>
-                                             <option value="139">Mauritania</option>
-                                             <option value="140">Mauritius</option>
-                                             <option value="141">Mayotte</option>
-                                             <option value="142">Mexico</option>
-                                             <option value="143">Micronesia,Federated States Of</option>
-                                             <option value="144">Moldova,Republic Of</option>
-                                             <option value="145">Monaco</option>
-                                             <option value="146">Mongolia</option>
-                                             <option value="147">Montenegro</option>
-                                             <option value="148">Montserrat</option>
-                                             <option value="149">Morocco</option>
-                                             <option value="150">Mozambique</option>
-                                             <option value="151">Myanmar</option>
-                                             <option value="152">Namibia</option>
-                                             <option value="153">Nauru</option>
-                                             <option value="154">Nepal</option>
-                                             <option value="155">Netherlands</option>
-                                             <option value="156">Netherlands Antilles</option>
-                                             <option value="157">New Caledonia</option>
-                                             <option value="158">New Zealand</option>
-                                             <option value="159">Nicaragua</option>
-                                             <option value="160">Niger</option>
-                                             <option value="161">Nigeria</option>
-                                             <option value="162">Niue</option>
-                                             <option value="163">Norfolk Island</option>
-                                             <option value="164">Northern Mariana Islands</option>
-                                             <option value="165">Norway</option>
-                                             <option value="166">Oman</option>
-                                             <option value="167">Pakistan</option>
-                                             <option value="168">Palau</option>
-                                             <option value="169">Palestinian Territory,Occupied</option>
-                                             <option value="170">Panama</option>
-                                             <option value="171">Papua New Guinea</option>
-                                             <option value="172">Paraguay</option>
-                                             <option value="173">Peru</option>
-                                             <option value="174">Philippines</option>
-                                             <option value="175">Pitcairn</option>
-                                             <option value="176">Poland</option>
-                                             <option value="177">Portugal</option>
-                                             <option value="178">Puerto Rico</option>
-                                             <option value="179">Qatar</option>
-                                             <option value="180">Reunion</option>
-                                             <option value="181">Romania</option>
-                                             <option value="182">Russian Federation</option>
-                                             <option value="183">Rwanda</option>
-                                             <option value="184">Saint Barthelemy</option>
-                                             <option value="185">Saint Helena</option>
-                                             <option value="186">Saint Kitts and Nevis</option>
-                                             <option value="187">Saint Lucia</option>
-                                             <option value="188">Saint Martin</option>
-                                             <option value="189">Saint Pierre and Miquelon</option>
-                                             <option value="190">Saint Vincent and the Grenadines</option>
-                                             <option value="191">Samoa</option>
-                                             <option value="192">San Marino</option>
-                                             <option value="193">Sao Tome and Principe</option>
-                                             <option value="194">Saudi Arabia</option>
-                                             <option value="195">Senegal</option>
-                                             <option value="196">Serbia</option>
-                                             <option value="197">Seychelles</option>
-                                             <option value="198">Sierra Leone</option>
-                                             <option value="199">Singapore</option>
-                                             <option value="200">Slovakia</option>
-                                             <option value="201">Slovenia</option>
-                                             <option value="202">Solomon Islands</option>
-                                             <option value="203">Somalia</option>
-                                             <option value="204">South Africa</option>
-                                             <option value="205">S. Georgia and the S. Sandwich Isds</option>
-                                             <option value="206">Spain</option>
-                                             <option value="207">Sri Lanka</option>
-                                             <option value="208">Sudan</option>
-                                             <option value="209">Suriname</option>
-                                             <option value="210">Svalbard and Jan Mayen Islands</option>
-                                             <option value="211">Swaziland</option>
-                                             <option value="212">Sweden</option>
-                                             <option value="213">Switzerland</option>
-                                             <option value="214">Syrian Arab Republic</option>
-                                             <option value="215">Taiwan</option>
-                                             <option value="216">Tajikistan</option>
-                                             <option value="217">Tanzania,United Republic Of</option>
-                                             <option value="218">Thailand</option>
-                                             <option value="219">Timor-leste</option>
-                                             <option value="220">Togo</option>
-                                             <option value="221">Tokelau</option>
-                                             <option value="222">Tonga</option>
-                                             <option value="223">Trinidad and Tobago</option>
-                                             <option value="224">Tunisia</option>
-                                             <option value="225">Turkey</option>
-                                             <option value="226">Turkmenistan</option>
-                                             <option value="227">Turks and Caicos Islands</option>
-                                             <option value="228">Tuvalu</option>
-                                             <option value="229">Uganda</option>
-                                             <option value="230">Ukraine</option>
-                                             <option value="231">United Arab Emirates</option>
-                                             <option value="232" selected="selected">United Kingdom</option>
-                                             <option value="233">United States</option>
-                                             <option value="234">United States Minor Outlying Islands</option>
-                                             <option value="235">Uruguay</option>
-                                             <option value="236">Uzbekistan</option>
-                                             <option value="237">Vanuatu</option>
-                                             <option value="238">Holy See (Vatican City State)</option>
-                                             <option value="239">Venezuela</option>
-                                             <option value="240">Viet Nam</option>
-                                             <option value="241">Virgin Islands (British)</option>
-                                             <option value="242">Virgin Islands (U.S.)</option>
-                                             <option value="243">Wallis and Futuna Islands</option>
-                                             <option value="244">Western Sahara</option>
-                                             <option value="245">Yemen</option>
-                                             <option value="246">Zambia</option>
-                                             <option value="247">Zimbabwe</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                 </div>
+                                 
                                  <!--/full-select -->
-                                 <div class="full-select">
-                                    <div class="login-row clearfix">
-                                       <label for="login-preferred-language" class="optional">Language Preference</label>
-                                       <div class="select-holder">
-                                          <select name="preferred_language" id="login-preferred-language">
-                                             <option value="local">Local Language</option>
-                                             <option value="english">English</option>
-                                          </select>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="login-row dob clearfix">
-                                    <label for="login-postcode" class="required"><span>*</span> Postcode</label>
-                                    <input type="text" name="postcode" id="login-postcode" value="" data-required-dependency="1">
-                                 </div>
+                                 
                               </div>
                               <!--/half-width -->
-                              <p class="hidden" id="newsletter-language-message"></p>
                               <div class="hr"></div>
                               <!--/hr -->
-                              <div class="login-row clearfix"><label for="login-email" class="required"><span>*</span> Email Address</label>
+                              <div class="login-row clearfix"><label for="login-email" class="required"><span>*</span> Email</label>
                                  <input type="text" name="email_address" id="login-email" value="">
                               </div>
-                              <div class="login-row clearfix"><label for="login-confirm_email_address" class="required"><span>*</span> Confirm Email Address</label>
+                              <div class="login-row clearfix"><label for="login-confirm_email_address" class="required"><span>*</span> Nhập lại email</label>
                                  <input type="text" name="confirm_email_address" id="login-confirm_email_address" value="">
                               </div>
                               <div class="login-row clearfix"><label for="login-password" class="required"><span>*</span> Password</label>
                                  <input type="password" name="password" id="login-password" value="">
                               </div>
-                              <div class="login-row clearfix"><label for="login-confirm-password" class="required"><span>*</span> Confirm Password</label>
+                              <div class="login-row clearfix"><label for="login-confirm-password" class="required"><span>*</span> Nhập lại Password</label>
                                  <input type="password" name="confirm_password" id="login-confirm-password" value="">
                               </div>
                               <fieldset>
-                                 <h3>Get all the news from Arsenal.com</h3>
+                                 <h3>Điều luật khi tham gia cộng đồng SaigonFutsal</h3>
                                  <div class="login-row mailing-options clearfix">
                                     <input type="hidden" name="dp_second_party" value="0"><input type="checkbox" name="dp_second_party" id="dp_second_party" value="1">
-                                    <label for="dp_second_party" class="optional"><strong>Manager's Email and Weekly E-Newsletter (only in English)</strong><br />I would like to receive the weekly Manager's and Arsenal's e-newsletters and other information about offerings from The Arsenal Football Club Plc by post, email and SMS.</label>
+                                    <label for="dp_second_party" class="optional"><strong>Manager's Email and Weekly E-Newsletter</strong><br />I would like to receive the weekly Manager's and Arsenal's e-newsletters and other information about offerings from The Arsenal Football Club Plc by post, email and SMS.</label>
                                  </div>
                                  <div class="login-row mailing-options clearfix">
                                     <input type="hidden" name="dp_first_party" value="0"><input type="checkbox" name="dp_first_party" id="dp_first_party" value="1">
-                                    <label for="dp_first_party" class="optional"><strong>Club Offers and Information (only in English)</strong><br />I would like to receive ticket updates, membership notifications and details of other offers and information relating to The Arsenal Football Club Plc and its group companies from time to time ("Arsenal") by post, email and SMS.</label>
+                                    <label for="dp_first_party" class="optional"><strong>Club Offers and Information</strong><br />I would like to receive ticket updates, membership notifications and details of other offers and information relating to The Arsenal Football Club Plc and its group companies from time to time ("Arsenal") by post, email and SMS.</label>
                                  </div>
                                  <div class="login-row mailing-options clearfix">
                                     <input type="hidden" name="dp_third_party" value="0"><input type="checkbox" name="dp_third_party" id="dp_third_party" value="1">
-                                    <label for="dp_third_party" class="optional"><strong>Offers and Information About Our Partners and Sponsors (only in English)</strong><br />I would like to receive offers and information about carefully selected third parties, including partners and sponsors, from Arsenal by post, email and SMS.</label>
+                                    <label for="dp_third_party" class="optional"><strong>Offers and Information About Our Partners and Sponsors</strong><br />I would like to receive offers and information about carefully selected third parties, including partners and sponsors, from Arsenal by post, email and SMS.</label>
                                  </div>
                               </fieldset>
                               <div class="terms-row">
                                  <div class="login-row mailing-options clearfix">
                                     <input type="hidden" name="terms_and_conditions" value="0"><input type="checkbox" name="terms_and_conditions" id="login-terms" value="1">
-                                    <label for="login-terms" class="optional">I accept the <a href="http://www.arsenal.com/digitalmembership-termsandconditions" target="_blank">terms and conditions</a></label>
+                                    <label for="login-terms" class="optional">Tôi đồng ý với tất cả điều luật khi tham gia cộng đồng SaigonFutsal</label>
                                  </div>
                               </div>
                               <!--/terms-row -->
@@ -944,14 +673,8 @@
                                  <input class="red-btn-submit" type="submit" value="Sign Up">
                                  <div class="login-row mailing-options clearfix">
                                     <input type="hidden" name="remember_me" value="0"><input type="checkbox" name="remember_me" id="check-register-remember" value="1" checked="checked">
-                                    <label for="check-register-remember" class="optional">Remember me</label>
+                                    <label for="check-register-remember" class="optional">Ghi nhớ</label>
                                  </div>
-                              </div>
-                              <div class="login-row clearfix">
-                                 <input type="hidden" name="acquisition_channel" value="AC" id="acquisition_channel">
-                              </div>
-                              <div class="login-row clearfix">
-                                 <input type="hidden" name="locale" value="en" id="locale">
                               </div>
                            </form>
                         </div>
@@ -1013,7 +736,7 @@
                      <!--/dm-forgot -->
                      <script type="text/javascript">
                         $(function() {
-                            app.auth.translations = {"forgotpassword":{"unknown_user_message":"Sorry, we don't recognise that membership number or email address. Please try again or email us at digitalmembershiphelp@arsenal.co.uk if you have a query.","missing_email_message":"Please provide an email address or a membership number"},"registration":{"missing_terms_and_conditions":"You must agree to the Arsenal Terms & Conditions in order to register","unknown_error_message":"An unknown error was encountered","invalid_fields_message":"Fields highlighted in red were invalid","mandatory_fields_message":"Fields marked with a * are mandatory"}};
+                            app.auth.translations = {"forgotpassword":{"unknown_user_message":"Sorry, we don't recognise that membership number or email address. Please try again or email us at digitalmembershiphelp@arsenal.co.uk if you have a query.","missing_email_message":"Please provide an email address or a membership number"},"registration":{"missing_terms_and_conditions":"You must agree to the Arsenal Terms & Conditions in order to register","unknown_error_message":"An unknown error was encountered","invalid_fields_message":"Fields highlighted in red were invalid","mandatory_fields_message":"Vui lòng điền đầy đủ các ô có dấu *"}};
                         });
                      </script>
                      <div class="footer">

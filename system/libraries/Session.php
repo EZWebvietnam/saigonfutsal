@@ -12,7 +12,11 @@
 class CI_Session {
 
 	var $flash_key = 'flash'; // prefix for "flash" variables (eg. flash:new:message)
-
+	var $sess_use_database;
+	var $sess_cookie_name;
+	var $now;
+	var $cookie_path;
+	var $cookie_domain;
 	function CI_Session()
 	{
 		$this->object =& get_instance();

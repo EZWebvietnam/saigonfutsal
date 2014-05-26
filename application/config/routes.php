@@ -40,6 +40,8 @@
 
 $route['default_controller'] = "home/index";
 $route['login-social/login-fb']='home/member/facebook';
+$route['dang-ky']='home/member/register';
+$route['dang-nhap']='home/member/login';
 $route['fust']='home/clubs/fust';
 $route['doi-bong']='home/clubs/list_club';
 $route['tin-tuc/(:any)-(:any)/p(:any)-(:any)'] = 'home/news/detail_new/$1/$3';

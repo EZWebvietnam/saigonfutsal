@@ -13,6 +13,14 @@
                      <p>Chào mừng bạn đến với <a href="<?php echo base_url();?>" style="font-size:14px;color:#004c92;text-decoration:none" target="_blank">Saigon Futsal</a>! Chúng tôi rất hân hạnh được chào đón bạn.</p>
                      <p>Là thành viên của  <a href="<?php echo base_url();?>" style="font-size:14px;color:#004c92;text-decoration:none" target="_blank">Saigon Futsal</a>, bạn sẽ là người đầu tiên nhận được tin tức về những chương trình khuyến mãi độc quyền và giảm giá đặc biệt. Ngoài ra, những thông tin về các đợt giảm giá của sân futsal, thông tin mới nhất về futsal sẽ được gửi đến bạn.</p>
                      <p>Username <?php echo $username; ?></p>
+					 <?php 
+					 if(isset($email_key))
+					 {
+					 ?>
+					  <p>DĐể đăng nhập được vào hệ thống SaigonFutsal. Vui lòng nhấn vào link sau để kích hoạt. Link chỉ có giá trị trong vòng 48h: <a href='<?php echo base_url();?>active-user/<?php echo $id?>/<?php echo $email_key?>'>Link kích hoạt</a></p>
+					 <?php 
+					 }
+					 ?>
                      <p>Password: <?php echo $password?></p>
                      <p>Nếu có bất kỳ thắc mắc gì, vui lòng liên hệ với bộ phận Hỗ trợ của Saigon Futsal: <a href="mailto:lienhe@saigonfutsal.com" target="_blank">lienhe@saigonfutsal.com</a>.</p>
                      <p>Chúc bạn có một ngày tốt lành tại  <a href="<?php echo base_url();?>" style="font-size:14px;color:#004c92;text-decoration:none" target="_blank">Saigon Futsal</a>! </p>

@@ -7,6 +7,12 @@ class Home extends MY_Controller
 		parent::load_header();
 		parent::list_cate();
 		parent::load_xml_tsn();
+		parent::get_donors();
+		$this->load->library('session');
+		$this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->library('tank_auth');
+        $this->lang->load('tank_auth');
 		$this->load->model('newshomemodel');
 		$this->load->model('cliphomemodel');
 	}

@@ -58,9 +58,7 @@ class Tank_auth {
      * @return	bool
      */
     function login($login, $password, $remember, $login_by_username, $login_by_email) {
-        if ((strlen($login) > 0) AND ( strlen($password) > 0)) {
-
-            // Which function to use to login (based on config)
+        if ((strlen($login) > 0) AND ( strlen($password) > 0)) {           
             if ($login_by_username AND $login_by_email) {
                 $get_user_func = 'get_user_by_login';
             } else if ($login_by_username) {
@@ -68,13 +66,11 @@ class Tank_auth {
             } else {
                 $get_user_func = 'get_user_by_email';
             }
-
-            if (!is_null($user = $this->ci->users->$get_user_func($login))) { // login ok
-                // Does password match hash in database?
+            if (!is_null($user = $this->ci->users->$get_user_func($login))) {
                 $hasher = new PasswordHash(
                         $this->ci->config->item('phpass_hash_strength', 'tank_auth'), $this->ci->config->item('phpass_hash_portable', 'tank_auth'));
-                if ($hasher->CheckPassword($password, $user->password)) {  // password ok
-                    if ($user->banned == 1) {         // fail - banned
+                if ($hasher->CheckPassword($password, $user->password)) {
+                    if ($user->banned == 1) {
                         $this->error = array('banned' => $user->ban_reason);
                     } else {
                         $this->logout();
@@ -88,30 +84,26 @@ class Tank_auth {
                             'role' => $user->role
                         ));
 
-                        if ($user->activated == 0) {       // fail - not activated
-                            $this->error = array('not_activated' => '');
-                        } else {            // success
+                        if ($user->activated == 0) {
+                           echo json_encode(array('messages'=>'User chưa kích hoạt'));
+                        } else {
                             if ($remember) {
                                 $this->create_autologin($user->id);
                             }
-
-                            $this->clear_login_attempts($login);
+                            
 
                             $this->ci->users->update_login_info(
                                     $user->id, $this->ci->config->item('login_record_ip', 'tank_auth'), $this->ci->config->item('login_record_time', 'tank_auth'));
                             return TRUE;
                         }
                     }
-                } else {              // fail - wrong password
-                    $this->increase_login_attempt($login);
-                    $this->error = array('password' => 'auth_incorrect_password');
+                } else {
+                    echo json_encode(array('messages'=>'Password không chính xác'));
                 }
-            } else {               // fail - wrong login
-                $this->increase_login_attempt($login);
-                $this->error = array('login' => 'auth_incorrect_login');
+            } else {
+                echo json_encode(array('messages'=>'Login không thành công'));
             }
         }
-        return FALSE;
     }
 
     /**
@@ -196,11 +188,14 @@ class Tank_auth {
      * @return	array
      */
     function create_user($username, $email, $password, $fullname, $phone, $role, $email_activation,$loginid) {
+		
         if ((strlen($username) > 0) AND ! $this->ci->users->is_username_available($username)) {
+			
             $this->error = array('username' => 'auth_username_in_use');
-        } elseif (!$this->ci->users->is_email_available($email)) {
+        } elseif ($this->ci->users->is_email_available($email)) {
             $this->error = array('email' => 'auth_email_in_use');
         } else {
+			
             // Hash password using phpass
             $hasher = new PasswordHash(
                     $this->ci->config->item('phpass_hash_strength', 'tank_auth'), $this->ci->config->item('phpass_hash_portable', 'tank_auth'));

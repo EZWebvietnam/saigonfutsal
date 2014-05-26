@@ -99,5 +99,11 @@ class MY_Controller extends CI_Controller
 		$this->load->model('newshomemodel');
 		$this->data['list_most_read'] = $this->newshomemodel->new_detail_top(0);
 	}
+	public function get_donors()
+	{
+		/*$this->load->model('donorshomemodel');
+		$this->data['list_donors']=$this->donorshomemodel->get_donors();*/
+		$this->data['list_donors']=array();
+	}
 }
 ?>
