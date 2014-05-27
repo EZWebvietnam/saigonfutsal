@@ -48,12 +48,29 @@
                               <!--/fixture-ticket-info -->
                               <div class="sale-info">
                                  <div class="on-sale">
-								 <a href="https://www.eticketing.co.uk/arsenal/" class="red-btn buy-now" style="width:105px !important;"><span>Cáp kèo</span></a>
+                                 <?php 
+                                 if(!$this->tank_auth->is_logged_in())
+                                 {
+								 	?>
+								 	<a id="login-capkeo" href="#" class="red-btn buy-now" style="width:105px !important;"><span>Cáp kèo</span></a>
                                  </div>
                                  <!--/on-sale -->
                                  <div class="now-selling">
-                                    <a href="https://www.eticketing.co.uk/arsenal/" class="red-btn buy-now" style="width:105px !important;"><span>Gia nhập</span></a>
+                                    <a id="login-gianhap" href="#" class="red-btn buy-now" style="width:105px !important;"><span>Gia nhập</span></a>
                                  </div>
+								 	<?php
+								 }
+								 else
+								 {
+								 
+                                 ?>
+								 <a  href="#" class="red-btn buy-now" style="width:105px !important;"><span>Cáp kèo</span></a>
+                                 </div>
+                                 <!--/on-sale -->
+                                 <div class="now-selling">
+                                    <a  href="#" class="red-btn buy-now" style="width:105px !important;"><span>Gia nhập</span></a>
+                                 </div>
+                                 <?php } ?>
                                  <!--/now-selling -->
                               </div>
                               <!--/sale-info -->

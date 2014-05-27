@@ -1215,6 +1215,14 @@ app.auth = {
             e.preventDefault();
             app.auth.showLightbox('login');
         });
+        $('#login-capkeo').on('click', function (e) {
+            e.preventDefault();
+            app.auth.showLightbox('login');
+        });
+        $('#login-gianhap').on('click', function (e) {
+            e.preventDefault();
+            app.auth.showLightbox('login');
+        });
         $('div.errors span a.red-btn').on('click', function (e) {
             e.preventDefault();
             app.auth.showLightbox('login');
