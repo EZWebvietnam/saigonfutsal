@@ -6,6 +6,11 @@ class Clubs extends MY_Controller
 		parent::__construct();
 		parent::load_header();
 		parent::list_cate();
+		$this->load->library('session');
+		$this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->library('tank_auth');
+        $this->lang->load('tank_auth');
 		$this->load->model('clubshomemodel');
 	}	
 	public function fust()
@@ -48,6 +53,13 @@ class Clubs extends MY_Controller
         $this->data['list'] = $array_sv;
 		$this->data['link_page'] = $link_cate;
 		$this->data['title']='Đội bóng | SaigonFutsal.com';
+		$this->data['main_content']='clubs/list_club_view';
+		$this->load->view('home/layout_list_club',$this->data);
+	}
+	public function register_club()
+	{
+		$this->data['title']='Đội bóng | SaigonFutsal.com';
+		$this->data['main_content']='clubs/register_club_view';
 		$this->load->view('home/layout_list_club',$this->data);
 	}
 }

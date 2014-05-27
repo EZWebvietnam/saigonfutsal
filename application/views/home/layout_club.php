@@ -24,7 +24,7 @@
                <meta name="keywords" content="<?php echo sub_string(loaibohtmltrongvanban($data_club[0]['about']),300)?>" />
                <meta property="fb:app_id" content="<?php echo $header['fbapp']?>">
                <link href="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/css/styles.css?v=1.7.3" media="all" rel="stylesheet" type="text/css" 
-               
+                <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
                <script type="text/javascript" src="<?php echo base_url();?>template/ezwebvietnam/home_sgfs/js/jquery.magnific-popup.js"></script>
                <script type="text/javascript">
                   //<!--
@@ -143,6 +143,10 @@
                            </ul>
                         </nav>
                         <!--//navigation -->	        
+                        <?php
+						if(!$this->tank_auth->is_logged_in())
+						{
+						?>        
                         <div id="account">
                            <a id='login-btn' href="#">Đăng nhập</a>
                            <a id='manage-btn' class="manage" href='/my-account'></a>
@@ -150,6 +154,27 @@
                            <a id='logout-btn' href='#'>Logout</a>
                            <!--//logged out -->
                         </div>
+						<?php } else {?>
+						<div id="account">
+						    <a id="manage-btn" class="manage" href="<?php echo base_url();?>tai-khoan"></a>
+						    <a id="manage-btn" class="manage" href="<?php echo base_url();?>tai-khoan" style="display: inline;">Xin chào <?php echo $this->session->userdata('full_name');?></a>
+						    <a id="logout-btn" href="<?php echo base_url();?>dang-xuat" style="display: none;"></a>
+						    <a id="logout-btn" href="<?php echo base_url();?>dang-xuat" style="display: inline;">Đăng xuất</a>
+							<?php 
+							if($this->session->userdata('role')==1)
+							{
+								?>
+								<a  href="<?php echo base_url();?>tao-doi-bong" style="display: inline;">Tạo đội bóng</a>
+								<?php
+							} else {
+								?>
+								<a  href="<?php echo base_url();?>quan-ly-doi-bong" style="display: inline;">Quản lý đội bóng</a>
+								<?php
+							}
+							?>
+						    <!--//logged out -->
+						</div>
+						<?php } ?>
                         <div id="country-select">
 						<style>
 							#country-select > a

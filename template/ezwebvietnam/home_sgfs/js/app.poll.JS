@@ -1277,7 +1277,6 @@ app.auth = {
         $('select', $registerForm).trigger('change');
     },
     showLogin: function (e) {
-        _gaq.push(['_trackEvent', 'Digital Membership', 'View Login']);
         if (typeof e != 'undefined') {
             e.preventDefault();
         }

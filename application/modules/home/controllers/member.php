@@ -10,6 +10,8 @@ class Member extends MY_Controller
         $this->load->library('tank_auth');
         $this->lang->load('tank_auth');
 		$this->load->model('users');
+		parent::load_header();
+		parent::list_cate();
 	}
 	public function facebook()
 	{
@@ -127,6 +129,53 @@ class Member extends MY_Controller
 		{
 			echo json_encode(array('success'=>1));
 		}
+	}
+	public function logout()
+	{
+		$this->tank_auth->logout();
+		redirect($_SERVER['HTTP_REFERER']);	
+	}
+	public function user_seting()
+	{
+		$edit = $this->input->post('edit');
+		switch($edit){
+			case 1:
+			{
+				$this->data['main_content'] = 'account/edit_profile';
+				break;
+			}
+			case 2:
+			{
+				
+				$password = $this->input->post('password');
+				$phone = $this->input->post('phone');
+				$full_name = $this->input->post('full_name');
+				if($password!='')
+				{
+					$password = $this->tank_auth->hash_password($password);	
+					$data_save = array('phone'=>$phone,'full_name'=>$full_name,'password'=>$password);
+				}
+				else
+				{
+					$data_save = array('phone'=>$phone,'full_name'=>$full_name);
+				}
+				$this->users->update_user($this->session->userdata('user_id'),$data_save);
+				$_SESSION['save_su']='save ok'; 
+				$this->session->set_userdata(array(
+                            'full_name' => $full_name,
+							'phone'=>$phone,
+                        ));
+				$this->data['main_content'] = 'account/view_profile';
+				break;
+			}
+			default:
+			{
+				$this->data['main_content'] = 'account/view_profile';
+				break;
+			}
+				
+		}
+		$this->load->view('home/layout_profile_user',$this->data);
 	}
 	function _send_email($type, $to, $email, &$data, $title) {
         /*$this->load->library('email');*/

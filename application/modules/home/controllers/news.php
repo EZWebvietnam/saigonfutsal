@@ -7,6 +7,11 @@ class News extends MY_Controller
 		parent::load_header();
 		parent::list_cate();
 		parent::list_most_read();
+		$this->load->library('session');
+		$this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->load->library('tank_auth');
+        $this->lang->load('tank_auth');
 		$this->load->model('newshomemodel');
 	}
 	public function detail_new($id_cate,$id_post)
