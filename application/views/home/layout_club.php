@@ -245,8 +245,22 @@
                	</style>
                <?php } ?>
                		<div id="sub-header" class="portal-header" class="cover_clubs">
-                  <h1 style="font-size: 14px !important; top: 300px !important;
-"><?php echo $data_club[0]['name'];?></h1>
+					<h1 style="font-size: 14px !important; top: 200px !important; background:none;
+align-content: center;">
+<?php 
+                           if(file_exists(PATH_FOLDER.ROT_DIR.'file/uploads/teams/'.$data_club[0]['logo'])&& is_file(PATH_FOLDER.ROT_DIR.'file/uploads/teams/'.$data_club[0]['logo'])&&$data_club[0]['logo']!='')
+                           {
+                           ?>
+                           
+						   	
+						   
+                              <img style="margin-left:20px;" width="150" height="100"  alt="<?php echo $data_club[0]['name'];?>" src="<?php echo base_url();?>file/uploads/teams/<?php echo $data_club[0]['logo']?>">
+                              <?php } else {?>
+                              <img style="margin-left:20px;" width="150" height="100"  alt="<?php echo $data_club[0]['name']?>" src="<?php echo base_url();?>file/uploads/no_image.gif">
+                             <?php } ?><br>
+ <b><?php echo $data_club[0]['name'];?></b>
+</h1>
+                  
                   
                </div>
                <!--//end of history header-->
