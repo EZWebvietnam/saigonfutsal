@@ -59,7 +59,7 @@
 			   </script>
 			   <?php } else {?>
 			   <script>
-			   var base_url = 'http://'+document.domain;
+			   var base_url = 'http://'+document.domain+'/beta';
 			   </script>
 			   <?php } ?>
       <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/ico/apple-touch-icon-144-precomposed.png">
@@ -297,7 +297,7 @@
                               <figcaption class="benefits"></figcaption>
                            </figure>
                            <a href="#" class="btn red-btn bind-register">Đăng ký thành viên</a>
-                           <a href="<?php echo base_url();?>login-fb" class="btn red-btn bind-register">Login Facebook</a>
+                           <a style="cursor:pointer;" onclick="window.location.href='<?php echo base_url();?>login-social/login-fb'" class="btn red-btn">Login Facebook</a>
                         </div>
                         <div class="dm-right">
                            <h1>Đăng nhập</h1>

@@ -26,14 +26,14 @@ class Member extends MY_Controller
 			$email_activation = $this->config->item('email_activation', 'tank_auth');
 			$password_1 = rand_string(6);
 			$password = $this->tank_auth->hash_password($password_1);
-			$data_create = $this->tank_auth->create_user($username,$email,$password,$full_name,0,0,$email_activation,$uid);
+			$data_create = $this->tank_auth->create_user2($username,$email,$password,$full_name,0,0,$email_activation,$uid);
 			if(!is_null($data_create))
 			{
 				
 				$data_email = array('full_name'=>$full_name,'username'=>$username,'password'=>$password_1);
 				$this->_send_email('activate',$email,$email,$data_email,'Đăng ký thành viên');
-				echo '2222';exit;
 			}
+			redirect('../'.ROT_DIR);
 		}
 		else
 		{

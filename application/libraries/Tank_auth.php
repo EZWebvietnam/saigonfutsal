@@ -106,7 +106,22 @@ class Tank_auth {
             }
         }
     }
-
+	public function login_fb($loginid)
+	{
+		if(!is_null($user = $this->ci->users->get_user_by_loginid($loginid)))
+		{
+			 $this->ci->session->set_userdata(array(
+                            'user_id' => $user->id,
+                            'username' => $user->username,
+                            'full_name' => $user->full_name,
+							'phone'=>$user->phone,
+                            'created' => $user->created,
+                            'email' => $user->email,
+                            'status' => ($user->activated == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
+                            'role' => $user->role
+             ));
+		}
+	}
     /**
      * Logout user from the site
      *
@@ -196,8 +211,6 @@ class Tank_auth {
         } elseif ($this->ci->users->is_email_available($email)) {
             $this->error = array('email' => 'auth_email_in_use');
         } else {
-			
-            // Hash password using phpass
             $hasher = new PasswordHash(
                     $this->ci->config->item('phpass_hash_strength', 'tank_auth'), $this->ci->config->item('phpass_hash_portable', 'tank_auth'));
             $hashed_password = $hasher->HashPassword($password);
@@ -227,46 +240,44 @@ class Tank_auth {
         }
         return NULL;
     }
-    function create_user2($username, $email, $password, $fullname, $phone,$sex,$birth_day,$address,$yahoo,$skype,$bank,$stk, $role, $email_activation,$active,$province) {
-        if ((strlen($username) > 0) AND ! $this->ci->users->is_username_available($username)) {
-            $this->error = array('username' => 'auth_username_in_use');
-        } elseif (!$this->ci->users->is_email_available($email)) {
-            $this->error = array('email' => 'auth_email_in_use');
-        } else {
-            // Hash password using phpass
-            $hasher = new PasswordHash(
-                    $this->ci->config->item('phpass_hash_strength', 'tank_auth'), $this->ci->config->item('phpass_hash_portable', 'tank_auth'));
-            $hashed_password = $hasher->HashPassword($password);
-
-            $data = array(
-                'username' => $username,
-                'password' => $hashed_password,
-                'email' => $email,
-                'full_name' => $fullname,
-                'phone' => $phone,
-                'last_ip' => $this->ci->input->ip_address(),
-                'activated' => $active,
-                'role' => $role,
-                'address' => $address,
-                'phone' => $phone,
-                'yahoo'=>$yahoo,
-                'skype'=>$skype,
-                'birthday'=>$birth_day,
-                'bank'=>$bank,
-                'stk'=>$stk,
-                'sex'=>$sex,
-                'province'=>$province
-            );
-            if ($email_activation) {
-                $data['new_email_key'] = md5(rand() . microtime());
-            }
-            if (!is_null($res = $this->ci->users->create_user($data, !$email_activation))) {
-                $data['user_id'] = $res['user_id'];
-                $data['password'] = $password;
-                unset($data['last_ip']);
-                return $data;
-            }
-        }
+    function create_user2($username, $email, $password, $fullname, $phone, $role, $email_activation,$loginid) {
+			if($this->ci->users->is_email_available($email))
+			{
+				$data_save = array('login_id'=>$loginid);
+				$this->ci->users->update_user_email($email,$data_save);
+				$this->login_fb($loginid);
+				return TRUE;
+			}
+			else
+			{
+	            $hasher = new PasswordHash(
+	                    $this->ci->config->item('phpass_hash_strength', 'tank_auth'), $this->ci->config->item('phpass_hash_portable', 'tank_auth'));
+	            $hashed_password = $hasher->HashPassword($password);
+	            $data = array(
+	                'username' => $username,
+	                'password' => $hashed_password,
+	                'email' => $email,
+	                'full_name' => $fullname,
+	                'phone' => $phone,
+	                'last_ip' => $this->ci->input->ip_address(),
+	                'activated' => 1,
+	                'role' => $role,
+	                'phone' => $phone,
+	                'login_id'=>$loginid
+	            );
+	            if ($email_activation) {
+	                $data['new_email_key'] = md5(rand() . microtime());
+	            }
+	            if (!is_null($res = $this->ci->users->create_user($data, TRUE))) {
+	                $data['id'] = $res['id'];
+	                $data['password'] = $password;
+	                
+	                unset($data['last_ip']);
+					$this->login_fb($loginid);
+	                return $data;
+	            }
+			
+			}
         return NULL;
     }
     /**
